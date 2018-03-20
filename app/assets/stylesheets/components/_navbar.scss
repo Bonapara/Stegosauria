@@ -49,3 +49,20 @@
   text-decoration: none;
 }
 
+/* Burger menu on mobile and tablet */
+.burger-menu {
+  display: none;
+}
+
+// @media screen and (min-width : 480px) and (max-width: 900px)
+@media screen and (max-width: 1050px)
+{
+  .navbar-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block !important;
+  }
+}
+
