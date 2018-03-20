@@ -20,10 +20,14 @@
     text-transform: uppercase;
     font-size: 20px;
     padding: 0px 40px;
+    color: black;
   }
 }
-
-
+.navbar-brand:hover {
+  a {
+    text-decoration: none;
+  }
+}
 /* Navbar menu */
 .navbar-menu-item {
   cursor: pointer;
