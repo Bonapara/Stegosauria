@@ -6,14 +6,16 @@
 
   <!-- Text logo -->
   <div class="navbar-brand">
+    <%= link_to root_path do %>
     <p> <span id="galerie"> Galerie </span> <span id="Isabelle"> Isabelle Laverny </span> </p>
+    <% end %>
   </div>
 
   <!-- Right Navigation -->
   <div class="navbar-menu">
     <!-- Menu links -->
-    <%= link_to "ARTISTES", "#", class: "navbar-menu-item navbar-menu-link" %>
-    <%= link_to "OEUVRES", "#", class: "navbar-menu-item navbar-menu-link" %>
+    <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
+    <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "EXPOSITIONS & ACTUS", "#", class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
   </div>
