@@ -1,0 +1,51 @@
+.artist-card {
+  width: 220px;
+  img {
+    width: 220px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  }
+
+  h2 {
+    margin: 8px 0px 20px 0px;
+  }
+
+  p {
+    margin: 15px 0px 0px 0px;
+  }
+}
+
+.artist-category {
+  color: $medium-gray-darker;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-style: italic;
+  font-family: "Spectral";
+}
+
+.artist-name {
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.0em;
+  font-size: 24px;
+  font-family: "Cardo";
+  transition: all 0.2s ease-out;
+}
+
+.artist-name:hover {
+  color: $red;
+}
+
+.artist-artworks {
+  color: $dark-gray;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-family: "Roboto";
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  margin-bottom: 60px !important;
+  border-bottom: 1px solid $medium-gray-darker;
+}

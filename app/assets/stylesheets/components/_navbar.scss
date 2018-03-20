@@ -43,13 +43,14 @@
 .navbar-menu-link {
   color: black;
   font-size: 12px;
+  transition: all 0.2s ease-out;
 }
 .navbar-menu-link:hover {
   color: $red;
   text-decoration: none;
 }
 
-/* Burger menu on mobile and tablet */
+/* Burger menu on mobile and tablet, A FINIR */
 .burger-menu {
   display: none;
 }
