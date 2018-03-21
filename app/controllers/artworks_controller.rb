@@ -9,7 +9,6 @@ class ArtworksController < ApplicationController
 
   def sculptures   # GET /sculptures
     @artworks = Artwork.where(artwork_domain: "sculpture")
-    # @sculpture = "hey"
   end
 
   def paintings     # GET /paintings
