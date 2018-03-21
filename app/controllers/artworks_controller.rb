@@ -1,38 +1,16 @@
 class ArtworksController < ApplicationController
+
   def index         # GET /artworks
-    @artworks = Artwork.all
+    if params[:commit]
+      domain = params[:commit][0...-1].downcase
+      @artworks = Artwork.where(artwork_domain: domain)
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def show          # GET /artworks/:id
     @artwork = Artwork.find(params[:id])
-  end
-
-  def sculptures   # GET /sculptures
-    @artworks = Artwork.where(artwork_domain: "sculpture")
-  end
-
-  def paintings     # GET /paintings
-    @artworks = Artwork.where(artwork_domain: "peinture")
-  end
-
-  def photographs   # GET /photographs
-    @artworks = Artwork.where(artwork_domain: "photographie")
-  end
-
-  def drawings      # GET /drawings
-    @artworks = Artwork.where(artwork_domain: "dessin")
-  end
-
-  def ceramics      # GET /ceramics
-    @artworks = Artwork.where(artwork_domain: "céramique")
-  end
-
-  def installations # GET /installations
-    @artworks = Artwork.where(artwork_domain: "installation")
-  end
-
-  def editions      # GET /editions
-    @artworks = Artwork.where(artwork_domain: "edition")
   end
 
   def new           # GET /artworks/new

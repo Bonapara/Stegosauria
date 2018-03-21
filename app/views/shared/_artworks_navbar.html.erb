@@ -1,10 +1,32 @@
 <div class="artworks-navbar">
-  <%= link_to "Toutes les oeuvres", artworks_path, :class => current_class?(artworks_path) %>
-  <%= link_to "Sculptures", sculptures_path, :class => current_class?(sculptures_path)%>
-  <%= link_to "Peintures", paintings_path, :class => current_class?(paintings_path) %>
-  <%= link_to "Photographies", photographs_path, :class => current_class?(photographs_path) %>
-  <%= link_to "Dessins", drawings_path, :class => current_class?(drawings_path) %>
-  <%= link_to "Céramiques", ceramics_path, :class => current_class?(ceramics_path) %>
-  <%= link_to "Installations", installations_path, :class => current_class?(installations_path) %>
-  <%= link_to "Editions", editions_path, :class => current_class?(editions_path) %>
+    <!-- ONGLETS -->
+    <!-- SCULPTURES -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Sculptures', class: "navbar-button" %>
+    <% end %>
+    <!-- PAINTINGS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Peintures', class: "navbar-button" %>
+    <% end %>
+    <!-- PHOTOGRAPHS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Photographies', class: "navbar-button" %>
+    <% end %>
+    <!-- DRAWINGS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Dessins', class: "navbar-button" %>
+    <% end %>
+    <!-- CERAMICS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Céramiques', class: "navbar-button" %>
+    <% end %>
+    <!-- INSTALLATIONS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Installations', class: "navbar-button" %>
+    <% end %>
+    <!-- INSTALLATIONS -->
+    <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
+    <%= submit_tag 'Editions', class: "navbar-button" %>
+    <% end %>
 </div>
+
