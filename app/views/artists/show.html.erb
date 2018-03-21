@@ -21,7 +21,7 @@
     </div>
     <div class="artist-bio-photo-container">
       <div class="artist-photo-container">
-        <img class="artist-photo" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAMAAQDGAAwAAQAAAAAAAA3rAAAAJGUyODMyNDNmLTZhYmMtNDMyZS04MmNiLWM4YTkyMzQzZGZjMA.jpg" alt="<%= @artist.first_name %> <%= @artist.last_name %> photo">
+        <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
       </div>
       <div class="artist-bio-container">
         <p class="about-the-artist">Biographie</p>
