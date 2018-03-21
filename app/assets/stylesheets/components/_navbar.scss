@@ -68,6 +68,11 @@
   img {
     height: 25px;
   }
+
+  #close-button {
+    height: 15px;
+    padding: 0px 11px;
+  }
 }
 
 .navbar-social-networks {
@@ -76,9 +81,14 @@
   }
 }
 
-/* Burger menu on mobile and tablet, A FINIR */
-.burger-menu {
+/* Burger menu on mobile and tablet */
+.burger-menu, #close-button {
   display: none;
+}
+
+.mobile-menu {
+  display: none;
+  margin-top: 60px;
 }
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
@@ -90,6 +100,26 @@
 
   .burger-menu {
     display: block !important;
+  }
+
+  .mobile-menu.show {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .navbar-menu-item {
+    padding: 20px !important;
+    border-right: none;
+    border-bottom: 1px solid $medium-gray;
+  }
+
+  .navbar-menu-link {
+    font-size: 14px !important;
+    text-align: center;
+  }
+
+  .navbar-menu-item:last-child {
+    margin-right: 0px !important;
   }
 }
 
