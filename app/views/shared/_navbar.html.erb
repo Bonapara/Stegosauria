@@ -1,34 +1,34 @@
+<!-- Navbar container -->
 <div class="navbar">
-  <!-- Text logo -->
+  <!-- Burger menu icons on mobile -->
   <div class="burger-menu">
-    <%= image_tag "burger-menu.png" %>
+    <%= image_tag "burger-menu.png", id: "burger-menu" %>
+    <%= image_tag "close-button.png", id: "close-button" %>
   </div>
+  <!-- Isabelle Laverny Logo -->
   <div class="navbar-brand">
     <%= link_to root_path do %>
-    <p> <!-- <span id="galerie"> Galerie </span> --> <span id="Isabelle"> Isabelle Laverny </span> </p>
+    <p> <span id="Isabelle"> Isabelle Laverny </span> </p>
     <% end %>
   </div>
-  <!-- Right Navigation -->
+  <!-- Desktop menu -->
   <div class="navbar-menu">
-    <!-- Menu links -->
     <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "EXPOSITIONS & ACTUS", "#", class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
   </div>
+  <!-- Instagram Logo -->
   <div class="navbar-social-networks">
     <%= image_tag "instagram-logo.png" %>
   </div>
-  <!-- Dropdown list appearing on mobile only -->
-<!--   <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
-  </div> -->
+</div>
+
+<!-- Mobile menu invisible on desktop -->
+<div class="mobile-menu">
+  <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "EXPOSITIONS & ACTUS", "#", class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
 </div>
 
