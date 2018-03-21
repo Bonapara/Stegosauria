@@ -1,6 +1,12 @@
 class ArtworksController < ApplicationController
+
   def index         # GET /artworks
-    @artworks = Artwork.all
+    if params[:commit]
+      domain = params[:commit][0...-1].downcase
+      @artworks = Artwork.where(artwork_domain: domain)
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def show          # GET /artworks/:id
