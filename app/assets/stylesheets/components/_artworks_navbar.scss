@@ -1,0 +1,37 @@
+.active {
+  padding-bottom: 8px;
+  border-bottom: 3px solid  white;
+  font-weight: 400 !important;
+  color: white !important;
+  opacity: 1 !important;
+  opacity: 0.3;
+}
+
+.artworks-navbar {
+  text-align: center;
+  background-color: $orange;
+  height: 40px;
+  position: fixed;
+  margin-bottom: 25px;
+  width: 100%;
+  z-index: 1000
+}
+
+.artworks-navbar > a{
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.artworks-navbar > a:hover{
+  color: white;
+  transition: background 0.3s ease;
+  font-weight: 400;
+}
+
+.artworks-container {
+  margin-top: 25px;
+}
