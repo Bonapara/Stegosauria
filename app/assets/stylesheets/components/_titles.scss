@@ -1,11 +1,13 @@
 // Section title
 .section-title {
   width: 100%;
-  background-color: $light-gray;
+  background-color: $light-red;
   text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
 
   h1 {
-    margin: 0px 0px 40px 0px;
+    margin: 0px;
     padding: 50px;
     font-size: 18px;
     text-transform: uppercase;

@@ -1,16 +1,13 @@
 <div class="navbar">
-  <!-- Image logo -->
-<!--   <%= link_to root_path, class: "navbar-wagon" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %> -->
-
   <!-- Text logo -->
+  <div class="burger-menu">
+    <%= image_tag "burger-menu.png" %>
+  </div>
   <div class="navbar-brand">
     <%= link_to root_path do %>
-    <p> <span id="galerie"> Galerie </span> <span id="Isabelle"> Isabelle Laverny </span> </p>
+    <p> <!-- <span id="galerie"> Galerie </span> --> <span id="Isabelle"> Isabelle Laverny </span> </p>
     <% end %>
   </div>
-
   <!-- Right Navigation -->
   <div class="navbar-menu">
     <!-- Menu links -->
@@ -19,7 +16,9 @@
     <%= link_to "EXPOSITIONS & ACTUS", "#", class: "navbar-menu-item navbar-menu-link" %>
     <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
   </div>
-
+  <div class="navbar-social-networks">
+    <%= image_tag "instagram-logo.png" %>
+  </div>
   <!-- Dropdown list appearing on mobile only -->
 <!--   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">

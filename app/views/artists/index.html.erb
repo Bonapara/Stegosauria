@@ -1,14 +1,16 @@
-<!-- Section title -->
+<!-- Title section -->
 <div class="section-title">
   <h1> Découvrez nos artistes </h1>
 </div>
-
+<!-- Artists count -->
 <div class="main-container">
   <div class="count">
     <%= @artists.count %> artistes
   </div>
 </div>
+<!-- Artist cards container -->
 <div class="columns-container">
+  <!-- TODO passer les artists en locals dans une partial de artist_card -->
   <% @artists.each do |artist| %>
     <div class="column">
       <div class="artist-card">
