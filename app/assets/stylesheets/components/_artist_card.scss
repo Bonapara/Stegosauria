@@ -1,3 +1,32 @@
+.columns-container {
+  column-count: 1;
+  column-gap: 0;
+}
+
+@media (min-width: 768px) {
+  .columns-container {
+    column-count: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .columns-container {
+    column-count: 3;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  break-inside: avoid;
+  padding: 5px;
+  border-right: 1px solid $medium-gray;
+  align-items: center;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
 .artist-card {
   width: 220px;
   img {
@@ -13,6 +42,12 @@
 
   p {
     margin: 15px 0px 0px 0px;
+  }
+}
+
+.artist-infos {
+  a {
+    text-decoration: none;
   }
 }
 
@@ -47,5 +82,5 @@
   text-transform: uppercase;
   padding-bottom: 60px;
   margin-bottom: 60px !important;
-  border-bottom: 1px solid $medium-gray-darker;
+  border-bottom: 1px solid $medium-gray;
 }

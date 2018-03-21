@@ -1,0 +1,25 @@
+// Section title
+.section-title {
+  width: 100%;
+  background-color: $light-gray;
+  text-align: center;
+
+  h1 {
+    margin: 0px 0px 40px 0px;
+    padding: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+}
+
+.count {
+  font-size: 12px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}

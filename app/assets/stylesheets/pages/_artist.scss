@@ -1,0 +1,75 @@
+// Permet de ne pas afficher le svg dans le code
+.defs-only {
+  display: none;
+}
+
+.artist-container {
+  padding: 0px 100px;
+}
+.show-artist-art-type {
+  font-family: $retro-font;
+  font-size: 20px;
+  color: $red;
+  text-align: center;
+  margin: 60px 0px 0px 0px;
+}
+
+.show-artist-name {
+  font-family: $modern-font;
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: $blue;
+  margin: 0px 0px 80px 0px;
+  text-decoration: underline $red;
+}
+
+.artist-bio-photo-container {
+  display: flex;
+}
+
+
+.artist-photo {
+  filter: url(#monochrome) brightness(90%);
+  height: 200px;
+  width: 200px;
+}
+
+.about-the-artist {
+  font-family: $modern-font;
+  font-weight: bolder;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: $blue;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  padding-left: 30px;
+}
+
+.artist-bio {
+  font-family: $retro-font;
+  text-align: justify;
+  font-size: 14px;
+  color: $blue;
+  line-height: 1.5em;
+  padding-left: 30px;
+}
+
+@media (max-width: 900px) {
+  .artist-container{
+    padding: 0px 30px;
+  }
+  .artist-bio-photo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-the-artist {
+    margin-top: 30px;
+    padding-left: 0px !important;
+  }
+  .artist-bio {
+    padding-left: 0px !important;
+  }
+}
