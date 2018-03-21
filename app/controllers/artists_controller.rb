@@ -5,6 +5,7 @@ class ArtistsController < ApplicationController
 
   def show          # GET /artists/:id
     @artist = Artist.find(params[:id])
+    @artworks = Artwork.all
   end
 
   def new           # GET /artists/new
