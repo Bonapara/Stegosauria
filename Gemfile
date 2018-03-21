@@ -12,6 +12,9 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
+# To be installed for Bootstrap 4
+# gem 'bootstrap', '~> 4.0.0'
+# gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'sass-rails'
 gem 'simple_form'

@@ -1,7 +1,35 @@
-<% @artists.each do |artist| %>
-  <h2> <%= artist.first_name %> </h2>
-  <p> <%= artist.last_name %> </p>
-  <p> <%= artist.biography %> </p>
-  <p> <%= artist.domain %> </p>
-  <p> <%= link_to "Voir l'artiste", artist_path(artist) %> </p>
-<% end %>
+<!-- Section title -->
+<div class="section-title">
+  <h1> Découvrez nos artistes </h1>
+</div>
+
+<div class="main-container">
+  <div class="count">
+    <%= @artists.count %> artistes
+  </div>
+</div>
+<div class="columns-container">
+  <% @artists.each do |artist| %>
+    <div class="column">
+      <div class="artist-card">
+        <div class="artist-img">
+          <%= image_tag "artwork_2.png" %>
+        </div>
+        <div class="artist-infos">
+          <p class="artist-category">
+            <%= artist.domain %>
+          </p>
+          <%= link_to artist_path(artist) do %>
+            <h2 class="artist-name">
+              <%= artist.last_name %> <%= artist.first_name %>
+            </h2>
+          <% end %>
+          <p class="artist-artworks">
+            <%= artist.artworks.count %> oeuvres
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+ </div>
+
