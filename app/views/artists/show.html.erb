@@ -31,7 +31,7 @@
   </div>
   <div class="artist-artworks-container">
     <% @artworks.select {|artwork| artwork.artist_id == @artist.id}.each do |artwork| %>
-      <img src="https://placeholdit.co//i/500x500?&bg=cdcdcd&fc=white&text=photo de l'oeuvre" alt="picture of the art">
+      <%= cl_image_tag artwork.photo, height: 800, width: 800, crop: :fill, :class => "artist-artwork-photo" %>
       <p><%= artwork.name %></p>
     <% end %>
   </div>
