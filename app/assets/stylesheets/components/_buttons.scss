@@ -1,12 +1,18 @@
 .button {
-  max-width: 260px;
-  letter-spacing: 0.5em;
-  font-size: 14px;
+  width: 260px;
+  letter-spacing: 0.2em;
+  font-size: 12px;
   font-family: "Roboto";
   text-transform: uppercase;
   font-weight: 400;
-  padding: 20px 40px;
+  padding: 14px 20px;
   border: 1px solid $red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button:hover {
+  opacity: 0.9;
 }
 
 .primary {
@@ -16,5 +22,5 @@
 
 .secondary {
   color: $red;
-  background-color: $white;
+  background-color: white;
 }

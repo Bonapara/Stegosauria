@@ -1,4 +1,4 @@
-.artwork-card {
+.artworks-card {
   width: 220px;
   position: relative;
   margin-top: 10px;
@@ -10,7 +10,7 @@
   }
 }
 
-.artwork-sold {
+.artworks-sold {
   position: absolute;
   top: -10px;
   left: -10px;
@@ -25,7 +25,7 @@
   border: 1px solid white;
 }
 
-.artwork-infos {
+.artworks-infos {
   text-align: left;
   a {
     text-decoration: none;
@@ -38,14 +38,14 @@
   }
 }
 
-.artwork-artist {
+.artworks-artist {
   font-weight: bolder;
   letter-spacing: 0.0em;
   font-size: 14px;
   font-family: "Cardo";
 }
 
-.artwork-name {
+.artworks-name {
   color: $dark-gray;
   letter-spacing: 0.2em;
   font-size: 14px;
@@ -60,6 +60,6 @@
   border-bottom: 1px solid $medium-gray;
 }
 
-.artwork-name:hover {
+.artworks-name:hover {
   color: $red;
 }

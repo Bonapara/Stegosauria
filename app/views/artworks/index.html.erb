@@ -15,20 +15,22 @@
   <!-- TODO passer les artists en locals dans une partial de artist_card -->
   <% @artworks.each do |artwork| %>
     <div class="column">
-      <div class="artwork-card">
-        <div class="artwork-img">
-          <%= image_tag "artwork_2.png" %>
-        </div>
+      <div class="artworks-card">
+        <%= link_to artwork_path(artwork) do %>
+          <div class="artworks-img">
+            <%= image_tag "artwork_2.png" %>
+          </div>
+        <% end %>
         <!-- Sold label for sold artwork  -->
-        <div class="artwork-sold">
+        <div class="artworks-sold">
           Vendue
         </div>
-        <div class="artwork-infos">
-          <h2 class="artwork-artist">
+        <div class="artworks-infos">
+          <h2 class="artworks-artist">
             <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
           </h2>
           <%= link_to artwork_path(artwork) do %>
-            <h2 class="artwork-name">
+            <h2 class="artworks-name">
               <%= artwork.name %>
             </h2>
           <% end %>

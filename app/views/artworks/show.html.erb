@@ -1,5 +1,30 @@
-  <h2> <%= @artwork.name %> </h2>
-  <p> <%= @artwork.dimensions %> </p>
-  <p> <%= @artwork.artwork_domain %> </p>
-  <p> <%= @artwork.description %> </p>
-  <%= link_to 'Retour aux oeuvres', artworks_path %>
+<div class="main-container">
+  <div class="artwork-container">
+    <%= link_to artworks_path do %>
+      <p class="count previous-page"> < Retour aux oeuvres </p>
+    <% end %>
+    <div class="artwork-img">
+      <%= image_tag "artwork_2.png" %>
+    </div>
+    <div class="artwork-infos">
+      <h2> <%= @artwork.name %> </h2>
+      <h3> <%= @artwork.artist.last_name %> <%= @artwork.artist.first_name %></h3>
+      <div class="flex-inline">
+        <p class="info-type"> Dimensions </p> <p class="artwork-info"> <%= @artwork.dimensions %> </p>
+      </div>
+      <div class="flex-inline">
+        <p class="info-type"> Type </p> <p class="artwork-info"> <%= @artwork.artwork_domain %> </p>
+      </div>
+      <div class="flex-inline">
+        <p class="info-type"> Description </p> <p class="artwork-info"> <%= @artwork.description %> </p>
+      </div>
+      <div class="flex-inline">
+        <p class="info-type"> Prix </p> <p class="artwork-info"> <i class="fas fa-paint-brush"></i> </p>
+      </div>
+      <div class="artwork-info explanation"> Intéressé par cette oeuvre ? <br> Renseignez vos coordonnées, et nous vous recontactons au plus vite pour en discuter. </div>
+      <div class="button primary">
+        Je suis intéressé !
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,8 +4,10 @@
 // Define fonts for body and headers
 $body-font: "Libre Baskerville", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
-$retro-font: "Libre Baskerville";
-$modern-font: "Roboto";
+
+$modern-font: "Roboto", "Helvetica", "sans-serif";
+$retro-font: "Libre Baskerville", "Helvetica", "sans-serif";
+$retro-font-2: "Spectral", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
