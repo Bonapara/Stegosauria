@@ -1,19 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts '------------------------'
+puts 'WELCOME TO THE SEED 2.O '
+puts '🤘 🤘 🤘 🤘 🤘 🤘 🤘 🤘 🤘 🤘 🤘 🤘'
+puts '------------------------'
 
-require 'open-uri'
-require 'json'
-
+puts '-------------------'
 puts 'Cleaning database...'
+puts '-------------------'
+Artwork.destroy_all
+puts "Artworks destroyed"
 Artist.destroy_all
-# Artwork.destroy_all
-# User.destroy_all
-puts 'Creating artists...'
+puts "Artists destroyed"
+
+puts '-------------------------'
+puts '‍🎨   Creating artists...'
+puts '-------------------------'
 
 filepath = "https://raw.githubusercontent.com/Bonapara/seeds/master/artist.json"
 
@@ -29,36 +29,50 @@ open(filepath) do |artists|
         domain:      item.values[4],
         remote_photo_url: item.values[5]["url"]
       }
+    puts "creating #{item.values[1]} ..."
     data << object
     end
   end
   Artist.create!(data)
 end
 
-puts 'artists created'
+puts '-------------------'
+puts "#{Artist.count} artists created"
+puts '-------------------'
 
-# puts 'Creating artworks...'
-# # Artwork 1
-# artwork1 = Artwork.new( {
-#   name: "3 PLONGEUSES",
-#   dimensions: "32x59x8cm",
-#   artwork_domain: "sculpture",
-#   description: "Ce bronze est une sculpture d'art contemporain.",
-#   photo: "images/photo_artist1.jpeg",
-#   artist_id: artist3.id
-#   })
-# artwork1.save!
+puts '--------------------------'
+puts '🖼   Creating Artworks...'
+puts '--------------------------'
+filepath = "https://raw.githubusercontent.com/Bonapara/seeds/master/oeuvres"
 
-# artwork2 = Artwork.new( {
-#   name: "PERCHÉE",
-#   dimensions: "hauteur: 30 cm",
-#   artwork_domain: "sculpture",
-#   description: "Sculpture Perchée - Bronze numéroté 7/8",
-#   photo: "images/photo_artist1.jpeg",
-#   artist_id: artist2.id
-#   })
-# puts 'artworks created'
+open(filepath) do |oeuvres|
+  data = []
+  oeuvres.read.each_line do |oeuvre|
+    @items = JSON.parse(oeuvre)
+    @items.each do |item|
+      object = {
+        name:  item.values[1],
+        dimensions:   item.values[2],
+        artwork_domain:   item.values[3],
+        description:      item.values[4],
+        remote_photo_url: item.values[5]["url"],
+        artist_id:        Artist.all.shuffle[0].id
+      }
+    puts "creating #{item.values[1]} ..."
+    data << object
+    end
+  end
+  Artwork.create!(data)
+end
 
-# artwork2.save!
+puts '-------------------'
+puts "#{Artwork.count} artworks created"
+puts '-------------------'
+
+puts '------------------------'
+puts '⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️'
+puts 'DATABASE HAS BEEN SEEDED '
+puts '🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥'
+puts '------------------------'
 
 
