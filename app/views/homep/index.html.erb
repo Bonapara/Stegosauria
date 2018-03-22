@@ -8,20 +8,25 @@
     </ol>
 
     <!-- Wrapper for slides -->
+
     <div class="carousel-inner">
-      <div class="item active" id="slide1">
+      <!-- PHOTO 1 -->
+      <div class="item active" class="slide">
+        <%= image_tag @photo_slide1 %>
         <div class="carousel-caption">
           <h4>Image 1</h4>
         </div>
       </div>
-
-      <div class="item" id="slide2">
+      <!-- PHOTO 2 -->
+      <div class="item" class="slide">
+        <%= image_tag @photo_slide2 %>
         <div class="carousel-caption">
           <h4>Image 2</h4>
         </div>
       </div>
-
-      <div class="item" id="slide3">
+      <!-- PHOTO 3 -->
+      <div class="item" class="slide">
+        <%= image_tag @photo_slide3 %>
         <div class="carousel-caption">
           <h4>Image 3</h4>
         </div>
@@ -29,16 +34,9 @@
     </div>
 
     <!-- Controls -->
+    <!-- left side -->
     <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
-
+    <!-- right side -->
     <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
   </div>
 </div>
-
-
-
-
-
-
-
-
