@@ -11,7 +11,6 @@
 .artwork-container {
   display: flex;
   position: relative;
-  // margin-top: $navbar-height;
   padding-top: 100px;
   img {
     width: 600px;
@@ -20,7 +19,7 @@
 }
 
 .artwork-infos {
-  margin-left: 50px;
+  padding-left: 60px;
   h2 {
     margin: 0px 0px 10px 0px;
     color: black;
@@ -39,6 +38,12 @@
     border-bottom: 1px solid $medium-gray;
   }
 
+  img {
+    width: 16px;
+    height: auto;
+    box-shadow: none;
+  }
+
   .info-type {
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -48,18 +53,56 @@
     margin-right: 12px;
   }
 
+  #description {
+    margin-bottom: 5px !important;
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0px !important;
+  }
+
   .artwork-info {
     font-size: 16px;
     font-family: "Cardo";
     font-weight: 300;
   }
 
-  .artwork-info:first-child {
-    margin-top: 20px;
-  }
-
   .explanation {
     margin: 50px 0px 0px 0px;
     font-style: italic;
+  }
+}
+
+// @media screen and (min-width : 480px) and (max-width: 900px)
+@media screen and (max-width: 1050px)
+{
+  .artwork-container {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .explanation {
+      text-align: center;
+    }
+  }
+  .artwork-infos {
+    padding-left: 0px;
+    img {
+      width: 16px;
+      height: auto;
+      box-shadow: none;
+    }
+  }
+  .button {
+    margin-bottom: 50px;
   }
 }
