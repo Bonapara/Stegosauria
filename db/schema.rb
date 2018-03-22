@@ -37,14 +37,6 @@ ActiveRecord::Schema.define(version: 20180322152011) do
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
-  create_table "home_pages", force: :cascade do |t|
-    t.string "photo_slide1"
-    t.string "photo_slide2"
-    t.string "photo_slide3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "home_ps", force: :cascade do |t|
     t.string "photo_slide1"
     t.string "photo_slide2"
