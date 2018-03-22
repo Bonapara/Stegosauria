@@ -1,0 +1,20 @@
+.button {
+  max-width: 260px;
+  letter-spacing: 0.5em;
+  font-size: 14px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 20px 40px;
+  border: 1px solid $red;
+}
+
+.primary {
+  color: white;
+  background-color: $red;
+}
+
+.secondary {
+  color: $red;
+  background-color: $white;
+}

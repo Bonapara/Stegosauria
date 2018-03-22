@@ -1,5 +1,7 @@
 .artwork-card {
   width: 220px;
+  position: relative;
+  margin-top: 10px;
   img {
     width: 220px;
     height: auto;
@@ -8,10 +10,31 @@
   }
 }
 
+.artwork-sold {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: white;
+  letter-spacing: 0.5em;
+  font-size: 10px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 8px 16px;
+  background-color: $red;
+  border: 1px solid white;
+}
+
 .artwork-infos {
-  text-align: center;
+  text-align: left;
   a {
     text-decoration: none;
+    h2 {
+      margin: 0px;
+    }
+  }
+  h2 {
+    margin: 14px 0px 8px 0px;
   }
 }
 
