@@ -1,0 +1,108 @@
+.previous-page {
+  position: absolute;
+  margin-top: $navbar-height;
+  top: 20px;
+}
+
+.previous-page:hover {
+  text-decoration: underline;
+}
+
+.artwork-container {
+  display: flex;
+  position: relative;
+  padding-top: 100px;
+  img {
+    width: 600px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  }
+}
+
+.artwork-infos {
+  padding-left: 60px;
+  h2 {
+    margin: 0px 0px 10px 0px;
+    color: black;
+    font-weight: lighter;
+    font-size: 30px;
+    font-family: "Roboto";;
+  }
+
+  h3 {
+    margin: 0px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
+    color: black;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: "Cardo";
+    border-bottom: 1px solid $medium-gray;
+  }
+
+  img {
+    width: 16px;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .info-type {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    font-family: "Roboto";
+    color: $red;
+    margin-right: 12px;
+  }
+
+  #description {
+    margin-bottom: 5px !important;
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0px !important;
+  }
+
+  .artwork-info {
+    font-size: 16px;
+    font-family: "Cardo";
+    font-weight: 300;
+  }
+
+  .explanation {
+    margin: 50px 0px 0px 0px;
+    font-style: italic;
+  }
+}
+
+// @media screen and (min-width : 480px) and (max-width: 900px)
+@media screen and (max-width: 1050px)
+{
+  .artwork-container {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .explanation {
+      text-align: center;
+    }
+  }
+  .artwork-infos {
+    padding-left: 0px;
+    img {
+      width: 16px;
+      height: auto;
+      box-shadow: none;
+    }
+  }
+  .button {
+    margin-bottom: 50px;
+  }
+}

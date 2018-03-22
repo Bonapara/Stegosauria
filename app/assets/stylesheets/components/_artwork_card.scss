@@ -1,5 +1,7 @@
-.artwork-card {
+.artworks-card {
   width: 220px;
+  position: relative;
+  margin-top: 10px;
   img {
     width: 220px;
     height: auto;
@@ -8,21 +10,42 @@
   }
 }
 
-.artwork-infos {
-  text-align: center;
+.artworks-sold {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: white;
+  letter-spacing: 0.5em;
+  font-size: 10px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 8px 16px;
+  background-color: $red;
+  border: 1px solid white;
+}
+
+.artworks-infos {
+  text-align: left;
   a {
     text-decoration: none;
+    h2 {
+      margin: 0px;
+    }
+  }
+  h2 {
+    margin: 14px 0px 8px 0px;
   }
 }
 
-.artwork-artist {
+.artworks-artist {
   font-weight: bolder;
   letter-spacing: 0.0em;
   font-size: 14px;
   font-family: "Cardo";
 }
 
-.artwork-name {
+.artworks-name {
   color: $dark-gray;
   letter-spacing: 0.2em;
   font-size: 14px;
@@ -37,6 +60,6 @@
   border-bottom: 1px solid $medium-gray;
 }
 
-.artwork-name:hover {
+.artworks-name:hover {
   color: $red;
 }
