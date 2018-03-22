@@ -17,7 +17,7 @@
     <div class="column">
       <div class="artwork-card">
         <div class="artwork-img">
-          <%= image_tag "artwork_2.png" %>
+          <%= cl_image_tag artwork.photo, crop: :fill %>
         </div>
         <div class="artwork-infos">
           <h2 class="artwork-artist">
