@@ -89,7 +89,6 @@
 
 .mobile-menu {
   display: none;
-  margin-top: 60px;
 }
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
@@ -104,8 +103,9 @@
   }
 
   .mobile-menu.show {
-    display: flex !important;
-    flex-direction: column;
+    display: block !important;
+    // display: flex !important;
+    // flex-direction: column;
   }
 
   .navbar-menu-item {
@@ -121,6 +121,16 @@
 
   .navbar-menu-item:last-child {
     margin-right: 0px !important;
+  }
+
+  .mobile-menu-container {
+    background-color: white;
+    z-index: 900;
+    width: 100%;
+    position: fixed;
+    top: $navbar-height;
+    display: flex;
+    flex-direction: column;
   }
 }
 
