@@ -18,7 +18,7 @@
       <div class="artworks-card">
         <%= link_to artwork_path(artwork) do %>
           <div class="artworks-img">
-            <%= image_tag "artwork_2.png" %>
+            <%= cl_image_tag artwork.photo, crop: :fill %>
           </div>
         <% end %>
         <!-- Sold label for sold artwork  -->

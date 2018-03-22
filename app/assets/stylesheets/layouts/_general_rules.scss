@@ -7,4 +7,11 @@
 .flex-inline {
   display: flex;
   align-items: center;
+
+.invisible {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
 }
