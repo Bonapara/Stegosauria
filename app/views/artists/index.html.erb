@@ -15,7 +15,12 @@
     <div class="column">
       <div class="artist-card">
         <div class="artist-img">
-          <%= image_tag "artwork_2.png" %>
+          <!-- If an artist does not have artworks, display a random image -->
+          <% if artist.artworks.first %>
+            <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
+          <% else %>
+            <%= image_tag "artwork_2.png" %>
+          <% end %>
         </div>
         <div class="artist-infos">
           <p class="artist-category">
