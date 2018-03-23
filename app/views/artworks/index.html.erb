@@ -27,7 +27,7 @@
         </div>
         <div class="artworks-infos">
           <h2 class="artworks-artist">
-            <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
+            <%= artwork.artist.first_name %> <%= artwork.artist.last_name %>
           </h2>
           <%= link_to artwork_path(artwork) do %>
             <h2 class="artworks-name">
@@ -39,3 +39,5 @@
     </div>
   <% end %>
  </div>
+
+ <%= will_paginate @artworks%>
