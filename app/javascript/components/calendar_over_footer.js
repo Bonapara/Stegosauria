@@ -1,4 +1,4 @@
-var socialFloat = document.querySelector('.articles-calendar');
+var articleCalendar = document.querySelector('.articles-calendar');
 var footer = document.querySelector('#footer');
 
 function checkOffset() {
@@ -7,12 +7,11 @@ function checkOffset() {
     return rect.top;
   }
 
-  if((getRectTop(socialFloat) + document.body.scrollTop) + socialFloat.offsetHeight >= (getRectTop(footer) + document.body.scrollTop) - 10)
-    socialFloat.style.position = 'absolute';
+  if((getRectTop(articleCalendar) + document.body.scrollTop) + articleCalendar.offsetHeight >= (getRectTop(footer) + document.body.scrollTop) - 10)
+    articleCalendar.style.position = 'absolute';
   if(document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop))
-    socialFloat.style.position = 'fixed'; // restore when you scroll up
+    articleCalendar.style.position = 'fixed'; // restore when you scroll up
 
-  socialFloat.innerHTML = document.body.scrollTop + window.innerHeight;
 }
 
 document.addEventListener("scroll", function(){
