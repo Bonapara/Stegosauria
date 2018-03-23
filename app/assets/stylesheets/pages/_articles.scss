@@ -1,0 +1,80 @@
+.articles-container {
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles-illustrations {
+  position: relative;
+  margin-bottom: 10vh;
+  img {
+    width: 600px;
+  }
+  .contents-types {
+  left: 10px;
+  bottom: 55px;
+  background-color: white;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-family: $modern-font;
+  }
+  h1 {
+    position: absolute;
+    font-family: $retro-font;
+    font-size: 20px;
+    bottom: 5px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: $red;
+  }
+}
+
+.articles-right-part {
+  margin-left: 50px;
+}
+
+.articles-calendar {
+  height: 80vh;
+  background-color: $light-gray;
+  position: fixed;
+  right: 100px;
+
+  .calendar-title {
+    background-color: $red;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      color: white;
+      padding: 12px;
+      margin: 0px;
+    }
+  }
+
+  .calendar-row {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: bottom;
+    border-bottom: 1px solid $medium-gray;
+
+    h1 {
+      margin: 0px;
+      font-size: 14px;
+    }
+
+    .cal-content-type {
+      font-weight: bolder;
+      text-transform: capitalize;
+      color: $red;
+      font-family: $modern-font;
+    }
+
+    .cal-article-title {
+      margin-left: 5px;
+      font-family: $retro-font;
+    }
+  }
+}

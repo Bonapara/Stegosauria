@@ -4,17 +4,26 @@
 }
 
 .artist-container {
-  padding: 0px 100px;
+  margin-top: 100px;
+  padding: 0px 200px;
 }
+
 .show-artist-art-type {
+  background-color: $light-gray;
   font-family: $retro-font;
   font-size: 20px;
   color: $red;
   text-align: center;
+  padding-top: 40px;
   margin: 60px 0px 0px 0px;
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 .show-artist-name {
+  padding-bottom: 40px;
+  background-color: $light-gray;
   font-family: $modern-font;
   letter-spacing: 0.1em;
   font-size: 40px;
@@ -22,7 +31,6 @@
   text-align: center;
   color: $blue;
   margin: 0px 0px 80px 0px;
-  text-decoration: underline $red;
 }
 
 .artist-bio-photo-container {
@@ -34,6 +42,7 @@
   filter: url(#monochrome) brightness(90%);
   height: 200px;
   width: 200px;
+  z-index: -10;
 }
 
 .about-the-artist {
@@ -57,6 +66,10 @@
   padding-left: 30px;
 }
 
+.artist-artwork-photo {
+  width: 300px;
+}
+
 @media (max-width: 900px) {
   .artist-container{
     padding: 0px 30px;
@@ -72,4 +85,19 @@
   .artist-bio {
     padding-left: 0px !important;
   }
+}
+
+.artist-artworks-container {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.artist-artwork-card {
+  margin-right: 40px;
+}
+
+.artist-artwork-name {
+  border: none !important;
 }
