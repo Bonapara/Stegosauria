@@ -37,15 +37,19 @@
 .articles-calendar {
   height: 600px;
   background-color: $light-gray;
+  position: fixed;
+  right: 100px;
 
   .calendar-title {
     background-color: $red;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
     h1 {
       font-size: 24px;
       text-align: center;
       color: white;
-      padding: 15px;
-      margin-top: 0px;
+      padding: 12px;
+      margin: 0px;
     }
   }
 
@@ -63,7 +67,7 @@
 
     .cal-content-type {
       font-weight: bolder;
-      text-transform: uppercase;
+      text-transform: capitalize;
       color: $red;
       font-family: $modern-font;
     }
