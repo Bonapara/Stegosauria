@@ -1,0 +1,78 @@
+footer {
+  color: white;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.gray-wrapper {
+  margin-top: 80px;
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+}
+
+.footer-part-1 {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+  margin-bottom: 40px;
+}
+
+.footer-follow-us {
+  display: flex;
+  flex-direction: column;
+}
+
+// .footer-icon
+
+.footer-part-2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-part-3 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 60px 0px 0px 0px;
+  border-top: 1px solid rgb(60, 60, 60);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu-item {
+  color: $medium-gray-darker;
+  padding: 10px 0px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  transition: all 0.2s ease-out;
+}
+
+a.footer-menu-item {
+  text-decoration: none;
+}
+
+.bold {
+  color: white;
+  font-weight: 700;
+}
+
+.cgv {
+  color: rgb(100, 100, 100);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.footer-menu-item:hover {
+  color: $red;
+}
+
