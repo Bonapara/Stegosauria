@@ -83,13 +83,76 @@
 }
 
 /* Burger menu on mobile and tablet */
-.burger-menu, #close-button {
+#close-button {
   display: none;
+}
+
+.burger-menu {
+  display: none;
+  position: relative;
 }
 
 .mobile-menu {
   display: none;
 }
+
+
+#burger-btn {
+  border-top:3px solid black; /* Le premier trait */
+  height:25px;
+  width:30px;
+  box-sizing:border-box;
+  position:absolute;
+  z-index:30;
+  left:20px;
+  top:-10px;
+  cursor:pointer;
+  transition:all 0.3s ease-in;
+}
+
+#burger-btn.mobile-navigation {
+  border-color:transparent !important; /* On supprime le premier trait */
+}
+
+#burger-btn:before { /* Le deuxième trait */
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background:black;
+  top:8px;
+  transition:all 0.3s ease-in;
+}
+
+#burger-btn:after { /* Le troisième trait */
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background:black;
+  bottom:0;
+  transition:all 0.3s ease-in;
+}
+
+
+
+#burger-btn.mobile-navigation:before {
+  transform: rotate(45deg) !important;
+  width:33px !important;
+  left:-2px !important;
+}
+
+#burger-btn.mobile-navigation:after {
+  transform: rotate(135deg) !important;
+  bottom:11px !important;
+  width:33px !important;
+  left:-2px !important;
+}
+
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
 @media screen and (max-width: 1050px)
