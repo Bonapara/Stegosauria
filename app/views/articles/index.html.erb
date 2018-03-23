@@ -4,7 +4,7 @@
       <div class="articles-illustrations">
         <%= link_to article_path(article) do %>
           <%= cl_image_tag article.picture, crop: :fill %>
-          <h1 class="contents-types"><%= article.content_type %></h1>
+          <h2 class="contents-types"><%= article.content_type %></h2>
           <h1 class="articles-titles"><%= article.title %></h1>
         <% end %>
       </div>
@@ -35,3 +35,5 @@
     </div>
   </div>
 </div>
+
+<%= will_paginate @articles %>

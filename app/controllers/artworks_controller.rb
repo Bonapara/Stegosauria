@@ -3,9 +3,9 @@ class ArtworksController < ApplicationController
   def index         # GET /artworks
     if params[:commit]
       domain = params[:commit].downcase
-      @artworks = Artwork.where(artwork_domain: domain)
+      @artworks = Artwork.where(artwork_domain: domain).paginate(:page => params[:page], :per_page => 5)
     else
-      @artworks = Artwork.all
+      @artworks = Artwork.paginate(:page => params[:page], :per_page => 15)
     end
   end
 

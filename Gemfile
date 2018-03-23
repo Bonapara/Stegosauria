@@ -9,8 +9,11 @@ gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
 gem 'rails_admin', '~> 1.3'
+# For pictures upload
 gem 'carrierwave', '~> 1.2.2'
 gem 'cloudinary'
+# For pagination :
+gem 'will_paginate', '~> 3.1.6'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
