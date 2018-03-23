@@ -58,6 +58,10 @@ a.footer-menu-item {
   text-decoration: none;
 }
 
+a.footer-menu-item:hover {
+  color: $red;
+}
+
 .bold {
   color: white;
   font-weight: 700;
@@ -72,7 +76,4 @@ a.footer-menu-item {
   padding: 20px;
 }
 
-.footer-menu-item:hover {
-  color: $red;
-}
 
