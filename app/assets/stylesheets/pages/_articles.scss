@@ -1,0 +1,140 @@
+.articles-container {
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles-illustrations {
+  position: relative;
+  margin-bottom: 10vh;
+  img {
+    width: 600px;
+  }
+  .contents-types {
+    @media (min-width: 800px) {
+      left: 10px;
+      bottom: 55px;
+    }
+  position: absolute;
+  background-color: white;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-family: $modern-font;
+  }
+  .articles-titles {
+    position: absolute;
+    font-family: $retro-font;
+    font-size: 20px;
+    bottom: 5px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: $red;
+  }
+}
+
+.articles-right-part {
+  margin-left: 50px;
+}
+
+.articles-calendar {
+  height: 80vh;
+  background-color: $light-gray;
+  position: fixed;
+  right: 100px;
+
+  .calendar-title {
+    background-color: $red;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      color: white;
+      padding: 12px;
+      margin: 0px;
+    }
+  }
+
+  .calendar-row {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: bottom;
+    border-bottom: 1px solid $medium-gray;
+
+    h1 {
+      margin: 0px;
+      font-size: 14px;
+    }
+
+    .cal-content-type {
+      font-weight: bolder;
+      text-transform: capitalize;
+      color: $red;
+      font-family: $modern-font;
+    }
+
+    .cal-article-title {
+      margin-left: 5px;
+      font-family: $retro-font;
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .articles-container {
+    margin: 100px 5vw;
+  }
+  .articles-calendar {
+    position: fixed;
+  }
+  .articles-illustrations {
+    img {
+      width: 45vw;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .articles-right-part {
+    display: none;
+  }
+
+  .articles-container {
+    margin-left: 5vh;
+    margin-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .articles-illustrations {
+    img {
+      width: 60vw;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .articles-illustrations {
+    .contents-types {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      margin: 0px;
+    }
+    .articles-titles {
+      position: absolute;
+      font-family: $retro-font;
+      font-size: 18px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 10px 10px;
+      margin: 0px;
+      background-color: $red;
+    }
+  }
+}
+

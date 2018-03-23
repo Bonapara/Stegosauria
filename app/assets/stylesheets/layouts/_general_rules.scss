@@ -5,6 +5,10 @@
   padding: 0px 100px;
 }
 
+.margin-top-under-navbar {
+  margin-top: 100px;
+}
+
 .flex-inline {
   display: flex;
   align-items: center;
@@ -16,4 +20,8 @@
 
 .visible {
   display: block !important;
+}
+
+a:hover {
+  text-decoration: none;
 }

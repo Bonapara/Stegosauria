@@ -31,8 +31,21 @@
   </div>
   <div class="artist-artworks-container">
     <% @artworks.select {|artwork| artwork.artist_id == @artist.id}.each do |artwork| %>
-      <%= cl_image_tag artwork.photo, height: 800, width: 800, crop: :fill, :class => "artist-artwork-photo" %>
-      <p><%= artwork.name %></p>
+      <div class="artwork-card artist-artwork-card">
+        <div class="artwork-img">
+          <%= cl_image_tag artwork.photo, crop: :fill %>
+        </div>
+        <div class="artwork-infos">
+          <h2 class="artwork-artist">
+            <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
+          </h2>
+          <%= link_to artwork_path(artwork) do %>
+          <h2 class="artwork-name artist-artwork-name">
+            <%= artwork.name %>
+          </h2>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
   <%= link_to 'Retour aux artistes', artists_path %>

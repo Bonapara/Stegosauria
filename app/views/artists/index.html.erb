@@ -9,19 +9,21 @@
   </div>
 </div>
 <!-- Artist cards container -->
-<div class="columns-container">
+<div class="columns-container margin">
   <!-- TODO passer les artists en locals dans une partial de artist_card -->
   <% @artists.each do |artist| %>
     <div class="column">
       <div class="artist-card">
-        <div class="artist-img">
-          <!-- If an artist does not have artworks, display a random image -->
-          <% if artist.artworks.first %>
-            <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
-          <% else %>
-            <%= image_tag "artwork_2.png" %>
-          <% end %>
-        </div>
+        <%= link_to artist_path(artist) do %>
+          <div class="artist-img">
+            <!-- If an artist does not have artworks, display a random image -->
+            <% if artist.artworks.first %>
+              <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
+            <% else %>
+              <%= image_tag "artwork_2.png" %>
+            <% end %>
+          </div>
+        <% end %>
         <div class="artist-infos">
           <p class="artist-category">
             <%= artist.domain %>
@@ -39,4 +41,6 @@
     </div>
   <% end %>
  </div>
+
+<%= will_paginate @artists %>
 
