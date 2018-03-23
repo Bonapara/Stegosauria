@@ -49,14 +49,14 @@
 // responsivness
 @media screen and (max-width: 1050px)
 {
-  .grid {
+  .gallery-container {
     margin: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  .gallery-owner-picture {
+  .gallery-owner-photo {
     display: none;
   }
   .gallery-photo {
