@@ -60,14 +60,6 @@ ActiveRecord::Schema.define(version: 20180323093521) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "home_pages", force: :cascade do |t|
-    t.string "photo_slide1"
-    t.string "photo_slide2"
-    t.string "photo_slide3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "home_ps", force: :cascade do |t|
     t.string "photo_slide1"
     t.string "photo_slide2"
