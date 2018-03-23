@@ -2,6 +2,10 @@ footer {
   color: white;
   width: 100%;
   padding-top: 30px;
+
+  form {
+    display: flex;
+  }
 }
 
 .gray-wrapper {
@@ -36,7 +40,7 @@ footer {
 .footer-part-2 {
   display: flex;
   justify-content: space-between;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 30px 0px 30px;
 }
 
 .footer-part-3 {
@@ -122,10 +126,6 @@ a.footer-menu-item:hover {
   font-family: "Roboto";
   padding: 8px;
   border: none;
-}
-
-form {
-  display: flex;
 }
 
 .form-button {
