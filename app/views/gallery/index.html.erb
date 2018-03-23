@@ -1,0 +1,40 @@
+<div class="grid">
+    <!-- Photo Gallery -->
+    <div class="gallery-photo">
+      <%= cl_image_tag @gallery.photo_gallery, crop: :fill %>
+    </div>
+    <!-- Photo Owner Gallery -->
+    <div class="gallery-owner-picture">
+      <%= cl_image_tag @gallery.photo_owner, crop: :fill %>
+    </div>
+    <!-- Description Gallery -->
+    <div class="description-gallery-container">
+      <div class="description-gallery">
+        <%= @gallery.description %>
+      </div>
+    </div>
+     <!-- MAP with adrress -->
+    <div class="map-container">
+      <a href="https://www.google.com/maps/search/?api=1&query=48.88127219999999,2.2893503000000237" >Où nous trouver : <%= @gallery.address %></a>
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+      function initMap() {
+        var uluru = {lat: 48.88127219999999, lng: 2.2893503000000237};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDydWVWRaKnNU8wx0qIl-8n8Luv1ZdXRU4&callback=initMap">
+</script>
+
