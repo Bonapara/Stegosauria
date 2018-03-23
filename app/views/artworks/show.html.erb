@@ -1,5 +1,33 @@
-  <h2> <%= @artwork.name %> </h2>
-  <p> <%= @artwork.dimensions %> </p>
-  <p> <%= @artwork.artwork_domain %> </p>
-  <p> <%= @artwork.description %> </p>
-  <%= link_to 'Retour aux oeuvres', artworks_path %>
+<div class="main-container">
+  <div class="artwork-container">
+    <%= link_to artworks_path do %>
+      <p class="count previous-page"> < Retour aux oeuvres </p>
+    <% end %>
+    <div class="artwork-img">
+      <%= cl_image_tag @artwork.photo, crop: :fill %>
+    </div>
+    <div class="artwork-infos">
+      <h2> <%= @artwork.name %> </h2>
+      <h3> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
+      <p class="info-type" id="description"> Description </p>
+      <p class="artwork-info"> <%= @artwork.description %> </p>
+      <div class="flex-inline">
+        <p class="info-type"> Dimensions </p> <p class="artwork-info"> <%= @artwork.dimensions %> </p>
+      </div>
+      <div class="flex-inline">
+        <p class="info-type"> Type </p> <p class="artwork-info"> <%= @artwork.artwork_domain %> </p>
+      </div>
+      <div class="flex-inline">
+        <p class="info-type"> Prix </p> <p class="artwork-info"> <%= image_tag "brush-bold" %> <%= image_tag "brush-bold" %> </p>
+      </div>
+      <div class="button-container">
+        <div class="artwork-info explanation">
+          Intéressé par cette oeuvre ? <br> Renseignez vos coordonnées, nous vous recontacterons au plus vite pour en discuter.
+        </div>
+        <div class="button primary">
+          Je suis intéressé !
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

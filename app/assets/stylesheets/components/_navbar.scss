@@ -1,5 +1,6 @@
 /* Navbar container */
 .navbar {
+  z-index: 1000;
   position: fixed;
   top: 0px;
   display: flex;
@@ -7,7 +8,7 @@
   justify-content: space-between;
   width: 100%;
   background: white;
-  height: 60px;
+  height: $navbar-height;
   padding: 0px 0px;
   margin: 0px;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -88,7 +89,6 @@
 
 .mobile-menu {
   display: none;
-  margin-top: 60px;
 }
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
@@ -103,8 +103,9 @@
   }
 
   .mobile-menu.show {
-    display: flex !important;
-    flex-direction: column;
+    display: block !important;
+    // display: flex !important;
+    // flex-direction: column;
   }
 
   .navbar-menu-item {
@@ -120,6 +121,16 @@
 
   .navbar-menu-item:last-child {
     margin-right: 0px !important;
+  }
+
+  .mobile-menu-container {
+    background-color: white;
+    z-index: 900;
+    width: 100%;
+    position: fixed;
+    top: $navbar-height;
+    display: flex;
+    flex-direction: column;
   }
 }
 

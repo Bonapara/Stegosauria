@@ -19,16 +19,18 @@
     <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
   </div>
   <!-- Instagram Logo -->
-  <!-- <div class="navbar-social-networks">
-    <%#= image_tag "instagram-logo.png" %>
-  </div> -->
+  <div class="navbar-social-networks">
+    <%= image_tag "instagram-logo.png" %>
+  </div>
 </div>
 
 <!-- Mobile menu invisible on desktop -->
 <div class="mobile-menu">
+  <div class="mobile-menu-container">
   <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "EXPOSITIONS & ACTUS", "#", class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "LA GALERIE", "#", class: "navbar-menu-item navbar-menu-link" %>
+  </div>
 </div>
 

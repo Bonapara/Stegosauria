@@ -1,6 +1,17 @@
 .main-container {
-  margin: 20px 85px;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  padding: 0px 100px;
+}
+
+.margin-top-under-navbar {
+  margin-top: 100px;
+}
+
+.flex-inline {
+  display: flex;
+  align-items: center;
 }
 
 .invisible {

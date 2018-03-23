@@ -3,7 +3,7 @@
   width: 100%;
   background-color: $light-red;
   text-align: center;
-  margin-top: 60px;
+  margin-top: $navbar-height;
   margin-bottom: 40px;
 
   h1 {
@@ -18,15 +18,19 @@
 }
 
 .count {
+  width: 100%;
   font-size: 12px;
-  padding: 0 10px;
   text-transform: uppercase;
   font-family: "Roboto";
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
+// .title-mobile {
+//   margin-top: 0px !important;
+// }
 
-.title-mobile {
-  margin-top: 0px !important;
+.margin-under-navbar {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }

@@ -6,7 +6,7 @@
 </div> -->
 <!-- Artists count -->
 <div class="main-container">
-  <div class="count">
+  <div class="count margin-under-navbar">
     <%= @artworks.count %> oeuvres
   </div>
 </div>
@@ -15,16 +15,22 @@
   <!-- TODO passer les artists en locals dans une partial de artist_card -->
   <% @artworks.each do |artwork| %>
     <div class="column">
-      <div class="artwork-card">
-        <div class="artwork-img">
-          <%= cl_image_tag artwork.photo, crop: :fill %>
+      <div class="artworks-card">
+        <%= link_to artwork_path(artwork) do %>
+          <div class="artworks-img">
+            <%= cl_image_tag artwork.photo, crop: :fill %>
+          </div>
+        <% end %>
+        <!-- Sold label for sold artwork  -->
+        <div class="artworks-sold">
+          Vendue
         </div>
-        <div class="artwork-infos">
-          <h2 class="artwork-artist">
+        <div class="artworks-infos">
+          <h2 class="artworks-artist">
             <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
           </h2>
           <%= link_to artwork_path(artwork) do %>
-            <h2 class="artwork-name">
+            <h2 class="artworks-name">
               <%= artwork.name %>
             </h2>
           <% end %>
