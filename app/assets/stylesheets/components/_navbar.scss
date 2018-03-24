@@ -90,16 +90,14 @@
 .burger-menu {
   display: none;
   position: relative;
-}
-
-.mobile-menu {
-  display: none;
+  padding-left: 60px;
 }
 
 
 #burger-btn {
-  border-top:3px solid black; /* Le premier trait */
-  height:25px;
+  // First line
+  border-top:2px solid black;
+  height:22px;
   width:30px;
   box-sizing:border-box;
   position:absolute;
@@ -110,11 +108,8 @@
   transition:all 0.3s ease-in;
 }
 
-#burger-btn.mobile-navigation {
-  border-color:transparent !important; /* On supprime le premier trait */
-}
-
-#burger-btn:before { /* Le deuxième trait */
+// 2nd line
+#burger-btn:before {
   content:"";
   display:block;
   position:absolute;
@@ -126,7 +121,8 @@
   transition:all 0.3s ease-in;
 }
 
-#burger-btn:after { /* Le troisième trait */
+// 3rd line
+#burger-btn:after {
   content:"";
   display:block;
   position:absolute;
@@ -135,23 +131,28 @@
   left:0;
   background:black;
   bottom:0;
-  transition:all 0.3s ease-in;
+  transition:all 0.4s ease-out;
 }
 
-
+// Burger button animation
+// First line removing
+#burger-btn.mobile-navigation {
+  border-color:transparent !important;
+}
 
 #burger-btn.mobile-navigation:before {
   transform: rotate(45deg) !important;
-  width:33px !important;
-  left:-2px !important;
+  width:28px !important;
+  // left:-2px !important;
 }
 
 #burger-btn.mobile-navigation:after {
   transform: rotate(135deg) !important;
-  bottom:11px !important;
-  width:33px !important;
-  left:-2px !important;
+  bottom:10px !important;
+  width:28px !important;
+  // left:-2px !important;
 }
+
 
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
@@ -187,22 +188,48 @@
   }
 
   .mobile-menu-container {
+    z-index: 900;
+    width: 100%;
+    position: fixed;
+    // top: $navbar-height;
+    // position: absolute;
+    top:-244px;
+    display: flex;
+    flex-direction: column;
+    transition:all 0.4s ease-out;
     a {
       background-color: white;
       opacity: 1;
     }
 
     .mobile-menu-darker {
-      opacity: 0.7;
+      opacity: 0;
       background-color: black;
-      height: 1000px;
+      height: 200vh;
+      transition:all 0.4s ease-out;
     }
-    z-index: 900;
-    width: 100%;
-    position: fixed;
-    top: $navbar-height;
-    display: flex;
-    flex-direction: column;
+
+    .mobile-menu-darker.add-opacity {
+      opacity: 0.7;
+    }
   }
 }
+
+// .mobile-menu-fixed {
+//   // display: none;
+//   position: fixed;
+//   top: $navbar-height;
+// }
+// .mobile-menu {
+//   // display: none;
+//   position: relative;
+// }
+
+.mobile-menu-container.translation {
+  transform: translateY(304px);
+}
+// .mobile-menu-container {
+//   position: absolute;
+//   top: -500px;
+// }
 

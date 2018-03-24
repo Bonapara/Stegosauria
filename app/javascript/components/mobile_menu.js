@@ -1,21 +1,22 @@
 // Elements selection
 const burgerMenuIcon = document.querySelector("#burger-btn");
-const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenu = document.querySelector(".mobile-menu-container");
 const sectionTitle = document.querySelector(".section-title");
 const closeButton = document.querySelector("#close-button");
 const mainContainer = document.querySelector(".main-container");
+const mobileMenuDarker = document.querySelector(".mobile-menu-darker");
 
 // Function to display/delete the mobile menu
 const displayBurgerMenu = () => {
   // Displaying mobile menu
-  // mobileMenu.classList.toggle("show");
+  // mobileMenu.classList.toggle("translation");
   // Replacing burger menu by close button
-  console.log("Hello");
   burgerMenuIcon.classList.toggle("mobile-navigation");
+  mobileMenu.classList.toggle("translation");
+  mobileMenuDarker.classList.toggle("add-opacity");
   // closeButton.classList.toggle("visible");
   // Removing margin top on the title section
   // sectionTitle.classList.toggle("title-mobile");
-
 };
 
 // When a user clicks on the burger menu icon or close button, the burger menu is displaying
