@@ -73,6 +73,22 @@
   }
 }
 
+
+.contact-form-input {
+  outline: none;
+  margin: 10px 0px;
+  width: 100%;
+  box-shadow: none;
+  border: 1px solid $medium-gray !important;
+  // background-color: rgb(60, 60, 60);
+  color: black;
+  font-size: 14px;
+  font-family: "Roboto";
+  padding: 8px;
+  border: none;
+}
+
+
 // @media screen and (min-width : 480px) and (max-width: 900px)
 @media screen and (max-width: 1050px)
 {
@@ -101,8 +117,20 @@
       height: auto;
       box-shadow: none;
     }
+    form {
+      width: 80%;
+    }
   }
   .button {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 650px)
+{
+  .artwork-infos {
+    form {
+      width: 100%;
+    }
   }
 }

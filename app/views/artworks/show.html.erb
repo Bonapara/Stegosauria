@@ -24,9 +24,25 @@
         <div class="artwork-info explanation">
           Intéressé par cette oeuvre ? <br> Renseignez vos coordonnées, nous vous recontacterons au plus vite pour en discuter.
         </div>
-        <div class="button primary">
-          Je suis intéressé !
-        </div>
+            <%= form_tag artworks_path, method: :get do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control contact-form-input",
+                placeholder: "Nom complet"
+              %>
+              <%= email_field_tag :query,
+                params[:query],
+                class: "form-control contact-form-input",
+                placeholder: "Adresse email"
+              %>
+              <%= text_area_tag :query,
+                params[:query],
+                class: "form-control contact-form-input",
+                placeholder: "Bonjour, cette oeuvre m'intéresse pour un éventuel achat. Est-il possible de m'envoyer des informations additionnelles ?",
+                rows: 4
+              %>
+            <%= submit_tag "Contacter la galerie", class: 'button primary' %>
+        <% end %>
       </div>
     </div>
   </div>
