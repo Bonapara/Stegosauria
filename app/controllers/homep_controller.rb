@@ -1,4 +1,5 @@
 class HomepController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     if HomeP.count > 0
       # PHOTO N°1 Carousel

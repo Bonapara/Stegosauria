@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index         # GET /artists
     # @artists = Artist.all
     @artists = Artist.paginate(:page => params[:page], :per_page => 15)

@@ -1,5 +1,5 @@
 class ArtworksController < ApplicationController
-
+  skip_before_action :authenticate_user!
   def index         # GET /artworks
     if params[:commit]
       domain = params[:commit].downcase
