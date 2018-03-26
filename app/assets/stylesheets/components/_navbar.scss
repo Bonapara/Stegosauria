@@ -1,4 +1,7 @@
-/* Navbar container */
+// NAVBAR
+//////////////////////////////////////////////////////////////////////
+
+// Navbar container
 .navbar {
   z-index: 1000;
   position: fixed;
@@ -12,12 +15,11 @@
   padding: 0px 0px;
   margin: 0px;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  // border-bottom: 1px solid black;
   transition: all 0.3s ease;
 }
 
 
-/* Isabelle Laverny brand */
+// Isabelle Laverny brand on the left
 .navbar-brand {
   p {
     margin: 0px;
@@ -38,7 +40,9 @@
 #Isabelle {
   letter-spacing: 0.1em;
 }
-/* Navbar menu */
+
+
+ // Navbar menu items
 .navbar-menu-item {
   cursor: pointer;
   padding: 0 20px;
@@ -54,7 +58,7 @@
 }
 
 
-/* Navbar link */
+// Navbar menu links
 .navbar-menu-link {
   color: black;
   font-size: 12px;
@@ -82,15 +86,82 @@
   }
 }
 
-/* Burger menu on mobile and tablet */
-.burger-menu, #close-button {
+
+// BURGER MENU
+//////////////////////////////////////////////////////////////////////
+
+.burger-menu {
   display: none;
+  position: relative;
+  padding-left: 60px;
 }
 
-.mobile-menu {
-  display: none;
+
+#burger-btn {
+  // First line
+  border-top:2px solid black;
+  height:22px;
+  width:30px;
+  box-sizing:border-box;
+  position:absolute;
+  z-index:30;
+  left:20px;
+  top:-10px;
+  cursor:pointer;
+  transition:all 0.3s ease-in;
 }
 
+// 2nd line
+#burger-btn:before {
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background:black;
+  top:8px;
+  transition:all 0.3s ease-in;
+}
+
+// 3rd line
+#burger-btn:after {
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background:black;
+  bottom:0;
+  transition:all 0.3s ease-out;
+}
+
+// Burger button animation
+// First line removing
+#burger-btn.mobile-navigation {
+  border-color:transparent !important;
+}
+
+// Line rotation
+#burger-btn.mobile-navigation:before {
+  transform: rotate(45deg) !important;
+  width:28px !important;
+}
+
+#burger-btn.mobile-navigation:after {
+  transform: rotate(135deg) !important;
+  bottom:10px !important;
+  width:28px !important;
+}
+
+// Menu translation
+.mobile-menu-container.translation {
+  transform: translateY(304px);
+}
+
+
+// On talet and mobile
 // @media screen and (min-width : 480px) and (max-width: 900px)
 @media screen and (max-width: 1050px)
 {
@@ -100,12 +171,6 @@
 
   .burger-menu {
     display: block !important;
-  }
-
-  .mobile-menu.show {
-    display: block !important;
-    // display: flex !important;
-    // flex-direction: column;
   }
 
   .navbar-menu-item {
@@ -124,22 +189,31 @@
   }
 
   .mobile-menu-container {
+    z-index: 900;
+    width: 100%;
+    position: fixed;
+    top:-244px;
+    display: flex;
+    flex-direction: column;
+    transition:all 0.4s ease-out;
     a {
       background-color: white;
       opacity: 1;
     }
 
     .mobile-menu-darker {
-      opacity: 0.7;
+      opacity: 0;
       background-color: black;
-      height: 1000px;
+      height: 0px;
+      transition:opacity 0.4s ease-out;
     }
-    z-index: 900;
-    width: 100%;
-    position: fixed;
-    top: $navbar-height;
-    display: flex;
-    flex-direction: column;
+
+    .mobile-menu-darker.add-opacity {
+      height: 200vh;
+      opacity: 0.7;
+    }
   }
 }
+
+
 

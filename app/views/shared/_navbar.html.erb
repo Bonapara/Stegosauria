@@ -2,8 +2,7 @@
 <div class="navbar">
   <!-- Burger menu icons on mobile -->
   <div class="burger-menu">
-    <%= image_tag "burger-menu.png", id: "burger-menu" %>
-    <%= image_tag "close-button.png", id: "close-button" %>
+    <div id="burger-btn"></div>
   </div>
   <!-- Isabelle Laverny Logo -->
   <div class="navbar-brand">
@@ -24,16 +23,16 @@
   </div>
 </div>
 
-<!-- Mobile menu invisible on desktop -->
-<div class="mobile-menu">
-  <div class="mobile-menu-container">
+<!-- Mobile menu invisible on desktop, visible on tablet and mobile -->
+<div class="mobile-menu-container">
   <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "EXPOSITIONS & ACTUS", articles_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "LA GALERIE", gallery_index_path, class: "navbar-menu-item navbar-menu-link" %>
+  <!-- Dark div on existing content, visble when the mobile menu is displaying -->
   <div class="mobile-menu-darker">
     <div id="dark-wrapper"></div>
   </div>
-  </div>
 </div>
+
 

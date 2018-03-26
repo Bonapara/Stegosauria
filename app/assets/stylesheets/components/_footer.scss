@@ -1,7 +1,11 @@
 footer {
   color: white;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 30px;
+
+  form {
+    display: flex;
+  }
 }
 
 .gray-wrapper {
@@ -12,11 +16,19 @@ footer {
 
 .footer-part-1 {
   display: flex;
-  justify-content: space-around;
-  padding-bottom: 40px;
+  justify-content: space-between;
+  padding: 0px 30px 40px 40px;
   border-bottom: 1px solid rgb(60, 60, 60);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
+
+// .footer-part-1:first-child {
+//   padding-left: 60px;
+// }
+
+// .footer-part-1:last-child {
+//   padding-right: 60px;
+// }
 
 .footer-follow-us {
   display: flex;
@@ -27,14 +39,15 @@ footer {
 
 .footer-part-2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 30px 0px 30px;
 }
 
 .footer-part-3 {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin: 60px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   border-top: 1px solid rgb(60, 60, 60);
 }
 
@@ -45,9 +58,9 @@ footer {
 
 .footer-menu-item {
   color: $medium-gray-darker;
-  padding: 10px 0px;
+  padding: 6px 0px;
   font-size: 12px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-family: "Roboto";
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -62,7 +75,19 @@ a.footer-menu-item:hover {
   color: $red;
 }
 
+.footer-adress {
+  text-transform: none;
+  padding: 4px 0px;
+  letter-spacing: 0.1em;
+  svg {
+    color: white;
+    margin-right: 8px;
+  }
+}
+
 .bold {
+  text-transform: uppercase;
+  padding: 10px 0px;
   color: white;
   font-weight: 700;
 }
@@ -76,4 +101,46 @@ a.footer-menu-item:hover {
   padding: 20px;
 }
 
+.footer-icon {
+  font-size: 28px;
+  svg {
+    margin-right: 10px;
+    transition: all 0.2s ease-out;
+  }
+  svg:hover {
+    color: $red;
+  }
+}
 
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form-input {
+  outline: none;
+  width: 200px;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto";
+  padding: 8px;
+  border: none;
+}
+
+.form-button {
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 9px 20px;
+  border: none;
+  text-align: center;
+  color: white;
+  background-color: $red;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}

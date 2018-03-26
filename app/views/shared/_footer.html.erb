@@ -2,17 +2,52 @@
   <div class="main-container">
     <footer id="footer">
       <div class="footer-part-1">
+
         <div class="footer-follow-us">
           <div class="footer-menu-item bold">
-            Suivre la galerie Isabelle Laverny
+            Nous suivre
           </div>
           <div class="footer-icon">
-            <i class="fab fa-facebook-square"></i>   
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-pinterest-square"></i>
           </div>
         </div>
-        <div class="footer-menu-item bold">
-          Newsletter
+
+        <div class="newsletter">
+          <div class="footer-menu-item bold">
+            Newsletter
+          </div>
+          <%= form_tag artworks_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-inline footer-form-input",
+              placeholder: "monadresse@gmail.com" %>
+              <%= submit_tag "Je m'inscris", class: 'form-button' %>
+          <% end %>
         </div>
+
+        <div class="footer-about">
+          <div class="footer-menu-item bold">
+            Galerie Isabelle Laverny
+          </div>
+          <div class="footer-menu-item footer-adress">
+            <i class="fas fa-map-marker-alt"></i> 27 rue Guersant, 75017 Paris
+          </div>
+          <div class="footer-menu-item footer-adress">
+            <i class="fas fa-phone"></i> 01 45 72 55 69
+          </div>
+          <div class="footer-menu-item footer-adress">
+            <i class="fas fa-clock"></i> Mardi au vendredi : 12h - 19h15 <br> <i class="fas fa-clock transparent"></i> Samedi : 10h30 - 13h | 15h - 19h30
+          </div>
+          <div class="footer-menu-item footer-adress">
+            <i class="fas fa-envelope"></i> contact@galerieisabellelaverny.com
+          </div>
+
+
+
+        </div>
+
       </div>
       <div class="footer-part-2">
         <div class="footer-column">
@@ -24,10 +59,13 @@
         </div>
         <div class="footer-column">
           <%= link_to "Oeuvres", artworks_path, class: "footer-menu-item bold" %>
-          <%= link_to "Les 3 muses", artworks_path, class: "footer-menu-item" %>
-          <%= link_to "Africaine Totem", artworks_path, class: "footer-menu-item" %>
-          <%= link_to "Arbre de Vie", artworks_path, class: "footer-menu-item" %>
-          <%= link_to "Arrivée à Deauville", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Sculpture", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Peinture", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Photographie", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Dessin", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Céramique", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Installation", artworks_path, class: "footer-menu-item" %>
+          <%= link_to "Edition", artworks_path, class: "footer-menu-item" %>
         </div>
         <div class="footer-column">
           <%= link_to "Expositions & actus", "#", class: "footer-menu-item bold" %>
