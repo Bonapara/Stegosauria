@@ -13,24 +13,26 @@ RailsAdmin.config do |config|
   end
 
     config.model 'HomeP' do
-    label "Accueil"
-    label_plural "Accueil"
+    label "Page d'accueil"
+    label_plural "Page d'accueil"
     weight 1
   end
 
     config.model 'Article' do
+    label "Expos et actus"
+    label_plural "Expos et actus"
     weight 4
   end
 
     config.model 'Gallery' do
-    label "Galerie"
-    label_plural "Galerie"
+    label "La galerie"
+    label_plural "La galerie"
     weight 5
   end
 
     config.model 'User' do
-    label "Client"
-    label_plural "Clients"
+    label "Users"
+    label_plural "Users"
     weight 6
   end
 
