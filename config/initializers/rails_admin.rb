@@ -1,5 +1,42 @@
 RailsAdmin.config do |config|
 
+  config.model 'Artwork' do
+    label "Oeuvre"
+    label_plural "Oeuvres"
+    weight 2
+  end
+
+    config.model 'Artist' do
+    label "Artiste"
+    label_plural "Artistes"
+    weight 3
+  end
+
+    config.model 'HomeP' do
+    label "Accueil"
+    label_plural "Accueil"
+    weight 1
+  end
+
+    config.model 'Article' do
+    weight 4
+  end
+
+    config.model 'Gallery' do
+    label "Galerie"
+    label_plural "Galerie"
+    weight 5
+  end
+
+    config.model 'User' do
+    label "Client"
+    label_plural "Clients"
+    weight 6
+  end
+
+
+
+
   ### Popular gems integration
 
   ## == Devise ==
