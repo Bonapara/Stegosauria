@@ -1,15 +1,20 @@
 /* Carousel */
-
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
+  padding: 0;
+}
+.carousel-inner {
+  position: relative;
+  width: 900px;
 }
 
 // largeur carousel
 #myCarousel {
-  width: 100%;
+
 }
 
 // hauteur slide image
@@ -17,7 +22,43 @@
   height: 400px;
 
 }
-// Image Carousel 3
+// carousel card
+.carousel-card {
+  position: absolute;
+  top: 15vh;
+  left: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #0F1527;
+  opacity: 0.95;
+}
+
+.image-title {
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.call-to-action-all {
+  height: 30vh;
+}
+
+// .carousel-caption {
+//   width: auto;
+// }
+
+.carousel-button {
+  width: auto!important;
+}
+// Image Carousel
 .slide {
   background-size: cover !important;
 }
