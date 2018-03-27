@@ -1,4 +1,5 @@
 /* MENU 2 Artworks container */
+
 .artworks-navbar {
   z-index: 900;
   display: flex;
@@ -8,9 +9,18 @@
   background-color: rgba(253, 239, 239, 0.95);
   height: 40px;
   width: 100%;
-  padding: 0px 300px;
   position: fixed;
   top: $navbar-height;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0px 20vw;
+  margin-top: 60px;
+  overflow-scrolling: touch;
+  overflow-style: -ms-autohiding-scrollbar;
+}
+
+.artworks-navbar::-webkit-scrollbar {
+    display: none;
 }
 
 /* ONGLETS MENU 2 */
