@@ -31,16 +31,16 @@
   </div>
   <div class="artist-artworks-container">
     <% @artworks.select {|artwork| artwork.artist_id == @artist.id}.each do |artwork| %>
-      <div class="artwork-card artist-artwork-card">
-        <div class="artwork-img">
+      <div class="artworks-card artist-artwork-card">
+        <div class="artworks-img">
           <%= cl_image_tag artwork.photo, crop: :fill %>
         </div>
-        <div class="artwork-infos">
-          <h2 class="artwork-artist">
+        <div class="artworks-infos">
+          <h2 class="artworks-artist">
             <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
           </h2>
           <%= link_to artwork_path(artwork) do %>
-          <h2 class="artwork-name artist-artwork-name">
+          <h2 class="artworks-name artist-artwork-name">
             <%= artwork.name %>
           </h2>
           <% end %>
