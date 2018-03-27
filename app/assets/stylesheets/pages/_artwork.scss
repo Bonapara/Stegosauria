@@ -61,11 +61,11 @@
     margin-bottom: 0px !important;
   }
 
-  .artwork-info {
-    font-size: 16px;
-    font-family: "Cardo";
-    font-weight: 300;
-  }
+  // .artwork-info {
+  //   font-size: 16px;
+  //   font-family: "Cardo";
+  //   font-weight: 300;
+  // }
 
   .explanation {
     margin: 50px 0px 0px 0px;
@@ -73,6 +73,11 @@
   }
 }
 
+.artwork-info {
+  font-size: 16px;
+  font-family: "Cardo";
+  font-weight: 300;
+}
 
 .contact-form-input {
   outline: none;
@@ -86,6 +91,15 @@
   font-family: "Roboto";
   padding: 8px;
   border: none;
+}
+
+
+.page-title {
+  margin: 60px 0px 30px 0px;
+  color: black;
+  font-weight: lighter;
+  font-size: 30px;
+  font-family: "Roboto";;
 }
 
 

@@ -11,7 +11,7 @@
 </svg>
 
 
-<div class="artist-container">
+<div class="main-container">
   <div class="artist-infos-container">
     <div class="show-artist-art-type">
       <p> <%= @artist.domain %> </p>
@@ -29,23 +29,9 @@
       </div>
     </div>
   </div>
-  <div class="artist-artworks-container">
-    <% @artworks.select {|artwork| artwork.artist_id == @artist.id}.each do |artwork| %>
-      <div class="artworks-card artist-artwork-card">
-        <div class="artworks-img">
-          <%= cl_image_tag artwork.photo, crop: :fill %>
-        </div>
-        <div class="artworks-infos">
-          <h2 class="artworks-artist">
-            <%= artwork.artist.last_name %> <%= artwork.artist.first_name %>
-          </h2>
-          <%= link_to artwork_path(artwork) do %>
-          <h2 class="artworks-name artist-artwork-name">
-            <%= artwork.name %>
-          </h2>
-          <% end %>
-        </div>
-      </div>
+  <div class="columns-container">
+    <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
+    <%= render 'shared/artwork_card', artwork: artwork %>
     <% end %>
   </div>
   <%= link_to 'Retour aux artistes', artists_path %>
