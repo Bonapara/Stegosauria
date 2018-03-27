@@ -11,6 +11,13 @@ class ArtworksController < ApplicationController
 
   def show          # GET /artworks/:id
     @artwork = Artwork.find(params[:id])
+    @artist = @artwork.artist
+    # Same artist artworks without the displaying one
+    @all_artworks = Artwork.all.select { |artwork| artwork.artist == @artwork.artist }
+    @artworks = []
+    @all_artworks.each do |artwork|
+      @artworks << artwork if artwork.name != @artwork.name
+    end
   end
 
   def new           # GET /artworks/new
