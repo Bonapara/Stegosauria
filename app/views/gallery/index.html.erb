@@ -1,23 +1,28 @@
 <div class="gallery-container">
-    <!-- Photo Gallery -->
-    <div class="gallery-photo">
-      <%= cl_image_tag @gallery.photo_gallery, crop: :fill %>
+    <div class="gallery-photo-container">
+      <!-- Photo Gallery -->
+      <%= cl_image_tag @gallery.photo_gallery, crop: :fill, :class => "gallery-photo"%>
     </div>
-    <!-- Photo Owner Gallery -->
-    <div class="gallery-owner-photo">
-      <%= cl_image_tag @gallery.photo_owner, crop: :fill %>
-    </div>
-    <!-- Description Gallery -->
-    <div class="description-gallery-container">
-      <div class="description-gallery">
-        <p> <%= @gallery.description %> </p>
-      </div>
-    </div>
-    <!-- MAP -->
+    <!-- MAP and Description container-->
     <div class="map-container">
+      <!-- Description Gallery -->
+      <div class="description-gallery-container">
+        <div class="gallery-owner-photo">
+        <!-- Photo Owner Gallery -->
+        <%= cl_image_tag @gallery.photo_owner, crop: :fill %>
+        </div>
+        <h1 class="the_gallery">La Galerie</h1>
+        <div class="description-gallery">
+          <p> <%= @gallery.description %> </p>
+        </div>
+        <h1 class="the_gallery">Isabelle Laverny</h1>
+        <div class="description-gallery">
+          <p> <%= @gallery.description %> </p>
+        </div>
+      </div>
       <iframe
         width="400"
-        height="400"
+        height="600"
         frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDy7Ksnv9eMUGY_R_tHMd-kYPuqv2WeQmE
           &q=27+rue+guersant,Paris+France" allowfullscreen>
