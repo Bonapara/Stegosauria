@@ -10,6 +10,9 @@ RailsAdmin.config do |config|
     label "Artiste"
     label_plural "Artistes"
     weight 3
+    object_label_method do
+      :full_name
+    end
   end
 
     config.model 'HomeP' do
