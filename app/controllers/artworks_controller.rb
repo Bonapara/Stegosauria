@@ -3,7 +3,7 @@ class ArtworksController < ApplicationController
   def index         # GET /artworks
     if params[:commit]
       domain = params[:commit].downcase
-      @artworks = Artwork.where(artwork_domain: domain).all
+      @artworks = Artwork.where(artwork_domain: domain).all.page params[:page]
     else
       @artworks = Artwork.all.order(:name).page params[:page]
     end
