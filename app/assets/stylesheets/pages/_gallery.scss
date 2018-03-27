@@ -1,50 +1,56 @@
 .gallery-container {
-  display: grid;
-  grid-template-columns: 1 fr 1 fr 700px;
-  grid-template-rows: 50% 50%;
   margin: 100px;
 }
 
 
 
-.gallery-photo {
-  grid-row: 1/ span 1;
-  grid-column: 1/span 1;
-  img {
-    width: 200px;
+.gallery-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  .gallery-photo {
+    width: 100%;
+    filter: grayscale(100%);
   }
   margin: auto;
 }
 
 .gallery-owner-photo {
-  grid-row: 1/ span 1;
-  grid-column: 2/span 1;
+  z-index: 1;
   img {
     width: 200px;
+    border-radius: 2px;
   }
-  margin: auto;
+}
+
+.map-container {
+  display: flex;
+  justify-content: space-between;
+}
+.the_gallery{
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  color: $red;
 }
 
 .description-gallery-container {
-  grid-row: 2/ span 1;
-  grid-column: 1/ span 2;
-  margin: auto;
-  margin-right: 20px;
+  display: flex;
+  width: 60vw;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100px !important;
+  margin-right: 40px;
 }
 .description-gallery {
   font-family: $retro-font;
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
   color: $blue;
-  line-height: 1.5em;
-  padding-left: 30px;
+  line-height: 1.4em;
 }
 
-.map-container {
-  grid-row: 1/ span 2;
-  grid-colum: 3/span 1;
-
-}
 
 // responsivness
 @media screen and (max-width: 1050px)
