@@ -1,23 +1,72 @@
 /* Carousel */
-
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
+  padding: 0;
+}
+.carousel-inner {
+  position: relative;
+  width: 900px;
 }
 
 // largeur carousel
 #myCarousel {
-  width: 100%;
+
 }
 
 // hauteur slide image
 #myCarousel .item {
-  height: 400px;
+  height: 500px;
 
 }
-// Image Carousel 3
+// carousel card
+.carousel-card {
+  position: absolute;
+  top: 15vh;
+  left: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #0F1527;
+  opacity: 0.95;
+}
+
+.image-title {
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title p {
+  font-size: 16px;
+}
+
+.image-title h4 {
+  font-size: 29px;
+}
+
+
+
+.call-to-action-all {
+  height: 30vh;
+}
+
+// .carousel-caption {
+//   width: auto;
+// }
+
+.carousel-button {
+  width: auto!important;
+}
+// Image Carousel
 .slide {
   background-size: cover !important;
 }
@@ -38,32 +87,185 @@
 }
 
 // /* landscape phone to portrait tablet SMALL IMAGE*/
-@media (max-width: 768px) {
-
+@media (max-width: 950px) {
+.carousel-inner {
+  width: 720px;
+}
 #myCarousel .item {
-  height: 300px;
+  height: 400px;
 }
 
-.carousel-caption h4 {
-  font-size: 22px;
+.carousel-card {
+  position: absolute;
+  top: 15vh;
+  left: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 172px;
+  height: 172px;
+  background-color: #0F1527;
+  opacity: 0.95;
 }
+.image-title {
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title p {
+  font-size: 14px;
+}
+
+.image-title h4 {
+  font-size: 26px;
+}
+
 
 }
 
 /* Large desktop LARGE IMAGE*/
-@media (min-width: 1200px) {
+@media (max-width: 750px) {
 
-  #myCarousel .item {
-    height: 500px;
+.carousel-inner {
+  width: 540px;
+}
+#myCarousel .item {
+  height: 300px;
+}
 
-  }
+.carousel-card {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 165px;
+  height: 165px;
+  background-color: #0F1527;
+  opacity: 0.95;
+}
+.image-title {
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .carousel-caption {
-    font-size: 24px;
-  }
+.image-title p {
+  font-size: 12px;
+}
 
-  .carousel-caption h4 {
-    font-size: 32px;
-  }
+.image-title h4 {
+  font-size: 24px;
+}
+
+
 
 }
+
+@media (max-width: 560px) {
+
+.carousel-inner {
+  width: 450px;
+}
+#myCarousel .item {
+  height: 250px;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-color: #0F1527;
+  opacity: 0.95;
+}
+.image-title {
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title p {
+  font-size: 12px;
+}
+
+.image-title h4 {
+  font-size: 16px;
+}
+
+.carousel-button {
+  font-size: 11px;
+  padding: 7px 0;
+  width: 89px!important;
+}
+
+
+}
+
+@media (max-width: 450px) {
+
+.carousel-inner {
+  width: 360px;
+}
+#myCarousel .item {
+  height: 300px;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 195px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 106px;
+  background-color: #0F1527;
+  opacity: 0.95;
+}
+.image-title {
+  height: 20vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.image-title p {
+  font-size: 12px;
+  margin-bottom: none;
+}
+
+.image-title h4 {
+  font-size: 16px;
+}
+
+.carousel-button {
+  font-size: 9px;
+  padding: 6px 0;
+  width: 76px !important;
+}
+
+.carousel-indicators {
+  bottom: 100px;
+}
+
+}
+
