@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
   def index         # GET /artists
     # @artists = Artist.all
-    @artists = Artist.paginate(:page => params[:page], :per_page => 15)
+    @artists = Artist.all
   end
 
   def show          # GET /artists/:id
