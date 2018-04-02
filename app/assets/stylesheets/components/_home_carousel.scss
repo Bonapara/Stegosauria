@@ -9,7 +9,8 @@
 }
 .carousel-inner {
   position: relative;
-  width: 900px;
+  width: 100%;
+  height: 650px;
 }
 
 // largeur carousel
@@ -19,23 +20,27 @@
 
 // hauteur slide image
 #myCarousel .item {
-  height: 500px;
+
 
 }
 // carousel card
 .carousel-card {
   position: absolute;
-  top: 15vh;
-  left: 10vh;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 100%;
   height: 200px;
   background-color: #0F1527;
   opacity: 0.95;
 }
+
+// slide size
+
+
 
 .image-title {
   height: 50vh;
