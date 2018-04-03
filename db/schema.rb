@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327142413) do
+ActiveRecord::Schema.define(version: 20180403123355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,14 +60,21 @@ ActiveRecord::Schema.define(version: 20180327142413) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "home_ps", force: :cascade do |t|
-    t.string "photo_slide1"
-    t.string "photo_slide2"
-    t.string "photo_slide3"
+  create_table "show_cases", force: :cascade do |t|
+    t.bigint "artist_id"
+    t.string "photo_artist"
+    t.bigint "artwork_id"
+    t.string "photo_artwork"
+    t.bigint "article_id"
+    t.string "photo_article"
+    t.bigint "gallery_id"
+    t.string "photo_gallery"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "artist_id"
-    t.index ["artist_id"], name: "index_home_ps_on_artist_id"
+    t.index ["article_id"], name: "index_show_cases_on_article_id"
+    t.index ["artist_id"], name: "index_show_cases_on_artist_id"
+    t.index ["artwork_id"], name: "index_show_cases_on_artwork_id"
+    t.index ["gallery_id"], name: "index_show_cases_on_gallery_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,4 +97,8 @@ ActiveRecord::Schema.define(version: 20180327142413) do
 
   add_foreign_key "artworks", "artists"
   add_foreign_key "home_ps", "artists"
+  add_foreign_key "show_cases", "articles"
+  add_foreign_key "show_cases", "artists"
+  add_foreign_key "show_cases", "artworks"
+  add_foreign_key "show_cases", "galleries"
 end
