@@ -1,5 +1,8 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Galerie Isabelle Laverny", ""]
+
+
   config.model 'Artwork' do
     label "Oeuvre"
     label_plural "Oeuvres"
