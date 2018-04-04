@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HomePageTest < ActiveSupport::TestCase
+class ShowcasesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

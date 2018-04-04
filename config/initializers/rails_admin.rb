@@ -9,7 +9,7 @@ RailsAdmin.config do |config|
     weight 2
   end
 
-    config.model 'Artist' do
+  config.model 'Artist' do
     label "Artiste"
     label_plural "Artistes"
     weight 3
@@ -18,25 +18,28 @@ RailsAdmin.config do |config|
     end
   end
 
-    config.model 'HomeP' do
+  config.model 'ShowCase' do
     label "Page d'accueil"
     label_plural "Page d'accueil"
     weight 1
   end
 
-    config.model 'Article' do
+  config.model 'Article' do
     label "Expos et actus"
     label_plural "Expos et actus"
     weight 4
   end
 
-    config.model 'Gallery' do
+  config.model 'Gallery' do
     label "La galerie"
     label_plural "La galerie"
     weight 5
+    object_label_method do
+      :name_gallery
+    end
   end
 
-    config.model 'User' do
+  config.model 'User' do
     label "Users"
     label_plural "Users"
     weight 6

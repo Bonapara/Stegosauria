@@ -1,4 +1,4 @@
-<div class="container">
+<div class="main-container">
   <div id="myCarousel" class="carousel slide">
     <!-- INDICATORS -->
     <ol class="carousel-indicators">
@@ -12,14 +12,14 @@
     <div class="carousel-inner">
       <!-- Artists call to action -->
       <div class="item active" class="slide">
-        <%= image_tag @homeP.photo_slide1 %>
+        <%= image_tag(@showcase.photo_artist, :class => "carousel-slide") %>
         <div class="carousel-card">
-          <div class="image-title">
+          <div class="card-title">
             <h4><%= @artist.first_name%> <%= @artist.last_name %></h4>
-            <p> Peinture sur toile</p>
+            <p class="catch-phrase"><%= @showcase.artist_description%></p>
           </div>
-          <div class="image-title">
-            <%= link_to "aller voir", artist_path(@artist), class: 'button primary carousel-button'%>
+          <div class="call-to-action">
+            <%= link_to "Découvrir l'artiste", artist_path(@artist), class: 'button primary carousel-button'%>
           </div>
           <!-- <div class="call-to-action-all">
             <%= link_to 'artistes', artists_path, class: 'button primary carousel-button' %>
@@ -28,37 +28,40 @@
       </div>
       <!-- Artworks call to action -->
       <div class="item" class="slide">
-        <%= image_tag @homeP.photo_slide2 %>
+        <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
         <div class="carousel-card">
-          <div class="image-title">
-            <h4>Oeuvres</h4>
+          <div class="card-title">
+            <h4><%= @artwork.name%></h4>
+            <p class="catch-phrase"><%= @showcase.artwork_description%></p>
           </div>
-          <div class="call-to-action-all">
-            <%= link_to 'Je vais voir', artworks_path, class: 'button primary carousel-button' %>
+          <div class="call-to-action">
+            <%= link_to "Voir l'oeuvre", artwork_path(@artwork), class: 'button primary carousel-button' %>
           </div>
         </div>
       </div>
       <!-- Exposition call to action -->
       <div class="item" class="slide">
-        <%= image_tag @homeP.photo_slide3 %>
+        <%= image_tag(@showcase.photo_article, :class => "carousel-slide") %>
         <div class="carousel-card">
-          <div class="image-title">
-            <h4>Expositions</h4>
+          <div class="card-title">
+            <h4><%= @article.title%></h4>
+            <p class="catch-phrase"><%= @showcase.article_description%></p>
           </div>
-          <div class="call-to-action-all">
-            <%= link_to 'Je vais voir', articles_path, class: 'button primary carousel-button' %>
+          <div class="call-to-action">
+            <%= link_to 'En savoir plus', articles_path, class: 'button primary carousel-button' %>
           </div>
         </div>
       </div>
       <!-- Gallery call to action -->
       <div class="item" class="slide">
-        <%= image_tag @homeP.photo_slide3 %>
+        <%= image_tag(@showcase.photo_gallery, :class => "carousel-slide") %>
         <div class="carousel-card">
-          <div class="image-title">
-            <h4>Galerie</h4>
+          <div class="card-title">
+            <h4><%= @gallery.name_gallery%></h4>
+            <p class="catch-phrase"><%= @showcase.gallery_description%></p>
           </div>
-          <div class="call-to-action-all">
-            <%= link_to 'Je vais voir', gallery_index_path, class: 'button primary carousel-button' %>
+          <div class="call-to-action">
+            <%= link_to 'Découvrir la galerie', gallery_index_path, class: 'button primary carousel-button' %>
           </div>
         </div>
       </div>
