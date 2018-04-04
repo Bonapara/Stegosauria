@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403123355) do
+ActiveRecord::Schema.define(version: 20180404091557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,10 @@ ActiveRecord::Schema.define(version: 20180403123355) do
     t.string "photo_gallery"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist_description"
+    t.string "artwork_description"
+    t.string "article_description"
+    t.string "gallery_description"
     t.index ["article_id"], name: "index_show_cases_on_article_id"
     t.index ["artist_id"], name: "index_show_cases_on_artist_id"
     t.index ["artwork_id"], name: "index_show_cases_on_artwork_id"
@@ -96,7 +100,6 @@ ActiveRecord::Schema.define(version: 20180403123355) do
   end
 
   add_foreign_key "artworks", "artists"
-  add_foreign_key "home_ps", "artists"
   add_foreign_key "show_cases", "articles"
   add_foreign_key "show_cases", "artists"
   add_foreign_key "show_cases", "artworks"

@@ -5,15 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 60px;
+  margin-top: 60px; // begin at the end of the navbar
   padding: 0;
 }
 
-// largeur carousel
-// .item.slide {
-
-// }
-
+// Picture
 .carousel-slide {
   position: relative;
   display: block;
@@ -22,12 +18,13 @@
   object-fit: cover;
 }
 
+// Indicators
 .carousel-indicators {
   bottom: 15%!important;
   left: 20%!important;
 }
 
-// carousel card
+// Card
 .carousel-card {
   position: absolute;
   top: 10%;
@@ -42,21 +39,23 @@
   opacity: 0.95;
 }
 
-// slide size
-.image-title {
+// card title
+.card-title {
   flex: 0 0 50%;
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   text-align: center
 }
 
-.image-title p {
-  font-size: 16px;
+.card-title p {
+  font-size: 20px;
+  margin: 10px 20px;
 }
 
-.image-title h4 {
+.card-title h4 {
   font-size: 29px;
   margin: 0 15px;
 }
@@ -64,10 +63,6 @@
 .call-to-action {
   height: 40%;
 }
-
-// .carousel-caption {
-//   width: auto;
-// }
 
 .carousel-button {
   width: auto!important;
@@ -78,247 +73,55 @@
   background-size: cover !important;
 }
 
-// Font size caption
-.carousel-caption {
-  font-size: 24px;
-}
 
-.carousel-caption h4 {
-  font-size: 32px;
-}
-// /* Media Queries */
-
-// /* Portrait & landscape phone */
-// @media (max-width: 480px) {
-
-// }
-
-// // /* landscape phone to portrait tablet SMALL IMAGE*/
-// @media (max-width: 950px) {
-// .carousel-inner {
-//   width: 720px;
-// }
-// #myCarousel .item {
-//   height: 400px;
-// }
-
-// .carousel-card {
-//   position: absolute;
-//   top: 15vh;
-//   left: 10vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 172px;
-//   height: 172px;
-//   background-color: #0F1527;
-//   opacity: 0.95;
-// }
-// .image-title {
-//   height: 50vh;
-//   color: white;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .image-title p {
-//   font-size: 14px;
-// }
-
-// .image-title h4 {
-//   font-size: 26px;
-// }
-
-
-// }
-
-/* Large desktop LARGE IMAGE*/
 @media (max-width: 900px) {
 
-// .main-container {
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   margin-top: 60px;
-//   padding: 0;
-// }
+  .item.active {
 
-// .carousel-slide {
-//   position: relative;
-//   display: block;
-//   width: 100vw;
-//   height: 600px!important;
-//   object-fit: cover;
-// }
+  }
+  .carousel-slide {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 675px!important;
+    object-fit: cover;
+  }
 
-// .carousel-card {
-//   position: absolute;
-//   bottom: 0%!important;
-//   left: 0%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-//   height: 19%;
-//   background-color: #EE5F5B;
-//   opacity: 0.95;
-// }
+  .carousel-indicators {
+    bottom: 0%!important;
+    left: 50%!important;
+  }
+
+  .carousel-card {
+    position: absolute;
+    top: 72%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 28%;
+    background-color: #0F1527;
+    opacity: 0.95;
+  }
+
+  .card-title h4 {
+    font-size: 23px;
+    margin: 0 15px;
+  }
+
+  .card-title p {
+    display: none;
+  }
+
+  .call-to-action {
+    height: 50%;
+  }
+
+  .carousel-button {
+    width: auto!important;
+    background-color: $red!important;
+    font-size: 9px;
+  }
 }
-
-// .carousel-inner {
-//   width: 540px;
-// }
-// #myCarousel .item {
-//   height: 300px;
-// }
-
-// .carousel-card {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-//   height: 25%;
-//   background-color: #EE5F5B;
-//   opacity: 0.95;
-// }
-
-// .carousel-card {
-//   position: absolute;
-//   top: 45px;
-//   left: 45px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 165px;
-//   height: 165px;
-//   background-color: #0F1527;
-//   opacity: 0.95;
-// }
-// .image-title {
-//   height: 50vh;
-//   color: white;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .image-title p {
-//   font-size: 12px;
-// }
-
-// .image-title h4 {
-//   font-size: 24px;
-// }
-
-
-
-
-// @media (max-width: 560px) {
-
-// .carousel-inner {
-//   width: 450px;
-// }
-// #myCarousel .item {
-//   height: 250px;
-// }
-
-// .carousel-card {
-//   position: absolute;
-//   top: 25px;
-//   left: 25px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 120px;
-//   height: 120px;
-//   background-color: #0F1527;
-//   opacity: 0.95;
-// }
-// .image-title {
-//   height: 50vh;
-//   color: white;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .image-title p {
-//   font-size: 12px;
-// }
-
-// .image-title h4 {
-//   font-size: 16px;
-// }
-
-// .carousel-button {
-//   font-size: 11px;
-//   padding: 7px 0;
-//   width: 89px!important;
-// }
-
-
-// }
-
-// @media (max-width: 450px) {
-
-// .carousel-inner {
-//   width: 360px;
-// }
-// #myCarousel .item {
-//   height: 300px;
-// }
-
-// .carousel-card {
-//   position: absolute;
-//   top: 195px;
-//   left: 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-//   height: 106px;
-//   background-color: #0F1527;
-//   opacity: 0.95;
-// }
-// .image-title {
-//   height: 20vh;
-//   color: white;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin: 0;
-// }
-
-// .image-title p {
-//   font-size: 12px;
-//   margin-bottom: none;
-// }
-
-// .image-title h4 {
-//   font-size: 16px;
-// }
-
-// .carousel-button {
-//   font-size: 9px;
-//   padding: 6px 0;
-//   width: 76px !important;
-// }
-
-// .carousel-indicators {
-//   bottom: 100px;
-// }
-
-// }
-
