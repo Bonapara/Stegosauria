@@ -1,13 +1,19 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Libre+Baskerville:400,400i,700|Roboto:300,400,400i,700,900|Spectral:300,300i,400,700,800");
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500|Roboto:400,500');
+@font-face {
+  font-family: 'Didot';
+  src: url('fonts/Didot.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Define fonts for body and headers
 $body-font: "Libre Baskerville", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
 
 $modern-font: "Roboto", "Helvetica", "sans-serif";
-$retro-font: "Libre Baskerville", "Helvetica", "sans-serif";
-$retro-font-2: "Spectral", "Helvetica", "sans-serif";
+$retro-font: "EB Garamond", "Helvetica", "sans-serif";
+$didot: "Didot", "Roboto", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
