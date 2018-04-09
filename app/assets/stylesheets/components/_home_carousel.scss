@@ -1,3 +1,9 @@
+// Global variables exclusively used in the homepage
+$angle-width: 10px;
+$height-element-large: 70px;
+$height-element-small: 50px;
+
+// Get rid of the background effect imposed by bootstrap
 .carousel-control.right {
   background-image: none!important;
 }
@@ -6,6 +12,10 @@
   background-image: none!important;
 }
 
+// To avoid having border red on the slides (active element) conflicts with navbar menu items
+.slide-no-border {
+  border: none!important;
+}
 
 /* Carousel */
 .carousel-main-container {
@@ -28,10 +38,10 @@
 }
 
 // Indicators
-.carousel-indicators {
-  bottom: 5%!important;
-  left: 90%!important;
-}
+// .carousel-indicators {
+//   bottom: 5%!important;
+//   left: 90%!important;
+// }
 
 // Content
 .carousel-elements {
@@ -45,11 +55,17 @@
   align-items: left;
 }
 
+.carousel-elements-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
 .carousel-element {
   position: relative;
   background-color: transparent;
   display: inline-block;
-  height: 70px;
+  height: $height-element-large;
 }
 
 .call-to-action-div-rel {
@@ -58,7 +74,7 @@
 }
 .call-to-action-div-abs {
   position: absolute;
-  right: -20px;
+  right: - $angle-width;
 }
 
 .carousel-element-display {
@@ -75,36 +91,35 @@
 
 .carousel-element-content {
   background-color: white;
-  height: 70px;
+  height: $height-element-large;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 15px;
+}
+
+.carousel-title-1 {
+  margin: 0;
 }
 
 .hide-block {
-  width: 20px;
+  width: $angle-width;
 }
 
 .carousel-svg {
   position: absolute;
   right: 0;
   top: 0;
-  width: 20px;
+  width: $angle-width;
   height: 100%;
 }
 
-.content-catch-phrase {
-  height: 35%;
-  width: 100%;
-  border-top: solid;
-  border-color: black;
-  background-color: white;
-}
 
-.content-call-to-action {
-  height: 25%;
-  width: 100%;
-  background-color: black;
+.call-to-action-button {
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: black;
+  font-size: 17px;
 }
 
 
@@ -114,54 +129,22 @@
 }
 
 
-// @media (max-width: 900px) {
+@media (max-width: 750px) {
 
-//   .item.active {
+  .carousel-title-1 {
+    font-size: 30px !important;
+  }
 
-//   }
-//   .carousel-slide {
-//     position: relative;
-//     display: block;
-//     width: 100vw;
-//     height: 675px!important;
-//     object-fit: cover;
-//   }
+  .carousel-title-2 {
+    font-size: 15px !important;
+  }
 
-//   .carousel-indicators {
-//     bottom: 0%!important;
-//     left: 50%!important;
-//   }
+  .carousel-element {
+    height: $height-element-small;
+  }
 
-//   .carousel-card {
-//     position: absolute;
-//     top: 72%;
-//     left: 0;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     height: 28%;
-//     background-color: #0F1527;
-//     opacity: 0.95;
-//   }
+  .carousel-element-content {
+    height: $height-element-small;
+  }
 
-//   .card-title h4 {
-//     font-size: 23px;
-//     margin: 0 15px;
-//   }
-
-//   .card-title p {
-//     display: none;
-//   }
-
-//   .call-to-action {
-//     height: 50%;
-//   }
-
-//   .carousel-button {
-//     width: auto!important;
-//     background-color: $red!important;
-//     font-size: 9px;
-//   }
-// }
+}
