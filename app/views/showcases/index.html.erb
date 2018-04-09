@@ -13,7 +13,58 @@
       <!-- Artists call to action -->
       <div class="item active" class="slide">
         <%= image_tag(@showcase.photo_artist, :class => "carousel-slide") %>
-        <div class="carousel-card">
+        <div class="carousel-content">
+          <!-- <div class="carousel-content-position"> -->
+            <!-- TITLE -->
+            <div class="carousel-content-title">
+              <div class="title-div">
+                <div class="title-div-2">
+                  <h1><%= @artist.first_name%> <%= @artist.last_name %></h1>
+                </div>
+                <div class="hide-block">
+                </div>
+              </div>
+              <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon fill="white" points="0,0 0,100 100,100"/>
+              </svg>
+            <!-- </div> -->
+          </div>
+          <!-- CATCH PHRASE -->
+          <div class="carousel-content-title">
+            <div class="title-div">
+              <div class="title-div-2">
+                <h4><%= @showcase.artist_description%></h4>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+          <!-- CALL TO ACTION BUTTON -->
+          <div class="call-to-action-div-rel">
+            <div class="call-to-action-div-abs">
+              <div class="carousel-content-title">
+                <div class="title-div">
+                  <div class="title-div-2 call-to-action">
+                    <%= link_to "Découvrir l'artiste", artist_path(@artist)%>
+                  </div>
+                  <div class="hide-block-black">
+                  </div>
+                  <div class="hide-block">
+                  </div>
+
+                </div>
+                <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="black" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--         <div class="carousel-card">
           <div class="card-title">
             <h4><%= @artist.first_name%> <%= @artist.last_name %></h4>
             <p class="catch-phrase"><%= @showcase.artist_description%></p>
@@ -21,10 +72,7 @@
           <div class="call-to-action">
             <%= link_to "Découvrir l'artiste", artist_path(@artist), class: 'button primary carousel-button'%>
           </div>
-          <!-- <div class="call-to-action-all">
-            <%= link_to 'artistes', artists_path, class: 'button primary carousel-button' %>
-          </div> -->
-        </div>
+        </div> -->
       </div>
       <!-- Artworks call to action -->
       <div class="item" class="slide">

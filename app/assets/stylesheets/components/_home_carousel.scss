@@ -1,3 +1,4 @@
+
 /* Carousel */
 .main-container {
   width: 100%;
@@ -20,9 +21,84 @@
 
 // Indicators
 .carousel-indicators {
-  bottom: 15%!important;
-  left: 20%!important;
+  bottom: 5%!important;
+  left: 90%!important;
 }
+
+// Content
+.carousel-content {
+  background-color: transparent;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.carousel-content-title {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: 70px;
+}
+
+.call-to-action.title-div-2 {
+  background-color: black;
+}
+
+.call-to-action.title-div-2 a {
+  color: white
+}
+
+.title-div {
+  display: flex;
+}
+
+.title-div-2 {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.hide-block {
+  width: 20px;
+}
+
+.svg-item {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+}
+
+.content-catch-phrase {
+  height: 35%;
+  width: 100%;
+  border-top: solid;
+  border-color: black;
+  background-color: white;
+}
+
+.call-to-action-div-rel {
+  position: relative;
+  width: 100%;
+}
+.call-to-action-div-abs {
+  position: absolute;
+  right: -20px;
+}
+
+.content-call-to-action {
+  height: 25%;
+  width: 100%;
+  background-color: black;
+}
+
 
 // Card
 .carousel-card {
@@ -60,9 +136,9 @@
   margin: 0 15px;
 }
 
-.call-to-action {
-  height: 40%;
-}
+// .call-to-action {
+//   height: 40%;
+// }
 
 .carousel-button {
   width: auto!important;
@@ -74,54 +150,54 @@
 }
 
 
-@media (max-width: 900px) {
+// @media (max-width: 900px) {
 
-  .item.active {
+//   .item.active {
 
-  }
-  .carousel-slide {
-    position: relative;
-    display: block;
-    width: 100vw;
-    height: 675px!important;
-    object-fit: cover;
-  }
+//   }
+//   .carousel-slide {
+//     position: relative;
+//     display: block;
+//     width: 100vw;
+//     height: 675px!important;
+//     object-fit: cover;
+//   }
 
-  .carousel-indicators {
-    bottom: 0%!important;
-    left: 50%!important;
-  }
+//   .carousel-indicators {
+//     bottom: 0%!important;
+//     left: 50%!important;
+//   }
 
-  .carousel-card {
-    position: absolute;
-    top: 72%;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 28%;
-    background-color: #0F1527;
-    opacity: 0.95;
-  }
+//   .carousel-card {
+//     position: absolute;
+//     top: 72%;
+//     left: 0;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: 28%;
+//     background-color: #0F1527;
+//     opacity: 0.95;
+//   }
 
-  .card-title h4 {
-    font-size: 23px;
-    margin: 0 15px;
-  }
+//   .card-title h4 {
+//     font-size: 23px;
+//     margin: 0 15px;
+//   }
 
-  .card-title p {
-    display: none;
-  }
+//   .card-title p {
+//     display: none;
+//   }
 
-  .call-to-action {
-    height: 50%;
-  }
+//   .call-to-action {
+//     height: 50%;
+//   }
 
-  .carousel-button {
-    width: auto!important;
-    background-color: $red!important;
-    font-size: 9px;
-  }
-}
+//   .carousel-button {
+//     width: auto!important;
+//     background-color: $red!important;
+//     font-size: 9px;
+//   }
+// }
