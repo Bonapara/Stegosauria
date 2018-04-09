@@ -7,59 +7,91 @@
     height: auto;
     border-radius: 3px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    transition: all 0.3s ease-out;
   }
 }
 
-.artworks-sold {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  color: white;
-  letter-spacing: 0.5em;
-  font-size: 10px;
-  font-family: "Roboto";
-  text-transform: uppercase;
-  font-weight: 400;
-  padding: 8px 16px;
-  background-color: $red;
-  border: 1px solid white;
-}
 
 .artworks-infos {
+  padding-bottom: 20px;
+  // border-bottom: 1px solid $medium-gray;
   text-align: left;
   a {
     text-decoration: none;
-    h2 {
-      margin: 0px;
-    }
-  }
-  h2 {
-    margin: 14px 0px 8px 0px;
   }
 }
 
 .artworks-artist {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  color: $transparent;
   font-weight: bolder;
   letter-spacing: 0.0em;
   font-size: 14px;
+  transition: all 0.3s ease-out;
   font-family: "Cardo";
 }
 
 .artworks-name {
-  color: $dark-gray;
+  margin-top: 10px;
+  color: $transparent;
   letter-spacing: 0.2em;
   font-size: 14px;
   font-family: "Roboto";
   font-weight: 300;
-  color: black;
-  transition: all 0.2s ease-out;
-  // text-transform: uppercase;
-  padding-bottom: 60px;
-  margin-top: 0px;
-  margin-bottom: 60px !important;
-  border-bottom: 1px solid $medium-gray;
+  transition: all 0.3s ease-out;
+  margin-bottom: 0px;
 }
 
 .artworks-name:hover {
   color: $red;
+}
+.artworks-sold {
+  margin-top: 10px;
+  color: $transparent;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  font-family: "Roboto";
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.artworks-dimensions {
+  margin-top: 10px;
+  display: flex;
+}
+
+.dimensions-content {
+  font-weight: lighter;
+  font-size: 12px;
+  color: $transparent;
+  transition: all 0.3s ease-out;
+}
+.dimensions-titles {
+  font-size: 12px;
+  color: $transparent;
+  transition: all 0.3s ease-out;
+}
+
+// Text appears on hover
+.artworks-card:hover {
+  img {
+    transform: scale(1.02);
+  }
+  .artworks-sold {
+    color: $red;
+  }
+  .dimensions-content {
+  color: $medium-gray;
+  }
+  .dimensions-titles {
+    color: $medium-gray;
+  }
+  .artworks-name {
+    color: $dark-gray;
+  }
+  .artworks-artist {
+    color: $dark-gray;
+  }
 }

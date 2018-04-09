@@ -12,7 +12,17 @@
       <p class="info-type" id="description"> Description </p>
       <p class="artwork-info"> <%= @artwork.description %> </p>
       <div class="flex-inline">
-        <p class="info-type"> Dimensions </p> <p class="artwork-info"> <%= @artwork.dimensions %> </p>
+        <p class="info-type"> Dimensions </p> <p class="artwork-info">
+         <div class="artworks-dimensions">
+          <p class="dimensions-titles">H&nbsp</p>
+          <p class="dimensions-content"><%= @artwork.height %> cm ×&nbsp</p>
+          <p class="dimensions-titles">L&nbsp</p>
+          <p class="dimensions-content"><%= @artwork.width %> cm&nbsp</p>
+          <% if @artwork.depth != 0 %>
+            <p class="dimensions-titles">×&nbspP&nbsp</p>
+            <p class="dimensions-content"><%= @artwork.depth %> cm&nbsp</p>
+          <% end %>
+        </div></p>
       </div>
       <div class="flex-inline">
         <p class="info-type"> Type </p> <p class="artwork-info"> <%= @artwork.artwork_domain %> </p>

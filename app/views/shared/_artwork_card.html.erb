@@ -1,23 +1,34 @@
 <div class="column">
+  <%= link_to artwork_path(artwork) do %>
   <div class="artworks-card">
-    <%= link_to artwork_path(artwork) do %>
-      <div class="artworks-img">
-        <%= cl_image_tag artwork.photo, crop: :fill %>
-      </div>
-    <% end %>
-    <!-- Sold label for sold artwork  -->
-    <div class="artworks-sold">
-      Vendue
+    <div class="artworks-img">
+      <%= cl_image_tag artwork.photo, crop: :fill %>
     </div>
+    <!-- Infos under card  -->
     <div class="artworks-infos">
       <h2 class="artworks-artist">
         <%= artwork.artist.first_name %> <%= artwork.artist.last_name %>
       </h2>
-      <%= link_to artwork_path(artwork) do %>
-        <h2 class="artworks-name">
-          <%= artwork.name %>
-        </h2>
+      <h2 class="artworks-name">
+        <%= artwork.name %>
+      </h2>
+      <% if artwork.sold == true %>
+        <div class="artworks-sold">
+          <p>Vendue</p>
+        </div>
+      <% else %>
+        <div class="artworks-dimensions">
+          <p class="dimensions-titles">H&nbsp</p>
+          <p class="dimensions-content"><%= artwork.height %> cm ×&nbsp</p>
+          <p class="dimensions-titles">L&nbsp</p>
+          <p class="dimensions-content"><%= artwork.width %> cm&nbsp</p>
+          <% if artwork.depth != 0 %>
+            <p class="dimensions-titles">×&nbspP&nbsp</p>
+            <p class="dimensions-content"><%= artwork.depth %> cm&nbsp</p>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
+  <% end %>
 </div>
