@@ -1,26 +1,36 @@
+// Section title
 .title-1 {
-  font-family: Didot;
-  font-style: normal;
+  font-family: $didot;
   font-weight: bold;
-  line-height: 136px;
   font-size: 48px;
-  text-align: center;
 }
 
+// Section subtitle
 .title-2 {
-
+  font-family: $retro-font;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.06em;
 }
 
 .artwork-category {
-
+  font-family: $retro-font;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  color: $red;
+  letter-spacing: 0.04em;
 }
 
 .text-content {
-
+  font-family: $retro-font;
+  line-height: 150%;
+  font-size: 18px;
+  text-align: justify;
+  letter-spacing: 0.04em;
 }
 
-.count {
-  width: 100%;
+.page-infos {
   font-size: 12px;
   text-transform: uppercase;
   font-family: "Roboto";
