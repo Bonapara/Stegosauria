@@ -10,29 +10,28 @@
   </filter>
 </svg>
 
-
 <div class="main-container">
+  <p><%= link_to 'Retour aux artistes', artists_path %></p>
+</div>
+
+<div class="main-container artist-container">
   <div class="artist-infos-container">
-    <div class="show-artist-art-type">
-      <p> <%= @artist.domain %> </p>
-    </div>
     <div class="artist-name-container">
       <h2 class="show-artist-name"> <%= @artist.first_name %> <%= @artist.last_name %></h2>
     </div>
-    <div class="artist-bio-photo-container">
-      <div class="artist-photo-container">
-        <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
-      </div>
-      <div class="artist-bio-container">
-        <p class="about-the-artist">Biographie</p>
-        <p class="artist-bio"><%= @artist.biography %></p>
-      </div>
+    <div class="show-artist-art-type">
+      <p> <%= @artist.domain %> </p>
     </div>
-  </div>
+    <div class="artist-photo-container">
+      <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
+    </div>
+    <div class="artist-bio-container">
+      <p class="artist-bio"><%= @artist.biography %></p>
+    </div>
+</div>
   <div class="columns-container">
     <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
     <%= render 'shared/artwork_card', artwork: artwork %>
     <% end %>
   </div>
-  <%= link_to 'Retour aux artistes', artists_path %>
 </div>
