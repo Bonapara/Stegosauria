@@ -214,5 +214,28 @@
   }
 }
 
+// responsiveness of gallerie Isabelle Laverny title
 
+@media screen and (max-width: 450px) {
+  .navbar-brand {
+    p {
+      font-size: 16px;
+    }
+  }
+}
 
+@media screen and (max-width: 400px) {
+  .navbar-brand {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navbar-brand {
+    p {
+      font-size: 10px;
+    }
+  }
+}
