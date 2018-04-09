@@ -1,4 +1,5 @@
 .columns-container {
+  margin: 0px 100px;
   column-count: 1;
   column-gap: 0;
 }
@@ -19,7 +20,7 @@
   flex-direction: column;
   break-inside: avoid;
   padding: 5px;
-  border-right: 1px solid $medium-gray;
+  // border-right: 1px solid $medium-gray;
   align-items: center;
 }
 
@@ -73,14 +74,7 @@
   color: $red;
 }
 
-.artist-artworks {
-  color: $dark-gray;
-  letter-spacing: 0.2em;
-  font-size: 12px;
-  font-family: "Roboto";
-  font-weight: 300;
-  text-transform: uppercase;
-  padding-bottom: 60px;
+.artists-bio {
   margin-bottom: 60px !important;
   border-bottom: 1px solid $medium-gray;
 }

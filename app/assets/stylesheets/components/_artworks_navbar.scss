@@ -6,7 +6,6 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: rgba(253, 239, 239, 0.95);
   height: 40px;
   width: 100%;
   position: fixed;
@@ -14,6 +13,7 @@
   overflow: auto;
   white-space: nowrap;
   padding: 0px 20vw;
+  background-color: rgba(255,255,255, 0.8);
   overflow-scrolling: touch;
   overflow-style: -ms-autohiding-scrollbar;
 }
@@ -32,7 +32,7 @@
 /* ONGLETS MENU 2 */
 .navbar-button {
   border: none;
-  font-family: "Roboto";
+  font-family: $modern-font;
   font-weight: 400;
   letter-spacing: 0.1em;
   color: black;

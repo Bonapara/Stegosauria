@@ -33,9 +33,21 @@
               <%= artist.first_name %> <%= artist.last_name %>
             </h2>
           <% end %>
-          <p class="artist-artworks">
-            <%= artist.artworks.count %> oeuvres
-          </p>
+          <div class="artists-bio">
+            <% if artist.biography.length > 50 %>
+              <%= truncate(artist.biography, length: 50) %>
+              <%= link_to '...Read more', '', class: "read-more-#{artist.id}" %>
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+                $('.read-more-<%= artist.id %>').on('click', function(e) {
+                  e.preventDefault()
+                  console.log("tho")
+                  $(this).parent().html('<%= escape_javascript artist.biography %>')
+                })
+              </script>
+            <% else %>
+              <%= artist.biography %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
