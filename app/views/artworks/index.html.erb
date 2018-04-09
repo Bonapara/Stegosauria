@@ -8,10 +8,12 @@
   </div>
 </div>
 <!-- Artist cards container -->
-<div class="columns-container">
-  <% @artworks.each do |artwork| %>
-    <%= render 'shared/artwork_card', artwork: artwork %>
-  <% end %>
+<div class="main-container">
+  <div class="full-page-columns-container">
+    <% @artworks.each do |artwork| %>
+      <%= render 'shared/artwork_card', artwork: artwork %>
+    <% end %>
+  </div>
 </div>
 
  <%= paginate @artworks %>

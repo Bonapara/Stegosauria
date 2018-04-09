@@ -1,3 +1,4 @@
+// style general to all cards
 .artworks-card {
   width: 220px;
   position: relative;
@@ -11,47 +12,110 @@
   }
 }
 
+// style specific to Artist show, Arwork index and show cards
+
+// hide titles if the device has a mouse
+@media (pointer:fine) {
+  .artworks-sold {
+    color: $transparent;
+  }
+  .dimensions-content {
+  color: $transparent;
+  }
+  .dimensions-titles {
+    color: $transparent;
+  }
+  .artworks-name {
+    color: $transparent;
+  }
+  .artworks-artist {
+    color: $transparent;
+  }
+  .artworks-category {
+    color: $transparent;
+  }
+  .artist-artworks-sold {
+    color: $transparent;
+  }
+}
+
+// Display titles on hover
+.artworks-card:hover {
+  img {
+    transform: scale(1.02);
+  }
+  .artworks-sold {
+    color: $red;
+  }
+  .dimensions-content {
+  color: $medium-gray-darker;
+  }
+  .dimensions-titles {
+    color: $medium-gray-darker;
+  }
+  .artworks-name {
+    color: $dark-gray;
+  }
+  .artworks-artist {
+    color: $dark-gray;
+  }
+  .artworks-category {
+    color: $red;
+  }
+  .artist-artworks-sold {
+    color: $dark-gray;
+  }
+}
+
+// display titles if there is no mouse
+@media (pointer:none) {
+  .artworks-sold {
+    color: $red;
+  }
+  .dimensions-content {
+  color: $medium-gray-darker;
+  }
+  .dimensions-titles {
+    color: $medium-gray-darker;
+  }
+  .artworks-name {
+    color: $dark-gray;
+  }
+  .artworks-artist {
+    color: $dark-gray;
+  }
+  .artworks-category {
+    color: $red;
+  }
+  .artist-artworks-sold {
+    color: $dark-gray;
+  }
+}
 
 .artworks-infos {
-  padding-bottom: 20px;
-  // border-bottom: 1px solid $medium-gray;
+  margin-top: 20px;
+  padding-bottom: 40px;
   text-align: left;
   a {
     text-decoration: none;
   }
 }
 
-.artworks-artist {
-  margin-top: 30px;
-  margin-bottom: 0px;
-  color: $transparent;
-  font-weight: bolder;
-  letter-spacing: 0.0em;
-  font-size: 14px;
-  transition: all 0.3s ease-out;
-  font-family: "Cardo";
-}
-
 .artworks-name {
   margin-top: 10px;
-  color: $transparent;
   letter-spacing: 0.2em;
   font-size: 14px;
-  font-family: "Roboto";
+  font-family: $modern-font;
   font-weight: 300;
   transition: all 0.3s ease-out;
   margin-bottom: 0px;
 }
 
-.artworks-name:hover {
-  color: $red;
-}
-.artworks-sold {
+.artworks-sold, .artist-artworks-sold{
   margin-top: 10px;
-  color: $transparent;
   letter-spacing: 0.5em;
   font-size: 12px;
-  font-family: "Roboto";
+  font-family: $modern-font;
   transition: all 0.3s ease-out;
   text-transform: uppercase;
   font-weight: 400;
@@ -63,35 +127,46 @@
 }
 
 .dimensions-content {
+  font-family: $modern-font;
   font-weight: lighter;
   font-size: 12px;
-  color: $transparent;
   transition: all 0.3s ease-out;
+  margin-bottom: 0px;
 }
 .dimensions-titles {
+  font-family: $modern-font;
   font-size: 12px;
-  color: $transparent;
   transition: all 0.3s ease-out;
+  margin-bottom: 0px;
 }
 
-// Text appears on hover
-.artworks-card:hover {
-  img {
-    transform: scale(1.02);
-  }
-  .artworks-sold {
-    color: $red;
-  }
-  .dimensions-content {
-  color: $medium-gray;
-  }
-  .dimensions-titles {
-    color: $medium-gray;
-  }
-  .artworks-name {
-    color: $dark-gray;
-  }
-  .artworks-artist {
-    color: $dark-gray;
-  }
+// style specific to Artworks Index and show
+.artworks-artist {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: bolder;
+  letter-spacing: 0.0em;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+  font-family: $retro-font;
 }
+
+// style specific to Artist Show
+
+.artworks-category {
+  margin-top: 10px;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-style: italic;
+  font-family: $retro-font;
+  text-transform: capitalize;
+  transition: all 0.3s ease-out;
+  font-weight: 400;
+}
+
+// style specific to Artist Index
+
+
+// ************************************
+// ADD STYLE OF ARTIST INDEX CARDS HERE
+// ************************************

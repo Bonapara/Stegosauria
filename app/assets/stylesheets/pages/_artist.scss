@@ -1,8 +1,3 @@
-// Permet de ne pas afficher le svg dans le code
-.defs-only {
-  display: none;
-}
-
 .artist-container {
   display: flex;
 }
@@ -10,38 +5,32 @@
 .artist-infos-container{
   display: flex;
   flex-direction: column;
+  flex-basis: 35%;
+  text-align: center;
+  padding-right: 50px;
+}
+
+.artist-artworks-container {
+  flex-basis: 65%;
+  padding-left: 50px;
 }
 
 .show-artist-art-type {
-  font-family: $retro-font;
-  font-size: 20px;
-  color: $red;
-  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
-
-.show-artist-name {
-  font-family: $modern-font;
-  letter-spacing: 0.1em;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-}
-
 
 .artist-photo {
-  filter: url(#monochrome) brightness(90%);
+  border-radius: 10px;
+  filter: grayscale(100%);
   height: 200px;
   width: 200px;
   z-index: -10;
+  margin-top: 50px;
 }
 
 .artist-bio {
-  font-family: $retro-font;
-  text-align: justify;
-  font-size: 14px;
-  color: $dark-gray;
-  line-height: 1.5em;
-  padding-left: 30px;
+  margin-top: 50px;
 }
 
 .artist-artwork-photo {
@@ -59,19 +48,4 @@
   .artist-bio {
     padding-left: 0px !important;
   }
-}
-
-.artist-artworks-container {
-  margin-top: 10vh;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.artist-artwork-card {
-  margin-right: 40px;
-}
-
-.artist-artwork-name {
-  border: none !important;
 }
