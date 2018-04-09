@@ -118,16 +118,8 @@ $height-element-small: 50px;
   font-family: $modern-font;
   font-weight: 400;
   letter-spacing: 0.2em;
-  color: black;
   font-size: 17px;
 }
-
-
-// Image Carousel
-.slide {
-  background-size: cover !important;
-}
-
 
 @media (max-width: 750px) {
 
