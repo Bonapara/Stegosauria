@@ -1,123 +1,216 @@
-<div class="main-container">
+<div class="carousel-main-container">
   <div id="myCarousel" class="carousel slide">
     <!-- INDICATORS -->
-    <ol class="carousel-indicators">
+    <!-- <ol class="carousel-indicators">
       <li class = "active" data-slide-to="0" data-target="#myCarousel"></li>
       <li data-slide-to="1" data-target="#myCarousel"></li>
       <li data-slide-to="2" data-target="#myCarousel"></li>
       <li data-slide-to="3" data-target="#myCarousel"></li>
-    </ol>
+    </ol> -->
     <!-- Wrapper for slides -->
-
     <div class="carousel-inner">
       <!-- Artists call to action -->
       <div class="item active" class="slide">
         <%= image_tag(@showcase.photo_artist, :class => "carousel-slide") %>
-        <div class="carousel-content">
-          <!-- <div class="carousel-content-position"> -->
-            <!-- TITLE -->
-            <div class="carousel-content-title">
-              <div class="title-div">
-                <div class="title-div-2">
-                  <h1><%= @artist.first_name%> <%= @artist.last_name %></h1>
-                </div>
-                <div class="hide-block">
-                </div>
-              </div>
-              <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon fill="white" points="0,0 0,100 100,100"/>
-              </svg>
-            <!-- </div> -->
-          </div>
-          <!-- CATCH PHRASE -->
-          <div class="carousel-content-title">
-            <div class="title-div">
-              <div class="title-div-2">
-                <h4><%= @showcase.artist_description%></h4>
+        <div class="carousel-elements">
+          <!-- TITLE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h1><%= @artist.first_name%> <%= @artist.last_name %></h1>
               </div>
               <div class="hide-block">
               </div>
             </div>
-            <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+          <!-- CATCH PHRASE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h4>la ala la aala lala a</h4>
+                <!-- <h4><%= @showcase.artist_description%></h4> -->
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon fill="white" points="0,0 0,100 100,100"/>
             </svg>
           </div>
           <!-- CALL TO ACTION BUTTON -->
           <div class="call-to-action-div-rel">
             <div class="call-to-action-div-abs">
-              <div class="carousel-content-title">
-                <div class="title-div">
-                  <div class="title-div-2 call-to-action">
+              <div class="carousel-element">
+                <div class="carousel-element-display">
+                  <div class="carousel-element-content call-to-action">
                     <%= link_to "Découvrir l'artiste", artist_path(@artist)%>
-                  </div>
-                  <div class="hide-block-black">
                   </div>
                   <div class="hide-block">
                   </div>
-
                 </div>
-                <svg class="svg-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <polygon fill="black" points="0,0 0,100 100,100"/>
                 </svg>
               </div>
             </div>
           </div>
         </div>
-
-<!--         <div class="carousel-card">
-          <div class="card-title">
-            <h4><%= @artist.first_name%> <%= @artist.last_name %></h4>
-            <p class="catch-phrase"><%= @showcase.artist_description%></p>
-          </div>
-          <div class="call-to-action">
-            <%= link_to "Découvrir l'artiste", artist_path(@artist), class: 'button primary carousel-button'%>
-          </div>
-        </div> -->
       </div>
       <!-- Artworks call to action -->
       <div class="item" class="slide">
         <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
-        <div class="carousel-card">
-          <div class="card-title">
-            <h4><%= @artwork.name%></h4>
-            <p class="catch-phrase"><%= @showcase.artwork_description%></p>
+        <div class="carousel-elements">
+          <!-- TITLE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h1><%= @artwork.name%></h1>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
           </div>
-          <div class="call-to-action">
-            <%= link_to "Voir l'oeuvre", artwork_path(@artwork), class: 'button primary carousel-button' %>
+          <!-- CATCH PHRASE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h4><%= @showcase.artwork_description%></h4>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+          <!-- CALL TO ACTION BUTTON -->
+          <div class="call-to-action-div-rel">
+            <div class="call-to-action-div-abs">
+              <div class="carousel-element">
+                <div class="carousel-element-display">
+                  <div class="carousel-element-content call-to-action">
+                    <%= link_to "Voir l'oeuvre", artwork_path(@artwork) %>
+                  </div>
+                  <div class="hide-block">
+                  </div>
+                </div>
+                <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="black" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- Exposition call to action -->
       <div class="item" class="slide">
-        <%= image_tag(@showcase.photo_article, :class => "carousel-slide") %>
-        <div class="carousel-card">
-          <div class="card-title">
-            <h4><%= @article.title%></h4>
-            <p class="catch-phrase"><%= @showcase.article_description%></p>
+        <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
+        <div class="carousel-elements">
+          <!-- TITLE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h1><%= @artwork.name%></h1>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
           </div>
-          <div class="call-to-action">
-            <%= link_to 'En savoir plus', articles_path, class: 'button primary carousel-button' %>
+          <!-- CATCH PHRASE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h4><%= @showcase.artwork_description%></h4>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+          <!-- CALL TO ACTION BUTTON -->
+          <div class="call-to-action-div-rel">
+            <div class="call-to-action-div-abs">
+              <div class="carousel-element">
+                <div class="carousel-element-display">
+                  <div class="carousel-element-content call-to-action">
+                    <%= link_to "Voir l'oeuvre", artwork_path(@artwork) %>
+                  </div>
+                  <div class="hide-block">
+                  </div>
+                </div>
+                <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="black" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- Gallery call to action -->
       <div class="item" class="slide">
         <%= image_tag(@showcase.photo_gallery, :class => "carousel-slide") %>
-        <div class="carousel-card">
-          <div class="card-title">
-            <h4><%= @gallery.name_gallery%></h4>
-            <p class="catch-phrase"><%= @showcase.gallery_description%></p>
+        <div class="carousel-elements">
+          <!-- TITLE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h1><%= @gallery.name_gallery%></h1>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
           </div>
-          <div class="call-to-action">
-            <%= link_to 'Découvrir la galerie', gallery_index_path, class: 'button primary carousel-button' %>
+          <!-- CATCH PHRASE -->
+          <div class="carousel-element">
+            <div class="carousel-element-display">
+              <div class="carousel-element-content">
+                <h4><%= @showcase.gallery_description%></h4>
+              </div>
+              <div class="hide-block">
+              </div>
+            </div>
+            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="white" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+          <!-- CALL TO ACTION BUTTON -->
+          <div class="call-to-action-div-rel">
+            <div class="call-to-action-div-abs">
+              <div class="carousel-element">
+                <div class="carousel-element-display">
+                  <div class="carousel-element-content call-to-action">
+                    <%= link_to 'Découvrir la galerie', gallery_index_path%>
+                  </div>
+                  <div class="hide-block">
+                  </div>
+                </div>
+                <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="black" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Controls -->
     <!-- left side -->
-    <!-- <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a> -->
+    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
     <!-- right side -->
-    <!-- <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a> -->
+    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
   </div>
 </div>
