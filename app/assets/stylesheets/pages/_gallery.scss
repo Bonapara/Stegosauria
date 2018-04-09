@@ -1,6 +1,24 @@
+// Gallery container
 .gallery-container {
-  margin: 100px;
+  display: flex;
 }
+
+// Right column
+.gallery-column-1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+
+// Left column
+.gallery-column-2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+
+
 
 
 
