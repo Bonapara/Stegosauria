@@ -10,7 +10,7 @@
     <div class="artist-photo-container">
       <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
     </div>
-    <p class="artist-bio text-content"><%= @artist.biography %></p>
+    <p class="artist-bio"><%= @artist.biography %></p>
   </div>
   <!-- Right column with Artist Artworks -->
   <div class="artist-artworks-container half-page-columns-container">
