@@ -1,23 +1,39 @@
 // Gallery container
 .gallery-container {
   display: flex;
+  svg {
+    color: $red;
+    margin-right: 12px;
+  }
 }
 
 // Right column
 .gallery-column-1 {
   display: flex;
   flex-direction: column;
-  flex-basis: 60%;
+  flex-basis: 65%;
+  padding-right: 50px;
 }
 
 // Left column
 .gallery-column-2 {
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 35%;
+  border-left: 1px solid $light-gray;
+  padding-left: 50px;
 }
 
+.gallery-photo {
+  width: 100%;
+}
 
+.gallery-map {
+  margin-top: 50px;
+}
 
 
 
