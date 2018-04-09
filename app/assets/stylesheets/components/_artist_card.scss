@@ -1,4 +1,5 @@
 .columns-container {
+  margin: 0px 100px;
   column-count: 1;
   column-gap: 0;
 }
@@ -19,7 +20,7 @@
   flex-direction: column;
   break-inside: avoid;
   padding: 5px;
-  border-right: 1px solid $medium-gray;
+  // border-right: 1px solid $medium-gray;
   align-items: center;
 }
 
