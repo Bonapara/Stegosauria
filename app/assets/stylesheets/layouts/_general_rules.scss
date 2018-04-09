@@ -1,7 +1,8 @@
 .main-container {
   margin-right: auto;
   margin-left:  auto;
-  max-width: 1050px;
+  max-width: 1100px;
+  margin-top: 60px;
   padding-right: 50px;
   padding-left:  50px;
 }
@@ -27,12 +28,20 @@ h1 {
   }
 }
 
+body {
+  margin-top: 90px;
+}
+
 .margin-under-navbar {
   margin-top: 15px;
 }
 
 .margin-under-artwork-navbar {
   margin-top: 100px;
+}
+
+.no-margin {
+  margin: 0px;
 }
 
 .flex-inline {
@@ -48,6 +57,16 @@ h1 {
   display: block !important;
 }
 
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
 .transparent {
   opacity: 0;
 }
@@ -55,3 +74,4 @@ h1 {
 a:hover {
   text-decoration: none;
 }
+
