@@ -1,7 +1,7 @@
 class Artist < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :artworks
-  has_many :home_ps
+  has_many :show_cases
 
   validates :first_name,     presence: true,   uniqueness: true
   validates :last_name,      presence: true,   uniqueness: true

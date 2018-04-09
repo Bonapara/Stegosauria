@@ -70,21 +70,6 @@ puts '-------------------'
 puts "#{Artwork.count} artworks created"
 puts '-------------------'
 
-puts '-------------------'
-puts 'Uploading Home Page photos'
-puts '-------------------'
-
-homepage = HomeP.new
-homepage.remote_photo_slide1_url = 'http://res.cloudinary.com/galerieisabellelaverny/image/upload/v1521737661/my-life-through-a-lens-110632-unsplash.jpg'
-homepage.remote_photo_slide2_url = 'http://res.cloudinary.com/galerieisabellelaverny/image/upload/v1521737671/jon-tyson-228428-unsplash.jpg'
-homepage.remote_photo_slide3_url = 'http://res.cloudinary.com/galerieisabellelaverny/image/upload/v1521737730/jean-philippe-delberghe-324898-unsplash.jpg'
-homepage.save!
-
-
-puts '-------------------'
-puts 'Home Page photos Uploaded'
-puts '-------------------'
-
 puts '------------------------'
 puts '⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️ ⛄️'
 puts 'DATABASE HAS BEEN SEEDED '
