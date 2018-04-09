@@ -1,5 +1,5 @@
 <div class="main-container">
-  <p><%= link_to 'Retour aux artistes', artists_path %></p>
+  <p class="mobile-only"><%= link_to 'Retour aux artistes', artists_path %></p>
 </div>
 
 <div class="main-container artist-container">
@@ -13,7 +13,7 @@
     <p class="artist-bio text-content"><%= @artist.biography %></p>
   </div>
   <!-- Right column with Artist Artworks -->
-  <div class="half-page-columns-container artist-artworks-container">
+  <div class="artist-artworks-container half-page-columns-container">
     <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
     <%= render 'shared/artist_card', artwork: artwork %>
     <% end %>

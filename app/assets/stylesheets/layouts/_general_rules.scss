@@ -56,6 +56,16 @@ body {
   display: block !important;
 }
 
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
 .transparent {
   opacity: 0;
 }
