@@ -1,13 +1,3 @@
-<!-- ******************************************************************
-ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
-*********************************************************************** -->
-<!-- ******************************************************************
-ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
-*********************************************************************** -->
-<!-- ******************************************************************
-ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
-*********************************************************************** -->
-
 <!-- Artists count -->
 <div class="main-container">
   <div class="count margin-under-navbar">
@@ -15,30 +5,57 @@ ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
   </div>
 </div>
 <!-- Artist cards container -->
-<div class="full-page-columns-container margin">
-  <!-- TODO passer les artists en locals dans une partial de artist_card -->
-  <% @artists.each do |artist| %>
-    <div class="full-page-column">
-      <%= link_to artist_path(artist) do %>
-      <div class="artworks-card">
-        <div class="artist-img">
-          <!-- If an artist does not have artworks, display a random image -->
-          <% if artist.artworks.first %>
-            <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
-          <% else %>
-            <%= image_tag "artwork_2.png" %>
-          <% end %>
+<div class="main-container">
+  <div class="full-page-columns-container margin">
+    <!-- TODO passer les artists en locals dans une partial de artist_card -->
+    <% @artists.each do |artist| %>
+      <div class="full-page-column">
+        <%= link_to artist_path(artist) do %>
+        <div class="artworks-card" id="artist-card">
+          <div class="artist-img">
+            <!-- If an artist does not have artworks, display a random image -->
+            <% if artist.artworks.first %>
+              <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
+            <% else %>
+              <%= image_tag "artwork_2.png" %>
+            <% end %>
+            <!-- artistes infos -->
+            <div class="artist-infos">
+              <div class="artist-elements">
+                <div class="artist-element-display">
+                  <div class="artist-element-content">
+                    <h2 class="artist-name">
+                      <%= artist.first_name %> <%= artist.last_name %>
+                    </h2>
+                  </div>
+                  <div class="artist-hide-block">
+                  </div>
+                </div>
+                <svg class="artist-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="white" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+              <div class="speciality-infos">
+                <div class="speciality-elements">
+                  <div class="speciality-element-display">
+                    <div class="speciality-element-content">
+                      <p class="artist-category">
+                        <%= artist.domain %>
+                      </p>
+                    </div>
+                    <div class="speciality-hide-block">
+                    </div>
+                  </div>
+                  <svg class="speciality-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon fill="white" points="0,0 0,100 100,100"/>
+                  </svg>
+                </div>
+              </div>
+          </div>
+          </div>
         </div>
-        <div class="artist-infos">
-          <h2 class="artist-name">
-            <%= artist.first_name %> <%= artist.last_name %>
-          </h2>
-          <p class="artist-category">
-            <%= artist.domain %>
-          </p>
-        </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-  <% end %>
- </div>
+    <% end %>
+  </div>
+</div>

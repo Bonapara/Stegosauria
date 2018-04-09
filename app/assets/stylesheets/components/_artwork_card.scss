@@ -166,7 +166,116 @@
 
 // style specific to Artist Index
 
+#artist-card {
+  img {
+    width: 250px;
+  }
+  margin-bottom: 10vh;
+}
 
-// ************************************
-// ADD STYLE OF ARTIST INDEX CARDS HERE
-// ************************************
+.artist-infos{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.artist-name {
+  font-family: $didot;
+  font-weight: bolder;
+  font-size: 16px;
+  margin: 0px !important;
+}
+
+.artist-category {
+  background-color: white;
+  margin: 0px;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-style: italic;
+  font-family: $retro-font;
+  color: $red;
+  text-transform: capitalize;
+  transition: all 0.3s ease-out;
+  font-weight: 400;
+}
+
+$artist-angle-width: 5px;
+$artist-height: 35px;
+
+.artist-elements {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $artist-height;
+}
+
+.artist-element-display {
+  display: flex;
+  align-items: center;
+}
+
+.artist-element-content {
+  background-color: $white;
+  height: $artist-height;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+h1.artist-text {
+  margin-bottom: 0 !important;
+}
+
+.artist-hide-block {
+  width: $artist-angle-width;
+}
+
+.artist-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $artist-angle-width;
+  height: 100%;
+}
+
+$speciality-angle-width: 5px;
+$speciality-height: 35px;
+
+.speciality-elements {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $speciality-height;
+}
+
+.speciality-element-display {
+  display: flex;
+  align-items: center;
+}
+
+.speciality-element-content {
+  background-color: $white;
+  height: $speciality-height;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+h1.speciality-text {
+  margin-bottom: 0 !important;
+}
+
+.speciality-hide-block {
+  width: $speciality-angle-width;
+}
+
+.speciality-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $speciality-angle-width;
+  height: 100%;
+}
