@@ -1,0 +1,45 @@
+// Columns class for Artist and Artwork Index
+
+.full-page-columns-container {
+  column-count: 1;
+  column-gap: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .full-page-columns-container {
+    column-count: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .full-page-columns-container {
+    column-count: 3;
+  }
+}
+
+.full-page-column {
+  display: flex;
+  flex-direction: column;
+  break-inside: avoid;
+  align-items: center;
+}
+
+// Columns class for Artist Show
+
+.half-page-columns-container {
+  column-count: 1;
+  column-gap: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .half-page-columns-container {
+    column-count: 2;
+  }
+}
+
+.half-page-column {
+  display: flex;
+  flex-direction: column;
+  break-inside: avoid;
+  // border-right: 1px solid $medium-gray;
+  align-items: center;
+}

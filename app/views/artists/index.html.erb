@@ -1,7 +1,13 @@
-<!-- Title section -->
-<div class="section-title">
-  <!-- <h1> Découvrez nos artistes </h1> -->
-</div>
+<!-- ******************************************************************
+ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
+*********************************************************************** -->
+<!-- ******************************************************************
+ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
+*********************************************************************** -->
+<!-- ******************************************************************
+ADD STYLE OF ARTIST INDEX CARDS at the end of _artwork_card.scss
+*********************************************************************** -->
+
 <!-- Artists count -->
 <div class="main-container">
   <div class="count margin-under-navbar">
@@ -9,47 +15,30 @@
   </div>
 </div>
 <!-- Artist cards container -->
-<div class="columns-container margin">
+<div class="full-page-columns-container margin">
   <!-- TODO passer les artists en locals dans une partial de artist_card -->
   <% @artists.each do |artist| %>
-    <div class="column">
-      <div class="artist-card">
-        <%= link_to artist_path(artist) do %>
-          <div class="artist-img">
-            <!-- If an artist does not have artworks, display a random image -->
-            <% if artist.artworks.first %>
-              <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
-            <% else %>
-              <%= image_tag "artwork_2.png" %>
-            <% end %>
-          </div>
-        <% end %>
+    <div class="full-page-column">
+      <%= link_to artist_path(artist) do %>
+      <div class="artworks-card">
+        <div class="artist-img">
+          <!-- If an artist does not have artworks, display a random image -->
+          <% if artist.artworks.first %>
+            <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
+          <% else %>
+            <%= image_tag "artwork_2.png" %>
+          <% end %>
+        </div>
         <div class="artist-infos">
+          <h2 class="artist-name">
+            <%= artist.first_name %> <%= artist.last_name %>
+          </h2>
           <p class="artist-category">
             <%= artist.domain %>
           </p>
-          <%= link_to artist_path(artist) do %>
-            <h2 class="artist-name">
-              <%= artist.first_name %> <%= artist.last_name %>
-            </h2>
-          <% end %>
-          <div class="artists-bio">
-            <% if artist.biography.length > 50 %>
-              <%= truncate(artist.biography, length: 50) %>
-              <%= link_to '...Read more', '', class: "read-more-#{artist.id}" %>
-              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-                $('.read-more-<%= artist.id %>').on('click', function(e) {
-                  e.preventDefault()
-                  console.log("tho")
-                  $(this).parent().html('<%= escape_javascript artist.biography %>')
-                })
-              </script>
-            <% else %>
-              <%= artist.biography %>
-            <% end %>
-          </div>
         </div>
       </div>
+      <% end %>
     </div>
   <% end %>
  </div>

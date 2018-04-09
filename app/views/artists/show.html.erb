@@ -1,38 +1,21 @@
-<!-- Blue filter for the artist picture -->
-<svg class="defs-only">
-  <filter id="monochrome" color-interpolation-filters="sRGB"
-    x="0" y="0" height="100%" width="100%">
-    <feColorMatrix type="matrix"
-      values="0.95 0 0 0 0.05
-              0.85 0 0 0 0.15
-              0.50 0 0 0 0.50
-              0    0 0 1 0" />
-  </filter>
-</svg>
-
-
 <div class="main-container">
+  <p class="mobile-only"><%= link_to 'Retour aux artistes', artists_path %></p>
+</div>
+
+<div class="main-container artist-container">
+  <!-- Left column with Artist Infos -->
   <div class="artist-infos-container">
-    <div class="show-artist-art-type">
-      <p> <%= @artist.domain %> </p>
+    <h2 class="title-1 title-1-small-size no-margin"> <%= @artist.first_name %> <%= @artist.last_name %></h2>
+    <h3 class="show-artist-art-type artworks-category-title"> <%= @artist.domain %> </h3>
+    <div class="artist-photo-container">
+      <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
     </div>
-    <div class="artist-name-container">
-      <h2 class="show-artist-name"> <%= @artist.first_name %> <%= @artist.last_name %></h2>
-    </div>
-    <div class="artist-bio-photo-container">
-      <div class="artist-photo-container">
-        <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
-      </div>
-      <div class="artist-bio-container">
-        <p class="about-the-artist">Biographie</p>
-        <p class="artist-bio"><%= @artist.biography %></p>
-      </div>
-    </div>
+    <p class="artist-bio text-content"><%= @artist.biography %></p>
   </div>
-  <div class="columns-container">
+  <!-- Right column with Artist Artworks -->
+  <div class="artist-artworks-container half-page-columns-container">
     <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
-    <%= render 'shared/artwork_card', artwork: artwork %>
+    <%= render 'shared/artist_card', artwork: artwork %>
     <% end %>
   </div>
-  <%= link_to 'Retour aux artistes', artists_path %>
 </div>
