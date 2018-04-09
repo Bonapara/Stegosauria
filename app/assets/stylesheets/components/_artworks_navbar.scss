@@ -6,7 +6,6 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: rgba(253, 239, 239, 0.95);
   height: 40px;
   width: 100%;
   position: fixed;
@@ -32,7 +31,7 @@
 /* ONGLETS MENU 2 */
 .navbar-button {
   border: none;
-  font-family: "Roboto";
+  font-family: $modern-font;
   font-weight: 400;
   letter-spacing: 0.1em;
   color: black;
