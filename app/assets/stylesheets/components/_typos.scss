@@ -30,6 +30,22 @@ p, .text-content {
   letter-spacing: 0.04em;
 }
 
+@media screen and (max-width: 500px)
+{
+  p, .text-content {
+    font-family: $retro-font;
+    line-height: 150%;
+    font-size: 14px;
+    text-align: justify;
+    letter-spacing: 0.04em;
+  }
+}
+
+.text-content {
+  text-align: left;
+  letter-spacing: 0em;
+}
+
 .page-infos {
   font-size: 12px;
   text-transform: uppercase;
