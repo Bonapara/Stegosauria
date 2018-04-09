@@ -3,9 +3,9 @@ class ArtworksController < ApplicationController
   def index         # GET /artworks
     if params[:commit]
       domain = params[:commit].downcase
-      @artworks = Artwork.where(artwork_domain: domain).all.page params[:page]
+      @artworks = Artwork.where(artwork_domain: domain).order('priority ASC').all.page params[:page]
     else
-      @artworks = Artwork.all.order(:name).page params[:page]
+      @artworks = Artwork.order('priority ASC').all.order(:name).page params[:page]
     end
   end
 
