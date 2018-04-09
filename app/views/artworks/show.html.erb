@@ -7,7 +7,7 @@
       <%= cl_image_tag @artwork.photo, crop: :fill %>
     </div>
     <div class="artwork-infos">
-      <h2> <%= @artwork.name %> </h2>
+      <h2 class="artwork-infos"> <%= @artwork.name %> </h2>
       <h3> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
       <p class="info-type" id="description"> Description </p>
       <p class="artwork-info"> <%= @artwork.description %> </p>
