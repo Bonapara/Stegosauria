@@ -2,31 +2,58 @@
     <!-- ONGLETS -->
     <!-- SCULPTURES -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Sculpture', class: "navbar-button" %>
+      <% if params[:commit] == 'Sculpture' %>
+        <%= submit_tag 'Sculpture', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Sculpture', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- PAINTINGS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Peinture', class: "navbar-button" %>
+      <% if params[:commit] == 'Peinture' %>
+        <%= submit_tag 'Peinture', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Peinture', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- PHOTOGRAPHS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Photographie', class: "navbar-button" %>
+      <% if params[:commit] == 'Photographie' %>
+        <%= submit_tag 'Photographie', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Photographie', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- DRAWINGS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Dessin', class: "navbar-button" %>
+      <% if params[:commit] == 'Dessin' %>
+        <%= submit_tag 'Dessin', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Dessin', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- CERAMICS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Céramique', class: "navbar-button" %>
+      <% if params[:commit] == 'Céramique' %>
+        <%= submit_tag 'Céramique', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Céramique', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- INSTALLATIONS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Installation', class: "navbar-button" %>
+      <% if params[:commit] == 'Installation' %>
+        <%= submit_tag 'Installation', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Installation', class: "navbar-button" %>
+      <% end %>
     <% end %>
     <!-- INSTALLATIONS -->
     <%= form_tag artworks_path, method: :get, class: "form-inline" do %>
-    <%= submit_tag 'Edition', class: "navbar-button" %>
+      <% if params[:commit] == 'Edition' %>
+        <%= submit_tag 'Edition', class: "active-navbar-button" %>
+      <% else %>
+        <%= submit_tag 'Edition', class: "navbar-button" %>
+      <% end %>
     <% end %>
 </div>
-
