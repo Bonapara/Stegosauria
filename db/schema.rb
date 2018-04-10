@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409142152) do
+ActiveRecord::Schema.define(version: 20180410122943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,20 +50,22 @@ ActiveRecord::Schema.define(version: 20180409142152) do
     t.integer "width"
     t.integer "depth"
     t.boolean "priority"
+    t.string "price"
+    t.string "number"
+    t.string "year"
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
   create_table "galleries", force: :cascade do |t|
     t.string "name_gallery"
-    t.text "description"
     t.string "photo_gallery"
-    t.string "first_name_owner"
-    t.string "last_name_owner"
-    t.text "bio_owner"
-    t.string "photo_owner"
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title_1"
+    t.text "description_1"
+    t.string "title_2"
+    t.text "description_2"
     t.string "opening_hours"
     t.string "phone"
     t.string "email"
