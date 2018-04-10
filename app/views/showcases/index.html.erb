@@ -165,13 +165,13 @@
       </div>
       <!-- Gallery call to action -->
       <div class="item slide-no-border" class="slide slide-no-border">
-        <%= image_tag(@showcase.photo_gallery, :class => "carousel-slide") %>
+        <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
         <div class="carousel-elements">
           <!-- TITLE -->
           <div class="carousel-element">
             <div class="carousel-element-display">
               <div class="carousel-element-content">
-                <h1 class="title-1 carousel-title-1"><%= @gallery.name_gallery%></h1>
+                <h1 class="title-1 carousel-title-1"><%= @artwork.name%></h1>
               </div>
               <div class="hide-block">
               </div>
@@ -185,7 +185,7 @@
             <div class="carousel-element">
               <div class="carousel-element-display">
                 <div class="carousel-element-content">
-                  <h4 class="title-2 carousel-title-2"><%= @showcase.gallery_description%></h4>
+                  <h4 class="title-2 carousel-title-2"><%= @showcase.artwork_description%></h4>
                 </div>
                 <div class="hide-block">
                 </div>
@@ -200,7 +200,8 @@
                 <div class="carousel-element">
                   <div class="carousel-element-display">
                     <div class="carousel-element-content call-to-action">
-                      <%= link_to 'DECOUVRIR LA GALERIE', gallery_index_path, :class => "call-to-action-button"%>
+                      <%= link_to "VOIR L'OEUVRE", artwork_path(@artwork), :class => "call-to-action-button"%>
+                      <%#= link_to 'DECOUVRIR LA GALERIE', gallery_index_path, :class => "call-to-action-button"%>
                     </div>
                     <div class="hide-block">
                     </div>

@@ -5,11 +5,11 @@ class ShowcasesController < ApplicationController
       @showcase = ShowCase.last
       @artist = Artist.find(@showcase.artist_id)
       @artwork = Artwork.find(@showcase.artwork_id)
-      @gallery = Gallery.find(@showcase.gallery_id)
+      # @gallery = Gallery.find(@showcase.gallery_id)
     else
       @photo_artist = 'http://placehold.it/1200X500'
       @photo_artwork = 'http://placehold.it/1200X500'
-      @photo_gallery = 'http://placehold.it/1200X500'
+      # @photo_gallery = 'http://placehold.it/1200X500'
     end
   end
 end
