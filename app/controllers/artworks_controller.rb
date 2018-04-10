@@ -1,6 +1,8 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!
-  def index         # GET /artworks
+  def index
+    I18n.locale = :fr
+     # GET /artworks
     if params[:commit]
       domain = params[:commit].downcase
       @artworks = Artwork.where(artwork_domain: domain).order('priority ASC').all.page params[:page]
