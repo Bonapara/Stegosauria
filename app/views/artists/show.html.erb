@@ -13,7 +13,13 @@
     <p class="artist-bio"><%= @artist.biography %></p>
   </div>
   <!-- Right column with Artist Artworks -->
+  <!-- Puts 2 columns if more than 1 artwork for the artist -->
+  <% if @artworks.select { |artwork| artwork.artist_id == @artist.id }.length > 1 %>
   <div class="artist-artworks-container half-page-columns-container">
+  <% else %>
+  <!-- Else put only one column -->
+  <div class="artist-artworks-container half-page-one-column-container">
+  <% end %>
     <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
     <%= render 'shared/artist_card', artwork: artwork %>
     <% end %>

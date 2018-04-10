@@ -65,6 +65,10 @@
   .artist-artworks-sold {
     color: $dark-gray;
   }
+  // for artist index
+  .artist-infos {
+  transform: scale(1.02);
+}
 }
 
 // display titles if there is no mouse
@@ -113,7 +117,7 @@
 
 .artworks-sold, .artist-artworks-sold {
   margin-top: 10px;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
   font-size: 12px;
   font-family: $modern-font;
   transition: all 0.3s ease-out;
@@ -164,6 +168,12 @@
   font-weight: 400;
 }
 
+.big-artworks-card {
+  img {
+    width: 350px;
+  }
+}
+
 // style specific to Artist Index
 
 #artist-card {
@@ -180,6 +190,8 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  transition: all 0.3s ease-out;
+
 }
 
 .artist-name {

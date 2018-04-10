@@ -30,6 +30,10 @@
   column-gap: 0;
 }
 
+.half-page-one-column-container {
+  column-count: 1;
+}
+
 @media screen and (min-width: 500px) {
   .half-page-columns-container {
     column-count: 2;
