@@ -5,21 +5,29 @@
     </div>
     <div class="artwork-infos">
       <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
-      <h3 class="artist-name"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
-      <h3 class="artwork-infos-text"> 2017 - N° 0189 </h3>
+      <h3 class="artist-name-show"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
+      <h3 class="artwork-infos-text" id="artwork-number"> <%= @artwork.year %>
+        <% if @artwork.number %>
+        - <%= @artwork.number %> </h3>
+        <% end %>
       <p class="artwork-info"> <%= @artwork.description %> </p>
 
       <ul>
-        <li class="dimensions-content black"> <%= image_tag "designer.png", class: "icon" %><%= @artwork.artwork_domain %></li>
-        <li class="dimensions-content black"> <div class="flex-inline"> <%= image_tag "cube.png", class: "icon" %> <p class="dimensions-titles black">H&nbsp</p>
-          <p class="dimensions-content black"><%= @artwork.height %> cm ×&nbsp</p>
-          <p class="dimensions-titles black">L&nbsp</p>
-          <p class="dimensions-content black"><%= @artwork.width %> cm&nbsp</p>
-          <% if @artwork.depth != 0 %>
-            <p class="dimensions-titles black">×&nbspP&nbsp</p>
-            <p class="dimensions-content black"><%= @artwork.depth %> cm&nbsp</p>
+
+        <li class="dimensions-content black">
+          <%= image_tag "cube.png", class: "icon" %>
+          <span class="dimensions-titles black bold">H&nbsp</span>
+          <span class="dimensions-content black"><%= @artwork.height %> cm &nbsp</span>
+          <span class="dimensions-titles black bold">L&nbsp</span>
+          <span class="dimensions-content black"><%= @artwork.width %> cm&nbsp</span>
+          <% if @artwork.depth != nil  %>
+            <span class="dimensions-titles black bold">&nbspP&nbsp</span>
+            <span class="dimensions-content black"><%= @artwork.depth %> cm&nbsp</span>
           <% end %>
-        </p> </div> </li>
+        </li>
+
+        <li class="dimensions-content black"> <%= image_tag "designer.png", class: "icon" %><%= @artwork.artwork_domain %></li>
+
         <li class="dimensions-content black"> <%= image_tag "euro.png", class: "icon" %>Entre 2000 € et 3000 € </li>
       </ul>
 
