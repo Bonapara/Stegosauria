@@ -10,18 +10,54 @@
 .artwork-container {
   display: flex;
   position: relative;
-  img {
-    width: 550px;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  .artwork-img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    img {
+      display: block;
+      max-height: calc(100vh - 120px);
+      max-width: 650px;
+      object-fit: contain;
+      // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    }
+  }
+
+
+  h3.artist-name {
+    margin-bottom: 16px;
+  }
+
+  h3.artwork-infos-text {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: inline !important;
+    list-style-type: none;
+    li {
+      margin-bottom: 10px;
+    }
+    li:last-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  .icon {
+    padding-right: 10px;
+    height: 20px;
+    width: auto;
+    opacity: 0.7;
   }
 }
 
 .artist-name {
   margin-top: 10px;
-  letter-spacing: 0.2em;
-  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-size: 18px;
   font-family: $modern-font;
-  font-weight: 300;
+  font-weight: 200;
   transition: all 0.3s ease-out;
   margin-bottom: 0px;
 }
@@ -31,14 +67,25 @@
   font-size: 14px;
 }
 
+
+.artwork-infos-text {
+  margin: 0px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-family: $modern-font;
+  font-weight: 200;
+  color: $medium-gray-darker;
+}
+
 .artwork-infos {
   padding-left: 60px;
+  width: 100%;
   h2 {
     margin: 0px 0px 10px 0px;
   }
 
-  h3 {
-    margin: 0px 0px 40px 0px;
+  p {
+    margin: 0px;
   }
 
   img {
@@ -63,7 +110,7 @@
   // }
 
   .explanation {
-    margin: 50px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     font-style: italic;
   }
 }
@@ -76,27 +123,43 @@
 
 .contact-form-input {
   outline: none;
-  margin: 10px 0px;
+  margin: 8px 0px;
   width: 100%;
   box-shadow: none;
   border: 1px solid $medium-gray !important;
-  // background-color: rgb(60, 60, 60);
   color: black;
-  font-size: 14px;
-  font-family: "Roboto";
+  font-size: 16px;
+  font-family: $retro-font;
   padding: 8px;
   border: none;
+  letter-spacing: 0.05em;
+}
+
+#name-field {
+  margin-right: 16px;
+  flex-basis: 40%;
+}
+
+#email-field {
+  flex-basis: 60%;
 }
 
 
-.page-title {
-  margin: 60px 0px 30px 0px;
-  color: black;
-  font-weight: lighter;
-  font-size: 30px;
-  font-family: "Roboto";;
-}
+.artwork-artist-container {
+  .title-2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
 
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    margin-top: 0px;
+  }
+}
 
 // @media screen and (min-width : 480px) and (max-width: 900px)
 @media screen and (max-width: 1050px)

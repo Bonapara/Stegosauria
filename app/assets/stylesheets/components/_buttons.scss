@@ -1,5 +1,4 @@
 .button {
-  width: 100%;
   letter-spacing: 0.2em;
   font-size: 12px;
   font-family: "Roboto";
@@ -7,19 +6,31 @@
   font-weight: 400;
   padding: 14px 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  border: none;
 }
 
-.button:hover {
-  opacity: 0.9;
-}
+
 
 .primary {
   color: white;
   background-color: black;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .secondary {
-  color: $red;
+  width: 280px;
+  justify: center;
+  color: black;
   background-color: white;
+  border: 1px solid black;
+  transition: all 0.2s ease-out;
+  &:hover {
+    color: $red;
+    background-color: white;
+    border: 1px solid $red;
+  }
 }
