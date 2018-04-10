@@ -13,7 +13,7 @@
   overflow: auto;
   white-space: nowrap;
   padding: 0px 20vw;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255,255,255, 0.9);
   overflow-scrolling: touch;
   overflow-style: -ms-autohiding-scrollbar;
 }
@@ -36,6 +36,18 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   color: black;
+  font-size: 12px;
+  background: none;
+  transition: all 0.2s ease-out;
+  padding-bottom: 5px;
+}
+
+.active-navbar-button {
+  border: none;
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: $red;
   font-size: 12px;
   background: none;
   transition: all 0.2s ease-out;

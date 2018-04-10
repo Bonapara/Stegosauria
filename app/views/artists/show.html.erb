@@ -23,11 +23,11 @@
       <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
       <div class="half-page-column">
         <%= link_to artwork_path(artwork) do %>
-        <!-- puts normal size if more than one card -->
+        <!-- puts normal card size if more than one card -->
         <% if @artworks.select { |artwork| artwork.artist_id == @artist.id }.length > 1 %>
         <div class="artworks-card">
           <% else %>
-        <!-- puts bigger size if more than one card -->
+        <!-- puts bigger card size if more than one card -->
           <div class="artworks-card big-artworks-card">
             <% end %>
             <div class="artworks-img">
