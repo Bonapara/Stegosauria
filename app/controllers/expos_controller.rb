@@ -14,5 +14,9 @@ class ExposController < ApplicationController
 
   def pasts   # GET /photographs
     @expos = Expo.where( "date_to < ?", Time.now )
+    # Array containing all the years
+    years = []
+    Expo.all.each { |expo| years << expo.date_from.year }
+    @years = years.uniq.sort
   end
 end
