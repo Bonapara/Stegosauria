@@ -4,6 +4,11 @@ RailsAdmin.config do |config|
 
 
   config.model 'Artwork' do
+    list do
+      field :name
+      field :photo
+      field :description
+    end
     label "Oeuvre"
     label_plural "Oeuvres"
     weight 2
