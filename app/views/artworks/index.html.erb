@@ -1,9 +1,6 @@
 <!-- Menu #2 -->
 <%= render 'shared/artworks_navbar' %>
-<!-- Title section -->
-<!-- <div class="section-title">
-  <h1> Découvrez nos oeuvres </h1>
-</div> -->
+
 <!-- Artists count -->
 <div class="main-container">
   <div class="count margin-under-artwork-navbar">
@@ -11,10 +8,12 @@
   </div>
 </div>
 <!-- Artist cards container -->
-<div class="columns-container">
-  <% @artworks.each do |artwork| %>
-    <%= render 'shared/artwork_card', artwork: artwork %>
-  <% end %>
+<div class="main-container">
+  <div class="full-page-columns-container">
+    <% @artworks.each do |artwork| %>
+      <%= render 'shared/artwork_card', artwork: artwork %>
+    <% end %>
+  </div>
 </div>
 
  <%= paginate @artworks %>

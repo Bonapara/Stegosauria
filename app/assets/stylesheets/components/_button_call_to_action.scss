@@ -1,0 +1,46 @@
+$button-angle-width: 5px;
+$button-height: 35px;
+
+.button-elements {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $button-height;
+}
+
+.button-element-display {
+  display: flex;
+  align-items: center;
+}
+
+.button-element-content {
+  background-color: black;
+  height: $button-height;
+  display: flex;
+  align-items: center;
+  padding: 9px 4px 8px 7px;
+}
+
+h1.button-text {
+  margin-bottom: 0 !important;
+}
+
+.button-hide-block {
+  width: $button-angle-width;
+}
+
+.button-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $button-angle-width;
+  height: 100%;
+}
+
+.button-text {
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: white;
+  font-size: 10px;
+}

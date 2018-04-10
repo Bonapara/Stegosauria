@@ -7,19 +7,26 @@
       <%= cl_image_tag @artwork.photo, crop: :fill %>
     </div>
     <div class="artwork-infos">
-      <h2> <%= @artwork.name %> </h2>
-      <h3> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
-      <p class="info-type" id="description"> Description </p>
+      <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
+      <h3 class="artist-name"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
       <p class="artwork-info"> <%= @artwork.description %> </p>
-      <div class="flex-inline">
-        <p class="info-type"> Dimensions </p> <p class="artwork-info"> <%= @artwork.dimensions %> </p>
-      </div>
-      <div class="flex-inline">
-        <p class="info-type"> Type </p> <p class="artwork-info"> <%= @artwork.artwork_domain %> </p>
-      </div>
-      <div class="flex-inline">
-        <p class="info-type"> Prix </p> <p class="artwork-info"> <i class="fas fa-paint-brush"></i><i class="fas fa-paint-brush"></i></p>
-      </div>
+
+      <ul>
+        <li class="dimensions-content black"> <%= @artwork.artwork_domain %></li>
+        <li class="dimensions-content black"> <div class="flex-inline"> <p class="dimensions-titles black">H&nbsp</p>
+          <p class="dimensions-content black"><%= @artwork.height %> cm ×&nbsp</p>
+          <p class="dimensions-titles black">L&nbsp</p>
+          <p class="dimensions-content black"><%= @artwork.width %> cm&nbsp</p>
+          <% if @artwork.depth != 0 %>
+            <p class="dimensions-titles black">×&nbspP&nbsp</p>
+            <p class="dimensions-content black"><%= @artwork.depth %> cm&nbsp</p>
+          <% end %>
+        </p> </div> </li>
+        <li class="dimensions-content black"> Entre 2000 € et 3000 € </li>
+      </ul>
+
+
+
       <div class="button-container">
         <div class="artwork-info explanation">
           Intéressé par cette oeuvre ? <br> Renseignez vos coordonnées, nous vous recontacterons au plus vite pour en discuter.
