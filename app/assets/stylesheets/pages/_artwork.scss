@@ -1,7 +1,6 @@
 .previous-page {
   position: absolute;
-  margin-top: $navbar-height;
-  top: 26px;
+  top: -25px;
 }
 
 .previous-page:hover {
@@ -11,31 +10,35 @@
 .artwork-container {
   display: flex;
   position: relative;
-  padding-top: 110px;
   img {
-    width: 600px;
+    width: 550px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   }
+}
+
+.artist-name {
+  margin-top: 10px;
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  font-family: $modern-font;
+  font-weight: 300;
+  transition: all 0.3s ease-out;
+  margin-bottom: 0px;
+}
+
+.black {
+  color: black !important;
+  font-size: 14px;
 }
 
 .artwork-infos {
   padding-left: 60px;
   h2 {
     margin: 0px 0px 10px 0px;
-    color: black;
-    font-weight: lighter;
-    font-size: 30px;
-    font-family: "Roboto";;
   }
 
   h3 {
-    margin: 0px 0px 30px 0px;
-    padding: 0px 0px 30px 0px;
-    color: black;
-    font-weight: bolder;
-    font-size: 18px;
-    font-family: "Cardo";
-    border-bottom: 1px solid $medium-gray;
+    margin: 0px 0px 40px 0px;
   }
 
   img {
@@ -44,14 +47,6 @@
     box-shadow: none;
   }
 
-  .info-type {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 12px;
-    font-family: "Roboto";
-    color: $red;
-    margin-right: 12px;
-  }
 
   #description {
     margin-bottom: 5px !important;

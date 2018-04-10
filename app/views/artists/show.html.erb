@@ -6,7 +6,7 @@
   <!-- Left column with Artist Infos -->
   <div class="artist-infos-container">
     <h2 class="title-1 title-1-small-size no-margin"> <%= @artist.first_name %> <%= @artist.last_name %></h2>
-    <h3 class="show-artist-art-type artworks-category-title"> <%= @artist.domain %> </h3>
+    <h3 class="show-artist-art-type artworks-category-title"> <%= @artist.speciality1 %> </h3>
     <div class="artist-photo-container">
       <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo" %>
     </div>
