@@ -15,9 +15,8 @@
     <div class="navbar-menu">
     <%= link_to "ARTISTES", artists_path, :class => current_class?(artists_path)%>
     <%= link_to "OEUVRES", artworks_path, :class => current_class?(artworks_path) %>
-    <%#= link_to "EXPOS", expos_path, :class => current_class?(expos_path) %>
-    <%= link_to "ACTUS", articles_path, :class => current_class?(articles_path) %>
-    <%= link_to "LA GALERIE", gallery_index_path, :class => current_class?(gallery_index_path) %>
+    <%= link_to "EXPOS", currents_path, :class => current_class?(currents_path) %>
+    <%= link_to "LA GALERIE", galeries_path, :class => current_class?(galeries_path) %>
     <!-- Instagram Logo -->
   </div>
     <div class="navbar-social-networks">
@@ -32,8 +31,8 @@
 <div class="mobile-menu-container">
   <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
-  <%= link_to "EXPOSITIONS & ACTUS", articles_path, class: "navbar-menu-item navbar-menu-link" %>
-  <%= link_to "LA GALERIE", gallery_index_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "EXPOS",currents_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "LA GALERIE", galeries_path, class: "navbar-menu-item navbar-menu-link" %>
   <!-- Dark div on existing content, visble when the mobile menu is displaying -->
   <div class="mobile-menu-darker">
     <div id="dark-wrapper"></div>

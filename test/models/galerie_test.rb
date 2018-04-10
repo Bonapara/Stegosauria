@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ArtistsControllerTest < ActionDispatch::IntegrationTest
+class GalerieTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

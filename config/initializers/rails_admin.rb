@@ -29,11 +29,11 @@ RailsAdmin.config do |config|
     weight 1
   end
 
-  config.model 'Article' do
-    label "Expos et actus"
-    label_plural "Expos et actus"
-    weight 4
-  end
+  # config.model 'Expo' do
+  #   label "Expos et actus"
+  #   label_plural "Expos et actus"
+  #   weight 4
+  # end
 
   config.model 'Gallery' do
     label "La galerie"
