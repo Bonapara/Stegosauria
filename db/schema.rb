@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410133521) do
+ActiveRecord::Schema.define(version: 20180410142451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,19 +62,19 @@ ActiveRecord::Schema.define(version: 20180410133521) do
     t.string "photo"
   end
 
-  create_table "galleries", force: :cascade do |t|
-    t.string "name_gallery"
-    t.string "photo_gallery"
-    t.string "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "galeries", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
     t.string "title_1"
     t.text "description_1"
     t.string "title_2"
     t.text "description_2"
+    t.string "address"
     t.string "opening_hours"
     t.string "phone"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "show_cases", force: :cascade do |t|
@@ -82,16 +82,12 @@ ActiveRecord::Schema.define(version: 20180410133521) do
     t.string "photo_artist"
     t.bigint "artwork_id"
     t.string "photo_artwork"
-    t.bigint "gallery_id"
-    t.string "photo_gallery"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "artist_description"
     t.string "artwork_description"
-    t.string "gallery_description"
     t.index ["artist_id"], name: "index_show_cases_on_artist_id"
     t.index ["artwork_id"], name: "index_show_cases_on_artwork_id"
-    t.index ["gallery_id"], name: "index_show_cases_on_gallery_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -115,5 +111,4 @@ ActiveRecord::Schema.define(version: 20180410133521) do
   add_foreign_key "artworks", "artists"
   add_foreign_key "show_cases", "artists"
   add_foreign_key "show_cases", "artworks"
-  add_foreign_key "show_cases", "galleries"
 end
