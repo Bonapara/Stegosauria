@@ -3,7 +3,7 @@
     <!-- Right column -->
     <div class="gallery-column-1">
       <!-- Photo Gallery -->
-      <%= cl_image_tag @gallery.photo_gallery, crop: :fill, :class => "gallery-photo"%>
+      <%= cl_image_tag @gallery.photo, crop: :fill, :class => "gallery-photo"%>
       <h2 class="title-2"> <%= @gallery.title_1 %> </h2>
         <p> <%= @gallery.description_1 %> </p>
       <h2 class="title-2"> <%= @gallery.title_2 %> </h2>
@@ -12,7 +12,7 @@
     <!-- Left column -->
     <div class="gallery-column-2">
       <div class="gallery-infos">
-        <h1 class="title-1">La galerie</h1>
+        <h1 class="title-1"><%= @gallery.name %></h1>
         <div class="text-content">
           <i class="fas fa-map-marker-alt"></i> <%= @gallery.address %>
         </div>
