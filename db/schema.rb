@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410132245) do
+ActiveRecord::Schema.define(version: 20180410133521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,7 +80,6 @@ ActiveRecord::Schema.define(version: 20180410132245) do
     t.string "photo_artist"
     t.bigint "artwork_id"
     t.string "photo_artwork"
-    t.string "photo_article"
     t.bigint "gallery_id"
     t.string "photo_gallery"
     t.datetime "created_at", null: false
