@@ -1,19 +1,17 @@
 <div class="main-container">
   <div class="artwork-container">
-    <%= link_to artworks_path do %>
-      <p class="count previous-page"> < Retour aux oeuvres </p>
-    <% end %>
     <div class="artwork-img">
       <%= cl_image_tag @artwork.photo, crop: :fill %>
     </div>
     <div class="artwork-infos">
       <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
       <h3 class="artist-name"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
+      <h3 class="artwork-infos-text"> 2017 - N° 0189 </h3>
       <p class="artwork-info"> <%= @artwork.description %> </p>
 
       <ul>
-        <li class="dimensions-content black"> <%= @artwork.artwork_domain %></li>
-        <li class="dimensions-content black"> <div class="flex-inline"> <p class="dimensions-titles black">H&nbsp</p>
+        <li class="dimensions-content black"> <%= image_tag "designer.png", class: "icon" %><%= @artwork.artwork_domain %></li>
+        <li class="dimensions-content black"> <div class="flex-inline"> <%= image_tag "cube.png", class: "icon" %> <p class="dimensions-titles black">H&nbsp</p>
           <p class="dimensions-content black"><%= @artwork.height %> cm ×&nbsp</p>
           <p class="dimensions-titles black">L&nbsp</p>
           <p class="dimensions-content black"><%= @artwork.width %> cm&nbsp</p>
@@ -22,31 +20,34 @@
             <p class="dimensions-content black"><%= @artwork.depth %> cm&nbsp</p>
           <% end %>
         </p> </div> </li>
-        <li class="dimensions-content black"> Entre 2000 € et 3000 € </li>
+        <li class="dimensions-content black"> <%= image_tag "euro.png", class: "icon" %>Entre 2000 € et 3000 € </li>
       </ul>
 
 
 
       <div class="button-container">
         <div class="artwork-info explanation">
-          Intéressé par cette oeuvre ? <br> Renseignez vos coordonnées, nous vous recontacterons au plus vite pour en discuter.
+          Intéressé par cette oeuvre ? Contactez-nous !
         </div>
             <%= form_tag artworks_path, method: :get do %>
+            <div class="flex-inline">
               <%= text_field_tag :query,
                 params[:query],
                 class: "form-control contact-form-input",
+                id: "name-field",
                 placeholder: "Nom complet"
               %>
               <%= email_field_tag :query,
                 params[:query],
                 class: "form-control contact-form-input",
+                id: "email-field",
                 placeholder: "Adresse email"
               %>
+            </div>
               <%= text_area_tag :query,
-                params[:query],
+                "Bonjour, est-il possible de recevoir des informations supplémentaires à propos de cette oeuvre ?",
                 class: "form-control contact-form-input",
-                placeholder: "Bonjour, cette oeuvre m'intéresse pour un éventuel achat. Est-il possible de m'envoyer des informations additionnelles ?",
-                rows: 4
+                rows: 2
               %>
             <%= submit_tag "Contacter la galerie", class: 'button primary' %>
         <% end %>
@@ -54,17 +55,16 @@
     </div>
   </div>
   <div class="artwork-artist-container">
-    <div class="artwork-artist-description">
-      <h2 class="page-title"> A propos de <%= @artist.first_name %> <%= @artist.last_name %></h2>
-      <p class="artwork-info"> <%= @artist.biography %> </p>
-    </div>
     <div class="artwork-artist-other">
-      <h2 class="page-title"> Oeuvres du même artiste </h2>
-      <div class="columns-container">
+      <h2 class="title-2"> Oeuvres du même artiste </h2>
+      <div class="full-page-columns-container">
         <% @artworks.each do |artwork| %>
         <%= render 'shared/artwork_card', artwork: artwork %>
         <% end %>
       </div>
     </div>
+    <%= link_to artist_path(@artist) do %>
+      <h2 class="button secondary"> Découvrir l'artiste </h2>
+    <% end %>
   </div>
 </div>

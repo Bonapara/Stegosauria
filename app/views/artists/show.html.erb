@@ -13,9 +13,52 @@
     <p class="artist-bio"><%= @artist.biography %></p>
   </div>
   <!-- Right column with Artist Artworks -->
+  <!-- Puts 2 columns if more than 1 artwork for the artist -->
+  <% if @artworks.select { |artwork| artwork.artist_id == @artist.id }.length > 1 %>
   <div class="artist-artworks-container half-page-columns-container">
-    <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
-    <%= render 'shared/artist_card', artwork: artwork %>
-    <% end %>
-  </div>
-</div>
+  <% else %>
+  <!-- Else put only one column -->
+  <div class="artist-artworks-container half-page-one-column-container">
+  <% end %>
+      <% @artworks.select { |artwork| artwork.artist_id == @artist.id }.each do |artwork| %>
+      <div class="half-page-column">
+        <%= link_to artwork_path(artwork) do %>
+        <!-- puts normal card size if more than one card -->
+        <% if @artworks.select { |artwork| artwork.artist_id == @artist.id }.length > 1 %>
+        <div class="artworks-card">
+          <% else %>
+        <!-- puts bigger card size if more than one card -->
+          <div class="artworks-card big-artworks-card">
+            <% end %>
+            <div class="artworks-img">
+              <%= cl_image_tag artwork.photo, crop: :fill %>
+            </div>
+            <!-- Infos under card  -->
+            <div class="artworks-infos">
+              <h2 class="artworks-name">
+                <%= artwork.name %>
+              </h2>
+              <% if artwork.sold == true %>
+              <h2 class="artist-artworks-sold">Vendue</h2>
+              <% else %>
+              <div class="artworks-dimensions">
+                <p class="dimensions-titles">H&nbsp</p>
+                <p class="dimensions-content"><%= artwork.height %> cm ×&nbsp</p>
+                <p class="dimensions-titles">L&nbsp</p>
+                <p class="dimensions-content"><%= artwork.width %> cm&nbsp</p>
+                <% if artwork.depth != 0 %>
+                <p class="dimensions-titles">×&nbspP&nbsp</p>
+                <p class="dimensions-content"><%= artwork.depth %> cm&nbsp</p>
+                <% end %>
+              </div>
+              <% end %>
+              <h2 class="artworks-category">
+                <%= artwork.artwork_domain%>
+              </h2>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
