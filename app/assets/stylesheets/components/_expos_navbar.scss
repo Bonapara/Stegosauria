@@ -1,0 +1,52 @@
+/* MENU 2 Artworks container */
+
+.expos-navbar {
+  z-index: 900;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: $navbar-height;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0px 20vw;
+  background-color: rgba(255,255,255, 0.8);
+  overflow-scrolling: touch;
+  overflow-style: -ms-autohiding-scrollbar;
+}
+
+@media (max-width: 560px) {
+  .expos-navbar {
+    padding: 0vh 3vw;
+    justify-content: flex-start;
+  }
+}
+
+.expos-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* ONGLETS MENU 2 */
+.navbar-button {
+  border: none;
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: black;
+  font-size: 12px;
+  background: none;
+  transition: all 0.2s ease-out;
+  padding-bottom: 5px;
+}
+
+/* Get rid of the blue border when clicking */
+.navbar-button:focus {outline:0;}
+
+/* Hover ONGLET r*/
+.navbar-button:hover {
+  color: $red;
+}
+
