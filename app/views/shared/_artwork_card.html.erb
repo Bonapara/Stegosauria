@@ -17,11 +17,11 @@
       <% else %>
         <div class="artworks-dimensions">
           <p class="dimensions-titles">H&nbsp</p>
-          <p class="dimensions-content"><%= artwork.height %> cm ×&nbsp</p>
+          <p class="dimensions-content"><%= artwork.height %> cm &nbsp</p>
           <p class="dimensions-titles">L&nbsp</p>
           <p class="dimensions-content"><%= artwork.width %> cm&nbsp</p>
-          <% if artwork.depth != 0 && nil %>
-            <p class="dimensions-titles">×&nbspP&nbsp</p>
+          <% if artwork.depth != nil %>
+            <p class="dimensions-titles">&nbspP&nbsp</p>
             <p class="dimensions-content"><%= artwork.depth %> cm&nbsp</p>
           <% end %>
         </div>
