@@ -1,7 +1,6 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!
   def index
-    raise
     I18n.locale = :fr
      # GET /artworks
     if params[:commit]
