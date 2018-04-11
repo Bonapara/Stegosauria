@@ -11,7 +11,7 @@ class ArtworkMailer < ActionMailer::Base
     @artist_fn = artist_fn
     @artist_ln = artist_ln
     mail(
-      :subject => "Personne interéssée par" @artwork_name,
+      :subject => "Personne interéssée par #{@artwork_name} de #{@artist_fn} #{@artist_ln}",
       :to  => 'contact@galerieisabellelaverny.com'
       )
   end
