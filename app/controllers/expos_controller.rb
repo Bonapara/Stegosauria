@@ -4,17 +4,17 @@ class ExposController < ApplicationController
 
   end
 
-  def currents   # GET /sculptures
+  def currents
     I18n.locale = :fr
     @expos = Expo.where(['date_from < ? AND date_to > ?', Time.now, Time.now])
   end
 
-  def futures     # GET /paintings
+  def futures
     I18n.locale = :fr
     @expos = Expo.where( "date_from > ?", Time.now )
   end
 
-  def pasts   # GET /photographs
+  def pasts
     I18n.locale = :fr
     @expos = Expo.where( "date_to < ?", Time.now )
     # Array containing all the years

@@ -35,7 +35,7 @@ RailsAdmin.config do |config|
   #   weight 4
   # end
 
-  config.model 'Gallery' do
+  config.model 'Galerie' do
     label "La galerie"
     label_plural "La galerie"
     weight 5

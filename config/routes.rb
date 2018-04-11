@@ -7,6 +7,7 @@ mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :galeries, only: [:index]
   resources :showcases, only: [:index]
   resources :expos, only: [:index]
+  resources :actus, only: [:index]
   get 'currents', to: 'expos#currents'
   get 'futures', to: 'expos#futures'
   get 'pasts', to: 'expos#pasts'

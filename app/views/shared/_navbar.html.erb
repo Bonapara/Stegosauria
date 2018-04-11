@@ -13,17 +13,18 @@
   <!-- Desktop menu -->
   <div class="navbar-right-part">
     <div class="navbar-menu">
-    <%= link_to "ARTISTES", artists_path, :class => current_class?(artists_path)%>
-    <%= link_to "OEUVRES", artworks_path, :class => current_class?(artworks_path) %>
-    <%= link_to "EXPOS", currents_path, :class => current_class?(currents_path) %>
-    <%= link_to "LA GALERIE", galeries_path, :class => current_class?(galeries_path) %>
-    <!-- Instagram Logo -->
-  </div>
+      <%= link_to "ARTISTES", artists_path, :class => current_class?(artists_path)%>
+      <%= link_to "OEUVRES", artworks_path, :class => current_class?(artworks_path) %>
+      <%= link_to "EXPOS", currents_path, :class => current_class?(currents_path) %>
+      <%= link_to "ACTUS", actus_path, :class => current_class?(actus_path) %>
+      <%= link_to "LA GALERIE", galeries_path, :class => current_class?(galeries_path) %>
+      <!-- Instagram Logo -->
+    </div>
     <div class="navbar-social-networks">
       <%= link_to "https://www.instagram.com/galerie_isabelle_laverny/?hl=fr", target: :_blank do %>
-      <i class="fab fa-instagram"></i>
+        <i class="fab fa-instagram"></i>
       <% end %>
-  </div>
+    </div>
   </div>
 </div>
 
@@ -31,7 +32,8 @@
 <div class="mobile-menu-container">
   <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
-  <%= link_to "EXPOS",currents_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "EXPOS", currents_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "ACTUS", actus_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "LA GALERIE", galeries_path, class: "navbar-menu-item navbar-menu-link" %>
   <!-- Dark div on existing content, visble when the mobile menu is displaying -->
   <div class="mobile-menu-darker">
