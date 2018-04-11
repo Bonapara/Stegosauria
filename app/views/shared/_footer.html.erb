@@ -18,7 +18,7 @@
           <div class="footer-menu-item bold">
             Newsletter
           </div>
-          <%= form_tag artworks_path do %>
+          <%= form_tag newsletter_new_email_path do %>
             <%= text_field_tag :query,
               params[:query],
               class: "form-inline footer-form-input",
