@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def artwork_form_email
-    raise
     ArtworkMailer.artwork_mail(params[:name], params[:mail], params[:query], params[:artwork_name], params[:artwork_id], params[:artist_fn], params[:artist_ln]).deliver_now
   end
 end
