@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
 gem 'rails_admin', '~> 1.3'
+gem 'postmark-rails'
 # For pictures upload
 gem 'carrierwave', '~> 1.2.2'
 gem 'cloudinary'
