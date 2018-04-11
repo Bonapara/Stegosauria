@@ -4,7 +4,7 @@ class NewsletterMailer < ActionMailer::Base
   def capart
     mail(
       :subject => 'Hello from Postmark',
-      :to  => 'contact@galerieisabellelaverny.com',
+      :to  => 'contact@galerieisabellelaverny.com'
       )
   end
 end
