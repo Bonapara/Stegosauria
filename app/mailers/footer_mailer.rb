@@ -5,7 +5,6 @@ class NewsletterMailer < ActionMailer::Base
     mail(
       :subject => 'Hello from Postmark',
       :to  => 'contact@galerieisabellelaverny.com',
-      :html_body => '<strong>Hello</strong> dear Postmark user.',
-      :track_opens => 'true')
+      )
   end
 end
