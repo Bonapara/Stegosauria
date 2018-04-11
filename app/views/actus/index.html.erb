@@ -16,6 +16,7 @@
         <% @actus.select { |actu| actu.date_from.year == year } .each do |actu| %>
         <div class="col-xs-12 col-sm-6">
           <div class="expos-card">
+            <div class="actus-type" style="background-color: <%= actu.event_color %>;"> <%= actu.actu_type %> </div>
             <!-- Expo image -->
             <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img" %>
             <!-- Expo title and subtitle -->
