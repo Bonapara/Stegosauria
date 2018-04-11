@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   end
 
   def newsletter_new_email
-    NewsletterMailer.message.deliver_now
+    NewsletterMailer.capart.deliver_now
   end
 end
