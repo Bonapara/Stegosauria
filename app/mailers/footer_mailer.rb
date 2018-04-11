@@ -1,10 +1,11 @@
 class NewsletterMailer < ActionMailer::Base
-  def message
+  default from: 'contact@galerieisabellelaverny.com'
+
+  def capart(mail_address)
+    @mail_address = mail_address
     mail(
-      :subject => 'Hello from Postmark',
-      :to  => 'contact@galerieisabellelaverny.com',
-      :from => 'contact@galerieisabellelaverny.com',
-      :html_body => '<strong>Hello</strong> dear Postmark user.',
-      :track_opens => 'true')
+      :subject => @mail_address,
+      :to  => 'contact@galerieisabellelaverny.com'
+      )
   end
 end
