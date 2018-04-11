@@ -1,1 +1,65 @@
+<!-- Second navbar -->
 <%= render 'shared/expos_navbar' %>
+<!-- Main container with additionnal margin -->
+<div class="main-container margin-under-artwork-navbar">
+  <!-- Loop on years -->
+  <% @years.reverse.each do |year| %>
+    <div class="year">
+    <%= year %>
+    </div>
+    <!-- Bootsrap grid -->
+    <div class="grid-expo">
+      <div class="row">
+        <!-- Loop on expos occurred in the year -->
+        <% @expos.select { |expo| expo.date_from.year == year } .each do |expo| %>
+        <div class="col-xs-12 col-sm-6">
+          <div class="expos-card">
+            <!-- Expo image -->
+            <%= cl_image_tag expo.photo, crop: :fill, class: "expo-img" %>
+            <!-- Expo title and subtitle -->
+            <div class="expo-main-infos">
+              <div class="artist-elements">
+                <div class="artist-element-display">
+                  <div class="artist-element-content">
+                    <h2 class="artist-name">
+                      <%= expo.name %>
+                    </h2>
+                  </div>
+                  <div class="artist-hide-block">
+                  </div>
+                </div>
+                <svg class="artist-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="white" points="0,0 0,100 100,100"/>
+                </svg>
+              </div>
+              <div class="speciality-infos">
+                <div class="speciality-elements">
+                  <div class="speciality-element-display">
+                    <div class="speciality-element-content">
+                      <p class="title-3-small">
+                        <%= expo.expo_type %>
+                      </p>
+                    </div>
+                    <div class="speciality-hide-block">
+                    </div>
+                  </div>
+                  <svg class="speciality-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon fill="white" points="0,0 0,100 100,100"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          <!--  Hover infos display  -->
+           <div class="expo-infos">
+              <p><span class="expo-infos-title">Artistes :</span> <%= expo.artistes %></p>
+              <p><span class="expo-infos-title">Date :</span> du <%= expo.date_from.strftime('%C %b') %> au <%= expo.date_to.strftime('%C %b') %></p>
+              <p><span class="expo-infos-title">Vernissage :</span> <%= expo.vernissage_date.strftime('%C %b') %>, de <%= expo.vernissage_hours_from.strftime("%H:%M") %> à <%= expo.vernissage_hours_to.strftime("%H:%M") %></p>
+              <p><span class="expo-infos-title">Lieu :</span> <%= expo.location %> </p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
