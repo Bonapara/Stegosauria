@@ -11,6 +11,8 @@ mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'futures', to: 'expos#futures'
   get 'pasts', to: 'expos#pasts'
   post 'newsletter_new_email', to: 'application#newsletter_new_email'
+  post 'artwork_form_email', to: 'application#artwork_form_email'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

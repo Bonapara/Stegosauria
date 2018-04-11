@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
   def newsletter_new_email
     NewsletterMailer.nl_mail(params[:query]).deliver_now
   end
+
+  def artwork_form_email
+    raise
+    ArtworkMailer.artwork_mail(params[:name], params[:mail], params[:query], params[:artwork_name], params[:artwork_id], params[:artist_fn], params[:artist_ln]).deliver_now
+  end
 end
