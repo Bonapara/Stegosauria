@@ -1,0 +1,123 @@
+// Global variables exclusively used in the homepage
+$expos-angle-width: 7px;
+$expos-height-element-large: 49px;
+$expos-height-element-small: 49px;
+
+
+/* expos */
+.expos-main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px; // begin at the end of the navbar
+  padding: 0;
+}
+
+// Picture
+.expos-slide {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 50vh!important;
+  object-fit: cover;
+}
+
+// Content
+.expos-elements {
+  background-color: transparent;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  opacity: 0.9;
+}
+
+.expos-element {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $expos-height-element-large;
+}
+
+.expos-element-display {
+  display: flex;
+}
+
+.expos-element-content {
+  background-color: white;
+  height: $expos-height-element-large;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.expos-title-1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+p.expos-title-2 {
+  font-family: $modern-font;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0px !important;
+}
+
+.expos-hide-block {
+  width: $expos-angle-width;
+}
+
+.expos-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $expos-angle-width;
+  height: 100%;
+}
+
+.expos-columns-container {
+  display: flex;
+  margin: 50px;
+}
+
+.expos-column-1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+  flex-basis: 50%;
+}
+
+.expos-column-2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  flex-basis: 50%;
+}
+
+
+
+@media (max-width: 750px) {
+
+  .expos-title-1 {
+    font-size: 30px !important;
+  }
+
+  .expos-title-2 {
+    font-size: 15px !important;
+  }
+
+  .expos-element {
+    height: $expos-height-element-small;
+  }
+
+  .expos-element-content {
+    height: $expos-height-element-small;
+  }
+
+}

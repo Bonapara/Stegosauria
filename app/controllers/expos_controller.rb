@@ -5,6 +5,7 @@ class ExposController < ApplicationController
   end
 
   def currents   # GET /sculptures
+    I18n.locale = :fr
     @expos = Expo.where(['date_from < ? AND date_to > ?', Time.now, Time.now])
   end
 

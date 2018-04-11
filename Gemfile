@@ -15,6 +15,9 @@ gem 'cloudinary'
 # For pagination :
 gem 'kaminari'
 
+# For translation
+gem 'rails-i18n'
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 # To be installed for Bootstrap 4
