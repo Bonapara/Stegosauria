@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GalleryTest < ActiveSupport::TestCase
+class ActuTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
