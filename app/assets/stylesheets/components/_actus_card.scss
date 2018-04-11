@@ -1,0 +1,24 @@
+.published-at {
+  font-size: 12px;
+  font-family: $modern-font;
+  color: $medium-gray-darker;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  text-align: right;
+
+}
+
+.actus-type {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: $modern-font;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  opacity: 0.9;
+}

@@ -15,7 +15,9 @@
         <!-- Loop on expos occurred in the year -->
         <% @actus.select { |actu| actu.date_from.year == year } .each do |actu| %>
         <div class="col-xs-12 col-sm-6">
+          <div class="published-at"> Publié le <%= actu.date_from.strftime('%e') %> <%= l(actu.date_from, format: '%B') %></div>
           <div class="expos-card">
+            <div class="actus-type" style="background-color: #2D9CDB;"> évènement </div>
             <!-- Expo image -->
             <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img" %>
             <!-- Expo title and subtitle -->
