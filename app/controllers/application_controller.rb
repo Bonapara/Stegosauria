@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   end
 
   def newsletter_new_email
-    NewsletterMailer.capart(params[:query]).deliver_now
+    NewsletterMailer.nl_mail(params[:query]).deliver_now
   end
 end
