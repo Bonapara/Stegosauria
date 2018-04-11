@@ -2,7 +2,7 @@
 .title-1 {
   font-family: $didot;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 35px;
 }
 
 .title-1-small-size {
@@ -34,6 +34,14 @@
   font-weight: 300;
   font-size: 14px;
   margin-bottom: 0px;
+}
+
+.title-3-medium {
+  font-family: $modern-font !important;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .artworks-category-title {
