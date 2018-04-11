@@ -10,10 +10,12 @@ class ExposController < ApplicationController
   end
 
   def futures     # GET /paintings
+    I18n.locale = :fr
     @expos = Expo.where( "date_from > ?", Time.now )
   end
 
   def pasts   # GET /photographs
+    I18n.locale = :fr
     @expos = Expo.where( "date_to < ?", Time.now )
     # Array containing all the years
     years = []
