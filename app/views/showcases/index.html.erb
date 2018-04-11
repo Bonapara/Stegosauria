@@ -14,15 +14,15 @@
         <%= image_tag(@showcase.photo_artist, :class => "carousel-slide") %>
         <div class="carousel-elements">
           <!-- TITLE -->
-          <div class="carousel-element">
+          <div class="carousel-element-title">
             <div class="carousel-element-display">
-              <div class="carousel-element-content">
+              <div class="carousel-element-content-title">
                 <h1 class="title-1 carousel-title-1"><%= @artist.first_name%> <%= @artist.last_name %></h1>
               </div>
-              <div class="hide-block">
+              <div class="hide-block-title">
               </div>
             </div>
-            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg class="carousel-svg-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon fill="white" points="0,0 0,100 100,100"/>
             </svg>
           </div>
@@ -31,7 +31,7 @@
             <div class="carousel-element">
               <div class="carousel-element-display">
                 <div class="carousel-element-content">
-                  <h4 class="title-2 carousel-title-2"><%= @showcase.artist_description%></h4>
+                  <h4 class="title-3-medium"><%= @showcase.artist_description%></h4>
                   <!-- <h4><%= @showcase.artist_description%></h4> -->
                 </div>
                 <div class="hide-block">
@@ -44,15 +44,15 @@
             <!-- CALL TO ACTION BUTTON -->
             <div class="call-to-action-div-rel">
               <div class="call-to-action-div-abs">
-                <div class="carousel-element">
+                <div class="carousel-element-action">
                   <div class="carousel-element-display">
-                    <div class="carousel-element-content call-to-action">
+                    <div class="carousel-element-content-action call-to-action">
                       <%= link_to "DÉCOUVRIR L'ARTISTE", artist_path(@artist), :class => "call-to-action-button"%>
                     </div>
-                    <div class="hide-block">
+                    <div class="hide-block-action">
                     </div>
                   </div>
-                  <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <svg class="carousel-svg-action" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="black" points="0,0 0,100 100,100"/>
                   </svg>
                 </div>
@@ -67,15 +67,15 @@
         <div class="carousel-elements">
           <!-- TITLE -->
           <div class="carousel-elements-2">
-            <div class="carousel-element">
+            <div class="carousel-element-title">
               <div class="carousel-element-display">
-                <div class="carousel-element-content">
+                <div class="carousel-element-content-title">
                   <h1 class="title-1 carousel-title-1"><%= @artwork.name%></h1>
                 </div>
-                <div class="hide-block">
+                <div class="hide-block-title">
                 </div>
               </div>
-              <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <svg class="carousel-svg-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,0 0,100 100,100"/>
               </svg>
             </div>
@@ -83,7 +83,7 @@
             <div class="carousel-element">
               <div class="carousel-element-display">
                 <div class="carousel-element-content">
-                  <h4 class="title-2 carousel-title-2"><%= @showcase.artwork_description%></h4>
+                  <h4 class="title-3-medium"><%= @showcase.artwork_description%></h4>
                 </div>
                 <div class="hide-block">
                 </div>
@@ -95,15 +95,15 @@
             <!-- CALL TO ACTION BUTTON -->
             <div class="call-to-action-div-rel">
               <div class="call-to-action-div-abs">
-                <div class="carousel-element">
+                <div class="carousel-element-action">
                   <div class="carousel-element-display">
-                    <div class="carousel-element-content call-to-action">
+                    <div class="carousel-element-content-action call-to-action">
                       <%= link_to "VOIR L'OEUVRE", artwork_path(@artwork), :class => "call-to-action-button"%>
                     </div>
-                    <div class="hide-block">
+                    <div class="hide-block-action">
                     </div>
                   </div>
-                  <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <svg class="carousel-svg-action" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="black" points="0,0 0,100 100,100"/>
                   </svg>
                 </div>
@@ -118,15 +118,15 @@
         <div class="carousel-elements">
           <!-- TITLE -->
           <div class="carousel-elements-2">
-            <div class="carousel-element">
+            <div class="carousel-element-title">
               <div class="carousel-element-display">
-                <div class="carousel-element-content">
+                <div class="carousel-element-content-title">
                   <h1 class="title-1 carousel-title-1"><%= @artwork.name%></h1>
                 </div>
-                <div class="hide-block">
+                <div class="hide-block-title">
                 </div>
               </div>
-              <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <svg class="carousel-svg-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,0 0,100 100,100"/>
               </svg>
             </div>
@@ -134,7 +134,7 @@
             <div class="carousel-element">
               <div class="carousel-element-display">
                 <div class="carousel-element-content">
-                  <h4 class="title-2 carousel-title-2"><%= @showcase.artwork_description%></h4>
+                  <h4 class="title-3-medium"><%= @showcase.artwork_description%></h4>
                 </div>
                 <div class="hide-block">
                 </div>
@@ -146,15 +146,15 @@
             <!-- CALL TO ACTION BUTTON -->
             <div class="call-to-action-div-rel">
               <div class="call-to-action-div-abs">
-                <div class="carousel-element">
+                <div class="carousel-element-action">
                   <div class="carousel-element-display">
-                    <div class="carousel-element-content call-to-action">
+                    <div class="carousel-element-content-action call-to-action">
                       <%= link_to "VOIR L'OEUVRE", artwork_path(@artwork), :class => "call-to-action-button"%>
                     </div>
-                    <div class="hide-block">
+                    <div class="hide-block-action">
                     </div>
                   </div>
-                  <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <svg class="carousel-svg-action" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="black" points="0,0 0,100 100,100"/>
                   </svg>
                 </div>
@@ -168,15 +168,15 @@
         <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
         <div class="carousel-elements">
           <!-- TITLE -->
-          <div class="carousel-element">
+          <div class="carousel-element-title">
             <div class="carousel-element-display">
-              <div class="carousel-element-content">
+              <div class="carousel-element-content-title">
                 <h1 class="title-1 carousel-title-1"><%= @artwork.name%></h1>
               </div>
-              <div class="hide-block">
+              <div class="hide-block-title">
               </div>
             </div>
-            <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg class="carousel-svg-title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon fill="white" points="0,0 0,100 100,100"/>
             </svg>
           </div>
@@ -185,7 +185,7 @@
             <div class="carousel-element">
               <div class="carousel-element-display">
                 <div class="carousel-element-content">
-                  <h4 class="title-2 carousel-title-2"><%= @showcase.artwork_description%></h4>
+                  <h4 class="title-3-medium"><%= @showcase.artwork_description%></h4>
                 </div>
                 <div class="hide-block">
                 </div>
@@ -197,16 +197,16 @@
             <!-- CALL TO ACTION BUTTON -->
             <div class="call-to-action-div-rel">
               <div class="call-to-action-div-abs">
-                <div class="carousel-element">
+                <div class="carousel-element-action">
                   <div class="carousel-element-display">
-                    <div class="carousel-element-content call-to-action">
+                    <div class="carousel-element-content-action call-to-action">
                       <%= link_to "VOIR L'OEUVRE", artwork_path(@artwork), :class => "call-to-action-button"%>
                       <%#= link_to 'DECOUVRIR LA GALERIE', gallery_index_path, :class => "call-to-action-button"%>
                     </div>
-                    <div class="hide-block">
+                    <div class="hide-block-action">
                     </div>
                   </div>
-                  <svg class="carousel-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <svg class="carousel-svg-action" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="black" points="0,0 0,100 100,100"/>
                   </svg>
                 </div>

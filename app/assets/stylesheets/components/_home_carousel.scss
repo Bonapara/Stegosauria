@@ -1,7 +1,15 @@
 // Global variables exclusively used in the homepage
-$angle-width: 10px;
-$height-element-large: 70px;
-$height-element-small: 50px;
+
+// TITLE
+$angle-width-title: 8px;
+$height-element: 56px;
+// CATCH PHRASE
+$angle-width: 7px;
+$height-element-small: 49px;
+// CALL TO ACTION
+$angle-width-action: 6px;
+$height-element-action: 42px;
+
 
 // Get rid of the background effect imposed by bootstrap
 .carousel-control.right {
@@ -35,6 +43,7 @@ $height-element-small: 50px;
   width: 100vw;
   height: 90vh!important;
   object-fit: cover;
+  padding: 10px;
 }
 
 // Indicators
@@ -55,43 +64,30 @@ $height-element-small: 50px;
   align-items: left;
 }
 
+// CATCH PHRASE & CALL TO ACTION CONTAINER
 .carousel-elements-2 {
   display: flex;
   flex-direction: column;
   align-items: left;
+  height: auto;
 }
 
-.carousel-element {
-  position: relative;
-  background-color: transparent;
-  display: inline-block;
-  height: $height-element-large;
-}
-
-.call-to-action-div-rel {
-  position: relative;
-  width: 100%;
-}
-.call-to-action-div-abs {
-  position: absolute;
-  right: - $angle-width;
-}
-
+// CONTAINER OF THE MULTIPLE DIV COMPOSING THE ORGINAL SHAPE
 .carousel-element-display {
   display: flex;
 }
 
-.carousel-element-content.call-to-action {
-  background-color: black;
+/////////////////////////////////////// TITLE //////////////////////////////////
+.carousel-element-title {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $height-element;
 }
 
-.carousel-element-content.call-to-action a {
-  color: white
-}
-
-.carousel-element-content {
+.carousel-element-content-title {
   background-color: white;
-  height: $height-element-large;
+  height: $height-element;
   display: flex;
   align-items: center;
   padding: 10px 15px;
@@ -99,6 +95,39 @@ $height-element-small: 50px;
 
 .carousel-title-1 {
   margin: 0;
+  font-size: 25px;
+}
+
+.hide-block-title {
+  width: $angle-width-title;
+}
+
+.carousel-svg-title {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $angle-width-title;
+  height: 100%;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////// CATH PHRASE ////////////////////////////////////
+
+.carousel-element {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $height-element-small;
+}
+
+.carousel-element-content {
+  background-color: white;
+  height: $height-element-small;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
 }
 
 .hide-block {
@@ -113,13 +142,64 @@ $height-element-small: 50px;
   height: 100%;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////CALL TO ACTION ///////////////////////////////////
+
+.call-to-action-div-rel {
+  position: relative;
+  width: 100%;
+}
+
+.call-to-action-div-abs {
+  position: absolute;
+  right: - $angle-width-action;
+}
+
+.carousel-element-action {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  height: $height-element-action;
+}
+
+.carousel-element-content-action {
+  background-color: white;
+  height: $height-element-action;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.hide-block-action {
+  width: $angle-width-action;
+}
+
+.carousel-svg-action {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $angle-width-action;
+  height: 100%;
+}
+
+.carousel-element-content-action.call-to-action {
+  background-color: black;
+}
+
+.carousel-element-content-action.call-to-action a {
+  color: white
+}
 
 .call-to-action-button {
   font-family: $modern-font;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.2em;
-  font-size: 17px;
+  font-size: 13px;
 }
+
+////////////////////////////////////////////////////////////////////////////////
 
 @media (max-width: 750px) {
 

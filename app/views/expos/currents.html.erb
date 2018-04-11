@@ -1,1 +1,47 @@
 <%= render 'shared/expos_navbar' %>
+
+<div class="expos-main-container">
+  <% @expos.each do |expo| %>
+  <div class="expos-photos">
+    <%= image_tag(expo.photo, :class => "expos-slide") %>
+    <div class="expos-elements">
+      <!-- TITLE -->
+      <div class="expos-element">
+        <div class="expos-element-display">
+          <div class="expos-element-content">
+            <h1 class="title-1 expos-title-1"><%= expo.name%></h1>
+          </div>
+          <div class="expos-hide-block">
+          </div>
+        </div>
+        <svg class="expos-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon fill="white" points="0,0 0,100 100,100"/>
+        </svg>
+      </div>
+      <!-- CATCH PHRASE -->
+      <div class="expos-element">
+        <div class="expos-element-display">
+          <div class="expos-element-content">
+            <p class="title-3-small expos-type"><%= expo.expo_type%></p>
+          </div>
+          <div class="expos-hide-block">
+          </div>
+        </div>
+        <svg class="expos-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon fill="white" points="0,0 0,100 100,100"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="expos-columns-container">
+    <div class="expos-column-1">
+      <p> <strong>Artistes:</strong>  <%= expo.artistes %></p>
+      <p> <strong>Date:</strong> Jusqu'au <%= expo.date_to.strftime("%e") %> <%= l(expo.date_to, format: '%B').capitalize %></p>
+      <p> <strong>Vernissage:</strong> le <%= expo.vernissage_date.strftime("%e") %> <%= l(expo.vernissage_date, format: '%B').capitalize %> de <%= expo.vernissage_hours_from.strftime("%H") %>h à <%= expo.vernissage_hours_to.strftime("%H").capitalize %>h</p>
+    </div>
+    <div class="expos-column-2">
+      <p> <%= expo.descriptions_expo %> </p>
+    </div>
+  </div>
+  <% end %>
+</div>
