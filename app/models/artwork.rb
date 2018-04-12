@@ -2,8 +2,18 @@ class Artwork < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   belongs_to :artist
   has_many :show_cases
-  validates :name,     presence: true,   uniqueness: true
+  validates :name,     presence: true
+  validates :artwork_domain,     presence: true
+  validates :description,     presence: true
+  validates_length_of :description, :minimum => 140, :maximum => 170
+  validates :photo,     presence: true
+  validates :height,     presence: true
+  validates :width,     presence: true
+  validates :price,     presence: true
+
   paginates_per 10
+
+
 
   # private
 
