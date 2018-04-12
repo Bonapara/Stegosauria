@@ -19,7 +19,7 @@ class ShowcasesController < ApplicationController
                         title: :title,
                         site_name: :site,
                         description: :description,
-                        image: "#{@artwork.photo_artwork}"
+                        image: "#{@artwork.photo}"
                       }
   end
 end

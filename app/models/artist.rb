@@ -8,7 +8,9 @@ class Artist < ApplicationRecord
   validates :last_name,      presence: true,   uniqueness: true
 
   def full_name
-    first_name + " " + last_name
+    if first_name != nil
+      first_name + " " + last_name
+    end
   end
 
 end
