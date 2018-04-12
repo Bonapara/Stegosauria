@@ -19,13 +19,16 @@
 
 // Isabelle Laverny brand on the left
 .navbar-brand {
+  padding-top: 7px !important;
   p {
     font-family: $didot;
     font-weight: bolder;
     font-size: 20px;
     color: black;
     padding: 0px;
-    letter-spacing: 0.1em;
+    margin: 0px;
+    letter-spacing: 0.06em;
+
   }
 }
 .navbar-brand:hover {
@@ -33,6 +36,13 @@
     text-decoration: none;
     opacity: 0.8;
   }
+}
+
+#signature {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.44em;
+  font-weight: lighter;
 }
 
 .navbar-right-part {
@@ -82,7 +92,11 @@
 
 .navbar-social-networks {
   .fa-instagram {
-    font-size: 30px;
+    font-size: 34px;
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: $red;
+    }
   }
 }
 
@@ -221,24 +235,26 @@
 
 @media screen and (max-width: 450px) {
   .navbar-brand {
+    padding-top: 9px !important;
+    padding-left: 0px;
+    padding-right: 20px;
     p {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
+
+  #signature {
+    font-size: 9px;
+  }
+
+  .main-navbar {
+    padding: 0px 20px;
+  }
+
+  #burger-btn {
+    left: 0px;
+  }
+
+
 }
 
-@media screen and (max-width: 400px) {
-  .navbar-brand {
-    p {
-      font-size: 12px;
-    }
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .navbar-brand {
-    p {
-      font-size: 10px;
-    }
-  }
-}
