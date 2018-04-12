@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Galerie Isabelle Laverny</title>
+    <% if current_page?(root_path)  %>
+      <%= display_meta_tags site: 'Galerie Isabelle Laverny' %>
+    <% else %>
+      <%= display_meta_tags reverse: true, site: 'Galerie Isabelle Laverny' %>
+    <% end %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= favicon_link_tag 'favicon.ico' %>
@@ -30,7 +34,7 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    </script>
   </head>
   <body>
     <%= render 'shared/navbar' %>

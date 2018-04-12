@@ -1,6 +1,7 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!
   def index
+    # SEO
     I18n.locale = :fr
      # GET /artworks
     if params[:commit]
@@ -9,6 +10,7 @@ class ArtworksController < ApplicationController
     else
       @artworks = Artwork.order('priority ASC').all.order(:name).page params[:page]
     end
+    @page_title = "#{params[:commit]} Nos oeuvres"
   end
 
   def show          # GET /artworks/:id
@@ -20,6 +22,7 @@ class ArtworksController < ApplicationController
     @all_artworks.each do |artwork|
       @artworks << artwork if artwork.name != @artwork.name
     end
+    @page_title = "#{@artwork.name} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}"
   end
 
   def new           # GET /artworks/new

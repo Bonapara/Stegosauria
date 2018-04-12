@@ -11,5 +11,6 @@ class ShowcasesController < ApplicationController
       @photo_artwork = 'http://placehold.it/1200X500'
       # @photo_gallery = 'http://placehold.it/1200X500'
     end
+    @page_title = "De l'art à l'art de vivre"
   end
 end

@@ -6,5 +6,6 @@ class ActusController < ApplicationController
     years = []
     Actu.all.each { |actu| years << actu.date_from.year }
     @years = years.uniq.sort
+    @page_title = "Notre actualité : évenements - presse - articles - expos"
   end
 end
