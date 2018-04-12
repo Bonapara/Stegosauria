@@ -10,7 +10,15 @@ class ArtworksController < ApplicationController
     else
       @artworks = Artwork.order('priority ASC').all.order(:name).page params[:page]
     end
-    @page_title = "#{params[:commit]} Nos oeuvres"
+    set_meta_tags title: "#{params[:commit]} Nos oeuvres",
+                  description: "Découvrez les oeuvres #{params[:commit]} de la Galerie Isabelle Laverny",
+                  keywords: "art, peinture, galerie, Paris 17",
+                  og: {
+                        title: :title,
+                        site_name: :site,
+                        description: :description,
+                        image: "#{@artworks.first.photo}"
+                      }
   end
 
   def show          # GET /artworks/:id
@@ -22,7 +30,15 @@ class ArtworksController < ApplicationController
     @all_artworks.each do |artwork|
       @artworks << artwork if artwork.name != @artwork.name
     end
-    @page_title = "#{@artwork.name} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}"
+    set_meta_tags title: "#{@artwork.name} - #{@artwork.artwork_domain} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}",
+                  description: "#{@artwork.name} #{@artwork.artwork_domain} #{@artwork.description} #{@artwork.price} #{@artwork.year}",
+                  keywords: "art, peinture, galerie, Paris 17",
+                  og: {
+                        title: :title,
+                        site_name: :site,
+                        description: :description,
+                        image: "#{@artwork.photo}"
+                      }
   end
 
   def new           # GET /artworks/new
