@@ -2,7 +2,8 @@ class ArtistsController < ApplicationController
   skip_before_action :authenticate_user!
   def index         # GET /artists
     # @artists = Artist.all
-    @artists = Artist.all
+    @artists = Artist.page(1)
+    # @artists = Artist.all.page params[:page]
     set_meta_tags title: "Nos artistes",
                   description: "Découvrez les artistes de la Galerie Isabelle Laverny",
                   keywords: "art, peinture, galerie, Paris 17",
