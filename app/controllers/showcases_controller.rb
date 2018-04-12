@@ -14,12 +14,12 @@ class ShowcasesController < ApplicationController
     set_meta_tags reverse: false,
                   title: "De l'art à l'art de vivre",
                   description: "Galerie d'art Paris 17",
-                  keywords: "art, peinture, galerie, Paris 17"
-                  # og: {
-                  #       title: :title,
-                  #       site_name: :site,
-                  #       description: :description,
-                  #       image: "#{@artwork.photo_artwork}"
-                  #     }
+                  keywords: "art, peinture, galerie, Paris 17",
+                  og: {
+                        title: :title,
+                        site_name: :site,
+                        description: :description,
+                        image: "#{@artwork.photo_artwork}"
+                      }
   end
 end
