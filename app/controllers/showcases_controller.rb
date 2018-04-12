@@ -11,6 +11,15 @@ class ShowcasesController < ApplicationController
       @photo_artwork = 'http://placehold.it/1200X500'
       # @photo_gallery = 'http://placehold.it/1200X500'
     end
-    @page_title = "De l'art à l'art de vivre"
+    set_meta_tags reverse: false,
+                  title: "De l'art à l'art de vivre",
+                  description: "Galerie d'art Paris 17",
+                  keywords: "art, peinture, galerie, Paris 17"
+                  # og: {
+                  #       title: :title,
+                  #       site_name: :site,
+                  #       description: :description,
+                  #       image: "#{@artwork.photo_artwork}"
+                  #     }
   end
 end

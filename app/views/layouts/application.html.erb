@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <% if current_page?(root_path)  %>
-      <%= display_meta_tags site: 'Galerie Isabelle Laverny' %>
-    <% else %>
-      <%= display_meta_tags reverse: true, site: 'Galerie Isabelle Laverny' %>
-    <% end %>
+    <%= display_meta_tags reverse: true, site: 'Galerie Isabelle Laverny' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= favicon_link_tag 'favicon.ico' %>
