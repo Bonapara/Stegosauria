@@ -40,7 +40,7 @@
       <p> <strong>Vernissage :</strong> le <%= expo.vernissage_date.strftime("%e") %> <%= l(expo.vernissage_date, format: '%B').capitalize %> de <%= expo.vernissage_hours_from.strftime("%H") %>h à <%= expo.vernissage_hours_to.strftime("%H").capitalize %>h</p>
     </div>
     <div class="expos-column-2">
-      <p><strong>Description :</strong><%= expo.descriptions_expo %> </p>
+      <p><strong>Description :</strong> <%= expo.descriptions_expo %> </p>
     </div>
   </div>
   <% end %>
