@@ -10,7 +10,7 @@ class ExposController < ApplicationController
   def futures
     I18n.locale = :fr
     @expos = Expo.where( "date_from > ?", Time.now )
-    @page_title = "#{@expos.first.expo_type} #{l(@expos.first.date_from, format: '%B')} Paris 17"
+    @page_title = "#{@expos.first.expo_type} #{l(@expos.first.date_from, format: '%B').capitalize!} Paris 17"
   end
 
   def pasts
