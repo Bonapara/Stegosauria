@@ -6,8 +6,8 @@ class ShowCase < ApplicationRecord
   mount_uploader :photo_artwork, PhotoUploader
   # mount_uploader :photo_gallery, PhotoUploader
   # Presence TRUE
-  validates :photo_artist,     presence: true, :allow_blank => false
-  validates :photo_artwork,     presence: true, :allow_blank => false
+  validates :photo_artist,     presence: true
+  validates :photo_artwork,     presence: true
   validates :artwork_description,     presence: true, :allow_blank => false
   validates :artist_description,     presence: true,  :allow_blank => false
   # Length of artist
