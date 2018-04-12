@@ -3,11 +3,13 @@ class ArtistsController < ApplicationController
   def index         # GET /artists
     # @artists = Artist.all
     @artists = Artist.all
+    @page_title = "Nos artistes"
   end
 
   def show          # GET /artists/:id
     @artist = Artist.find(params[:id])
     @artworks = Artwork.all
+    @page_title = "#{@artist.first_name} #{@artist.last_name} - #{@artist.speciality1} #{@artist.speciality2} #{@artist.speciality3}"
   end
 
   def new           # GET /artists/new
