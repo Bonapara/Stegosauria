@@ -18,39 +18,18 @@
   overflow-style: -ms-autohiding-scrollbar;
 }
 
-.navbar-button:active {
-  background-color: blue;
+.expos-navbar > a {
+  border: none;
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: black;
+  font-size: 12px;
+  background: none;
+  transition: all 0.2s ease-out;
+  padding-bottom: 5px;
 }
 
-// @media (max-width: 560px) {
-//   .expos-navbar {
-//     padding: 0vh 3vw;
-//     justify-content: flex-start;
-//   }
-// }
-
-// .expos-navbar::-webkit-scrollbar {
-//     display: none;
-// }
-
-// /* ONGLETS MENU 2 */
-// .navbar-button {
-//   border: none;
-//   font-family: $modern-font;
-//   font-weight: 400;
-//   letter-spacing: 0.1em;
-//   color: black;
-//   font-size: 12px;
-//   background: none;
-//   transition: all 0.2s ease-out;
-//   padding-bottom: 5px;
-// }
-
-// /* Get rid of the blue border when clicking */
-// .navbar-button:focus {outline:0;}
-
-// /* Hover ONGLET r*/
-// .navbar-button:hover {
-//   color: $red;
-// }
-
+.active2 {
+  color: $red!important;
+}
