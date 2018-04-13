@@ -11,6 +11,10 @@ class Artwork < ApplicationRecord
   validates :width,     presence: true
   validates :price,     presence: true
 
+  def artwork_domain
+    ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']
+  end
+
   paginates_per 30
 
 
