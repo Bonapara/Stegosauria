@@ -1,7 +1,7 @@
 // Gallery container
 .gallery-container {
   display: flex;
-  svg {
+  .icon {
     color: $medium-gray-darker;
     margin-right: 12px;
   }
@@ -19,9 +19,9 @@
 .gallery-column-2 {
   position: sticky;
   top: 90px;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 100px);
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: column;
   flex-basis: 35%;
   border-left: 1px solid $light-gray;
