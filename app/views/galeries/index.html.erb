@@ -14,32 +14,52 @@
       <div class="gallery-infos">
         <h1 class="title-1"><%= @gallery.name %></h1>
         <div class="text-content">
-          <i class="fas fa-map-marker-alt"></i> <%= @gallery.address %>
+          <i class="fas fa-map-marker-alt icon"></i> <%= @gallery.address %>
         </div>
         <div class="text-content">
-          <i class="fas fa-clock"></i>
+          <i class="fas fa-clock icon"></i>
           <%= @gallery.opening_hours %>
         </div>
         <div class="text-content">
-          <i class="fas fa-phone"></i> <%= @gallery.phone %>
+          <i class="fas fa-phone icon"></i> <%= @gallery.phone %>
         </div>
         <div class="text-content">
-          <i class="fas fa-envelope"></i> <%= @gallery.email %>
+          <i class="fas fa-envelope icon"></i> <a href="mailto:<%= @gallery.email %>"> <%= @gallery.email %> </a>
         </div>
       </div>
       <div class="gallery-map">
         <iframe
           width="100%"
-          height="200"
+          height="270"
           frameborder="0" style="border:0"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDy7Ksnv9eMUGY_R_tHMd-kYPuqv2WeQmE
             &q=27+rue+guersant,Paris+France" allowfullscreen>
         </iframe>
-        <%= link_to "Se rendre à la galerie", "http://www.google.com", class: "button primary" %>
+        <div>
+        <%= link_to "https://www.google.com/maps/place/27+Rue+Guersant,+75017+Paris/" do %>
+          <div class="button-elements">
+            <div class="button-element-display">
+              <div class="button-element-content">
+                <h1 class="button-text">Se rendre à la galerie</h1>
+              </div>
+              <div class="button-hide-block">
+              </div>
+            </div>
+            <svg class="button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="black" points="0,0 0,100 100,100"/>
+            </svg>
+          </div>
+        </div>
+      <% end %>
+
+<!--         <%= link_to "Se rendre à la galerie", "https://www.google.com/maps/place/27+Rue+Guersant,+75017+Paris/", class: "button primary" %>
+ -->
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 
