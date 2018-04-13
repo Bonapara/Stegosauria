@@ -8,8 +8,8 @@
     <h2 class="title-1 title-1-small-size no-margin"> <%= @artist.first_name %> <%= @artist.last_name %></h2>
     <h3 class="show-artist-art-type artworks-category-title">
       <%= @artist.speciality1 %>
-      <% if @artist.speciality2 != nil%>
-      <span class="spe-separator">-</span> <%= @artist.speciality2 %>
+      <% if @artist.speciality2.blank? != true %>
+        <span class="spe-separator">-</span> <%= @artist.speciality2 %>
       <% end %>
     </h3>
     <div class="artist-photo-container">
