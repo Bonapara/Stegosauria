@@ -8,7 +8,7 @@ class ArtworksController < ApplicationController
       domain = params[:commit]
       @artworks = Artwork.where(artwork_domain: domain).order('priority ASC').all.page params[:page]
     else
-      @artworks = Artwork.order('priority ASC').all.order(:name).page params[:page]
+      @artworks = Artwork.order('priority ASC').all.order('priority ASC').page params[:page]
     end
 
     if @artworks.count > 0
