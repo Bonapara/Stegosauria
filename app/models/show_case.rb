@@ -1,10 +1,13 @@
 class ShowCase < ApplicationRecord
   belongs_to :artist
   belongs_to :artwork
-  # belongs_to :gallery
+  belongs_to :expo
+  belongs_to :galerie
+  # PHOTO Cloudinary
   mount_uploader :photo_artist, PhotoUploader
   mount_uploader :photo_artwork, PhotoUploader
-  # mount_uploader :photo_gallery, PhotoUploader
+  mount_uploader :photo_expo, PhotoUploader
+  mount_uploader :photo_galerie, PhotoUploader
   # Presence TRUE
   validates :photo_artist,     presence: true
   validates :photo_artwork,     presence: true

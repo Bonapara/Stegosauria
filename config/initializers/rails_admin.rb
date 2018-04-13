@@ -2,7 +2,6 @@ RailsAdmin.config do |config|
 
   config.main_app_name = ["Galerie Isabelle Laverny", ""]
 
-
   config.model 'Artwork' do
     list do
       field :name
@@ -29,29 +28,12 @@ RailsAdmin.config do |config|
     weight 1
   end
 
-  # config.model 'Expo' do
-  #   label "Expos et actus"
-  #   label_plural "Expos et actus"
-  #   weight 4
-  # end
-
-  config.model 'Galerie' do
-    label "La galerie"
-    label_plural "La galerie"
-    weight 5
-    object_label_method do
-      :name_gallery
-    end
-  end
 
   config.model 'User' do
     label "Users"
     label_plural "Users"
     weight 6
   end
-
-
-
 
   ### Popular gems integration
 

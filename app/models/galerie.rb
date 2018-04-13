@@ -1,5 +1,5 @@
 class Galerie < ApplicationRecord
-  # has_many :show_cases
+  has_many :show_cases
   mount_uploader :photo, PhotoUploader
   validates :name,     presence: true
   validates :title_1,     presence: true
