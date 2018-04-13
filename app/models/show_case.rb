@@ -14,6 +14,9 @@ class ShowCase < ApplicationRecord
   validates :artwork_description,     presence: true, :allow_blank => false
   validates :artist_description,     presence: true,  :allow_blank => false
   # Length of artist
-  validates_length_of :artist_description, :minimum => 30, :maximum => 60
-  validates_length_of :artwork_description, :minimum => 30, :maximum => 60
+  validates_length_of :artist_description, :minimum => 30, :maximum => 50
+  validates_length_of :artwork_description, :minimum => 30, :maximum => 50
+  validates_length_of :expo_description, :minimum => 30, :maximum => 50
+  validates_length_of :galerie_description, :minimum => 30, :maximum => 50
+
 end
