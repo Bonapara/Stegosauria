@@ -1,4 +1,5 @@
 class ActusController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     I18n.locale = :fr
     @actus = Actu.all
