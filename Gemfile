@@ -11,7 +11,7 @@ gem 'redis'
 gem 'rails_admin', '~> 1.3'
 gem 'postmark-rails'
 gem 'meta-tags', '~> 2.9'
-gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin_rollincode', :git => "git@github.com:Bonapara/rails_admin_theme.git"
 
 # For pictures upload
 gem 'carrierwave', '~> 1.2.2'
