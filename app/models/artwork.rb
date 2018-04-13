@@ -11,8 +11,12 @@ class Artwork < ApplicationRecord
   validates :width,     presence: true
   validates :price,     presence: true
 
-  def artwork_domain
+  def artwork_domain_enum
     ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']
+  end
+
+   def price_enum
+    ['< 500 €', '500 - 1000 €', '1000 - 1500 €', '1500 - 2000 €', '> 2000 €']
   end
 
   paginates_per 30
