@@ -3,12 +3,18 @@
 // TITLE
 $angle-width-title: 8px;
 $height-element: 56px;
+$angle-width-title-small: 6px;
+$height-element-title-small: 42px;
 // CATCH PHRASE
-$angle-width: 7px;
-$height-element-small: 49px;
+$angle-width-catch-phrase: 7px;
+$height-element-catch-phrase: 49px;
+$angle-width-catch-phrase-small: 5px;
+$height-element-catch-phrase-small: 35px;
 // CALL TO ACTION
 $angle-width-action: 6px;
 $height-element-action: 42px;
+$angle-width-action-small: 5px;
+$height-element-action-small: 35px;
 
 
 // Get rid of the background effect imposed by bootstrap
@@ -120,26 +126,26 @@ $height-element-action: 42px;
   position: relative;
   background-color: transparent;
   display: inline-block;
-  height: $height-element-small;
+  height: $height-element-catch-phrase;
 }
 
 .carousel-element-content {
   background-color: white;
-  height: $height-element-small;
+  height: $height-element-catch-phrase;
   display: flex;
   align-items: center;
   padding: 10px 15px;
 }
 
 .hide-block {
-  width: $angle-width;
+  width: $angle-width-catch-phrase;
 }
 
 .carousel-svg {
   position: absolute;
   right: 0;
   top: 0;
-  width: $angle-width;
+  width: $angle-width-catch-phrase;
   height: 100%;
 }
 
@@ -203,21 +209,84 @@ $height-element-action: 42px;
 ////////////////////////////////////////////////////////////////////////////////
 
 @media (max-width: 750px) {
-
-  .carousel-title-1 {
-    font-size: 30px !important;
+  /////////////////////////////////////// TITLE //////////////////////////////////
+  .carousel-element-title {
+    height: $height-element-title-small;
   }
 
-  .carousel-title-2 {
-    font-size: 15px !important;
+  .carousel-element-content-title {
+    height: $height-element-title-small;
+    padding: 10px 10px!important;
+  }
+
+  .carousel-title-1 {
+    font-size: 20px!important;
+  }
+
+  .hide-block-title {
+    width: $angle-width-title-small;
+  }
+
+  .carousel-svg-title {
+    width: $angle-width-title-small;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+
+  /////////////////////////////// CATH PHRASE ////////////////////////////////////
+
+  .carousel-title-3 {
+    font-size: 14px!important;
   }
 
   .carousel-element {
-    height: $height-element-small;
+    height: $height-element-catch-phrase-small;
   }
 
   .carousel-element-content {
-    height: $height-element-small;
+    height: $height-element-catch-phrase-small;
+    padding: 10px 10px!important;
   }
+
+  .hide-block {
+    width: $angle-width-catch-phrase-small;
+  }
+
+  .carousel-svg {
+    width: $angle-width-catch-phrase-small;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+
+
+  //////////////////////////////CALL TO ACTION ///////////////////////////////////
+
+  .call-to-action-div-abs {
+    right: - $angle-width-action-small;
+  }
+
+  .carousel-element-action {
+    height: $height-element-action-small;
+  }
+
+  .carousel-element-content-action {
+    height: $height-element-action-small;
+    padding: 10px 10px!important;
+  }
+
+  .hide-block-action {
+    width: $angle-width-action-small;
+  }
+
+  .carousel-svg-action {
+    width: $angle-width-action-small;
+  }
+
+  .call-to-action-button {
+    font-size: 10px!important;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
 
 }

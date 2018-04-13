@@ -4,23 +4,36 @@ class ArtistsController < ApplicationController
     # @artists = Artist.all
     @artists = Artist.page(1)
     # @artists = Artist.all.page params[:page]
-    set_meta_tags title: "Nos artistes",
-                  description: "Découvrez les artistes de la Galerie Isabelle Laverny",
-                  keywords: "art, peinture, galerie, Paris 17",
-                  og: {
-                        title: :title,
-                        site_name: :site,
-                        description: :description,
-                        image: "#{@artists.first.photo}"
-                      }
+
+    # SEO
+    if @artists.count > 0
+      set_meta_tags title: "Nos artistes",
+                    description: "Découvrez les artistes de la Galerie Isabelle Laverny",
+                    keywords: "art, peinture, galerie, Paris 17",
+                    og: {
+                          title: :title,
+                          site_name: :site,
+                          description: :description,
+                          image: "#{@artists.first.photo}"
+                        }
+    else
+      set_meta_tags title: "Nos artistes",
+                    description: "Découvrez les artistes de la Galerie Isabelle Laverny",
+                    keywords: "art, peinture, galerie, Paris 17",
+                    og: {
+                          title: :title,
+                          site_name: :site,
+                          description: :description
+                        }
+    end
 
   end
 
   def show          # GET /artists/:id
     @artist = Artist.find(params[:id])
     @artworks = Artwork.all
-    set_meta_tags title: "#{@artist.first_name} #{@artist.last_name} - #{@artist.speciality1} #{@artist.speciality2} #{@artist.speciality3}",
-                  description: "#{@artist.first_name} #{@artist.last_name}, #{@artist.biography} #{@artist.speciality1} #{@artist.speciality2} #{@artist.speciality3}",
+    set_meta_tags title: "#{@artist.first_name} #{@artist.last_name} - #{@artist.speciality1} #{@artist.speciality2}",
+                  description: "#{@artist.first_name} #{@artist.last_name}, #{@artist.biography} #{@artist.speciality1} #{@artist.speciality2}",
                   keywords: "art, peinture, galerie, Paris 17",
                   og: {
                         title: :title,

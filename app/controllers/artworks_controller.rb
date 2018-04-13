@@ -10,15 +10,27 @@ class ArtworksController < ApplicationController
     else
       @artworks = Artwork.order('priority ASC').all.order(:name).page params[:page]
     end
-    set_meta_tags title: "#{params[:commit]} Nos oeuvres",
-                  description: "Découvrez les oeuvres #{params[:commit]} de la Galerie Isabelle Laverny",
-                  keywords: "art, peinture, galerie, Paris 17",
-                  og: {
-                        title: :title,
-                        site_name: :site,
-                        description: :description,
-                        image: "#{@artworks.first.photo}"
-                      }
+
+    if @artworks.count > 0
+      set_meta_tags title: "#{params[:commit]} Nos oeuvres",
+                    description: "Découvrez les oeuvres #{params[:commit]} de la Galerie Isabelle Laverny",
+                    keywords: "art, peinture, galerie, Paris 17",
+                    og: {
+                          title: :title,
+                          site_name: :site,
+                          description: :description,
+                          image: "#{@artworks.first.photo}"
+                        }
+    else
+      set_meta_tags title: "#{params[:commit]} Nos oeuvres",
+                    description: "Découvrez les oeuvres #{params[:commit]} de la Galerie Isabelle Laverny",
+                    keywords: "art, peinture, galerie, Paris 17",
+                    og: {
+                          title: :title,
+                          site_name: :site,
+                          description: :description
+                        }
+    end
   end
 
   def show          # GET /artworks/:id
@@ -39,21 +51,6 @@ class ArtworksController < ApplicationController
                         description: :description,
                         image: "#{@artwork.photo}"
                       }
-  end
-
-  def new           # GET /artworks/new
-  end
-
-  def create        # POST /artworks
-  end
-
-  def edit          # GET /artworks/:id/edit
-  end
-
-  def update        # PATCH /artworks/:id
-  end
-
-  def destroy       # DELETE /artworks/:id
   end
 
   # Never trust parameters from the scary internet, only allow the white list through
