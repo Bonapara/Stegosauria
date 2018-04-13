@@ -11,6 +11,14 @@ class Artist < ApplicationRecord
   validates :photo,     presence: true
   validates :speciality1,     presence: true
 
+  def speciality1_enum
+    ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']
+  end
+
+  def speciality2_enum
+    ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']
+  end
+
   def full_name
     if first_name != nil
       first_name + " " + last_name

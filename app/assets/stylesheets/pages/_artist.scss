@@ -40,6 +40,11 @@
   width: 300px;
 }
 
+.spe-separator {
+  font-family: $modern-font;
+  font-size: 16px;
+}
+
 @media screen and (max-width: 1050px) {
   .artist-container {
     display:flex;
