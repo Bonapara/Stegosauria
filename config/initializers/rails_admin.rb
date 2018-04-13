@@ -4,10 +4,11 @@ RailsAdmin.config do |config|
 
 
   config.model 'Artwork' do
-    list do
-      field :name
-      field :photo
-      field :description
+    field :photo do
+        label "une belle tof"
+    end
+    field :name do
+        label "Nom"
     end
     label "Oeuvre"
     label_plural "Oeuvres"
