@@ -1,6 +1,9 @@
 class Expo < ApplicationRecord
+  # Dependance
+  has_many :show_cases
+  # Photo Cloudinary
   mount_uploader :photo, PhotoUploader
-
+  # Validations
   validates :name,     presence: true
   validates :expo_type,     presence: true
   validates :artistes,     presence: true
