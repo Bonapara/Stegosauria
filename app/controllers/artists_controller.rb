@@ -1,9 +1,7 @@
 class ArtistsController < ApplicationController
   skip_before_action :authenticate_user!
   def index         # GET /artists
-    # @artists = Artist.all
-    @artists = Artist.page(1)
-    # @artists = Artist.all.page params[:page]
+    @artists = Artist.all.page params[:page]
 
     # SEO
     if @artists.count > 0
@@ -27,6 +25,7 @@ class ArtistsController < ApplicationController
                         }
     end
 
+
   end
 
   def show          # GET /artists/:id
@@ -41,21 +40,6 @@ class ArtistsController < ApplicationController
                         description: :description,
                         image: "#{@artist.photo}"
                       }
-  end
-
-  def new           # GET /artists/new
-  end
-
-  def create        # POST /artists
-  end
-
-  def edit          # GET /artists/:id/edit
-  end
-
-  def update        # PATCH /artists/:id
-  end
-
-  def destroy       # DELETE /artists/:id
   end
 
   # Never trust parameters from the scary internet, only allow the white list through
