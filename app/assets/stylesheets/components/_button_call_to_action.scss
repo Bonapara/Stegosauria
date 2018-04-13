@@ -2,10 +2,14 @@ $button-angle-width: 5px;
 $button-height: 35px;
 
 .button-elements {
+  margin-top: 10px;
   position: relative;
   background-color: transparent;
   display: inline-block;
   height: $button-height;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .button-element-display {
@@ -45,4 +49,21 @@ h1.button-text {
   letter-spacing: 0.2em;
   color: white;
   font-size: 10px;
+  // &:hover {
+  //   opacity: 0.8;
+  // }
+}
+
+.submit-button-text {
+  border: none;
+  background-color: transparent;
+  font-family: $modern-font;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  // &:hover {
+  //   opacity: 0.8;
+  // }
 }
