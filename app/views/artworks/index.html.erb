@@ -8,6 +8,7 @@
   </div>
 </div>
 <!-- Artist cards container -->
+<% if @artworks.count > 0  %>
 <div class="main-container">
   <div class="full-page-columns-container">
     <% @artworks.each do |artwork| %>
@@ -15,6 +16,11 @@
     <% end %>
   </div>
 </div>
+<% else %>
+  <div class="empty-artwork">
+    <h1 class="title-1">Plus d'oeuvres dans cette catégorie pour l'instant</h1>
+  </div>
+<% end %>
 
  <%= paginate @artworks%>
 
