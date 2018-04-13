@@ -18,6 +18,10 @@
   overflow-style: -ms-autohiding-scrollbar;
 }
 
+.navbar-button:active {
+  background-color: blue;
+}
+
 // @media (max-width: 560px) {
 //   .expos-navbar {
 //     padding: 0vh 3vw;
