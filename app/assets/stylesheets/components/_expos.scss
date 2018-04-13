@@ -3,6 +3,18 @@ $expos-angle-width: 7px;
 $expos-height-element-large: 49px;
 $expos-height-element-small: 49px;
 
+// When there is no expo
+.empty-expo {
+  margin-top: 100px;
+  padding: 20px;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center
+}
+
 
 /* expos */
 .expos-main-container {

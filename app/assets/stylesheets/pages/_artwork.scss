@@ -1,3 +1,13 @@
+.empty-artwork {
+  width: 100vw;
+  padding: 20px;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
 .previous-page {
   position: absolute;
   top: -25px;
