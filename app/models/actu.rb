@@ -1,4 +1,4 @@
-COLORS = { "Sortie culturelle" => '#2F80ED', "Evènement" => '#EE5F5B', "Presse" => '#F2994A' }
+COLORS = { "Sortie culturelle" => '#2F80ED', "Evènement" => '#EE5F5B', "Presse" => '#F2994A', "Article" => '#00b894'}
 
 class Actu < ApplicationRecord
   mount_uploader :photo, PhotoUploader
@@ -11,7 +11,10 @@ class Actu < ApplicationRecord
   validates :description,     presence: true
   validates :photo,     presence: true
   validates :actu_type,     presence: true
-  # validates_inclusion_of :actu_type, :in => ["prout", "caca", "pipi"]
+
+  def actu_type_enum
+    ['Article', 'Presse', 'Evènement', 'Sortie culturelle']
+  end
 
   def event_color
     COLORS[actu_type]
