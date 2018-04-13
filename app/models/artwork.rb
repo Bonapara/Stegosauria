@@ -11,7 +11,7 @@ class Artwork < ApplicationRecord
   validates :width,     presence: true
   validates :price,     presence: true
 
-  paginates_per 10
+  paginates_per 30
 
 
 
