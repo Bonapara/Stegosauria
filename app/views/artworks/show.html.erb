@@ -4,6 +4,7 @@
       <%= cl_image_tag @artwork.photo, crop: :fill %>
     </div>
     <div class="artwork-infos">
+      <div class="artwork-infos-1">
       <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
       <h3 class="artist-name-show"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
       <h3 class="artwork-infos-text" id="artwork-number"> <%= @artwork.year %>
@@ -30,6 +31,7 @@
 
         <li class="dimensions-content black"> <%= image_tag "euro.png", class: "icon" %>Entre 2000 € et 3000 € </li>
       </ul>
+      </div>
 
 
 
@@ -57,13 +59,24 @@
               <%= text_area_tag :query,
                 "Bonjour, est-il possible de recevoir des informations supplémentaires à propos de cette oeuvre ?",
                 class: "form-control contact-form-input",
-                rows: 2
+                rows: 3
               %>
             <%= hidden_field_tag :artwork_name, @artwork.name %>
             <%= hidden_field_tag :artwork_id, @artwork.id %>
             <%= hidden_field_tag :artist_fn, @artwork.artist.first_name %>
             <%= hidden_field_tag :artist_ln, @artwork.artist.last_name %>
-            <%= submit_tag "Contacter la galerie", class: 'button primary'%>
+            <div class="button-elements">
+              <div class="button-element-display">
+                <div class="button-element-content">
+                  <%= submit_tag "Contacter la galerie", class: "submit-button-text" %>
+                </div>
+                <div class="button-hide-block">
+                </div>
+              </div>
+              <svg class="button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon fill="black" points="0,0 0,100 100,100"/>
+              </svg>
+            </div>
         <% end %>
       </div>
     </div>

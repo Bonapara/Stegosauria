@@ -101,6 +101,9 @@
 }
 
 .artwork-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-left: 60px;
   width: 100%;
   h2 {
@@ -109,6 +112,7 @@
 
   p {
     margin: 0px;
+    color: black;
   }
 
   img {
@@ -116,7 +120,6 @@
     height: auto;
     box-shadow: none;
   }
-
 
   #description {
     margin-bottom: 5px !important;
@@ -126,17 +129,13 @@
     margin-bottom: 0px !important;
   }
 
-  // .artwork-info {
-  //   font-size: 16px;
-  //   font-family: "Cardo";
-  //   font-weight: 300;
-  // }
-
   .explanation {
     padding: 10px 0px 0px 0px;
     font-style: italic;
+    color: black;
   }
 }
+
 
 .artwork-info {
   font-size: 16px;
