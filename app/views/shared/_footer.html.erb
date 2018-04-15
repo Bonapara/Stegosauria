@@ -24,7 +24,7 @@
               required: 'required',
               class: "form-inline footer-form-input",
               placeholder: "monadresse@gmail.com" %>
-              <%= submit_tag "Je m'inscris", class: 'form-button', data: { confirm: "Ajouter mon email à la Newsletter ?" } %>
+              <%= submit_tag "Je m'inscris", class: 'button primary', data: { confirm: "Ajouter mon email à la Newsletter ?" } %>
           <% end %>
         </div>
 
@@ -69,11 +69,16 @@
           <%= link_to "Edition", artworks_path, class: "footer-menu-item" %>
         </div>
         <div class="footer-column">
-          <%= link_to "Expositions & actus", "#", class: "footer-menu-item bold" %>
-          <%= link_to "Vernissage", "#", class: "footer-menu-item" %>
-          <%= link_to "Exposition hors des murs", "#", class: "footer-menu-item" %>
-          <%= link_to "Exposition dans les murs", "#", class: "footer-menu-item" %>
-          <%= link_to "Autres actualités", "#", class: "footer-menu-item" %>
+          <%= link_to "Expositions", "#", class: "footer-menu-item bold" %>
+          <%= link_to "Exposition en cours", "#", class: "footer-menu-item" %>
+          <%= link_to "Exposition à venir", "#", class: "footer-menu-item" %>
+          <%= link_to "Archives", "#", class: "footer-menu-item" %>
+        </div>
+        <div class="footer-column">
+          <%= link_to "Actualités", "#", class: "footer-menu-item bold" %>
+          <%= link_to "Sortie culturelle", "#", class: "footer-menu-item" %>
+          <%= link_to "Evènement", "#", class: "footer-menu-item" %>
+          <%= link_to "Article de presse", "#", class: "footer-menu-item" %>
         </div>
         <div class="footer-column">
           <%= link_to "La galerie", "#", class: "footer-menu-item bold" %>

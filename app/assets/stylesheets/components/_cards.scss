@@ -54,16 +54,16 @@
     color: $medium-gray-darker;
   }
   .artworks-name {
-    color: $dark-gray;
+    color: black;
   }
   .artworks-artist {
-    color: $dark-gray;
+    color: black;
   }
   .artworks-category {
     color: $red;
   }
   .artist-artworks-sold {
-    color: $dark-gray;
+    color: black;
   }
   // for artist index
   .artist-infos {
@@ -83,16 +83,16 @@
     color: $medium-gray-darker;
   }
   .artworks-name {
-    color: $dark-gray;
+    color: black;
   }
   .artworks-artist {
-    color: $dark-gray;
+    color: black;
   }
   .artworks-category {
     color: $red;
   }
   .artist-artworks-sold {
-    color: $dark-gray;
+    color: black;
   }
 }
 
@@ -107,7 +107,7 @@
 
 .artworks-name {
   margin-top: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   font-size: 14px;
   font-family: $modern-font;
   font-weight: 300;
@@ -133,13 +133,14 @@
 .dimensions-content {
   font-family: $modern-font;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 10px;
   transition: all 0.3s ease-out;
   margin-bottom: 0px;
 }
+
 .dimensions-titles {
   font-family: $modern-font;
-  font-size: 12px;
+  font-size: 10px;
   transition: all 0.3s ease-out;
   margin-bottom: 0px;
 }
@@ -152,7 +153,7 @@
   letter-spacing: 0.0em;
   font-size: 16px;
   transition: all 0.3s ease-out;
-  font-family: $retro-font;
+  font-family: $didot;
 }
 
 // style specific to Artist Show

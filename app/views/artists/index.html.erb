@@ -1,11 +1,8 @@
-<!-- Artists count -->
-<div class="main-container">
-  <div class="count margin-under-navbar">
-    <%= @artists.count %> artistes
-  </div>
-</div>
 <!-- Artist cards container -->
 <div class="main-container">
+  <!-- <div class="page-infos">
+    <%= @artists.count %> artistes
+  </div> -->
   <div class="full-page-columns-container margin">
     <!-- TODO passer les artists en locals dans une partial de artist_card -->
     <% @artists.each do |artist| %>
