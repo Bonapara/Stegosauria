@@ -242,8 +242,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sweet-alert (0.0.9)
-    sweet-alert-confirm (0.4.1)
     temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
@@ -299,8 +297,6 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  sweet-alert
-  sweet-alert-confirm
   uglifier
   web-console (>= 3.3.0)
   webpacker

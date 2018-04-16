@@ -160,6 +160,9 @@ a.footer-menu-item:hover {
   text-align: center;
   color: white;
   background-color: black;
+  &:focus {
+    outline:0;
+  }
 }
 
 .form-button:hover {
