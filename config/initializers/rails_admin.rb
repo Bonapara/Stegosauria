@@ -174,17 +174,14 @@ RailsAdmin.config do |config|
     field :actu_type do
       label "type d'actu"
     end
+    field :dates do
+      label "Date(s) de l'évènement"
+    end
     field :location do
       label "Adresse"
     end
     field :description do
       label "Description"
-    end
-    field :date_from do
-      label "date_from"
-    end
-    field :date_to do
-      label "date_from"
     end
     field :photo do
       label "photo"
