@@ -28,9 +28,9 @@
     padding: 0px;
     margin: 0px;
     letter-spacing: 0.06em;
-
   }
 }
+
 .navbar-brand:hover {
   a {
     text-decoration: none;
@@ -79,6 +79,10 @@
   border-bottom: 2px solid $red;
 }
 
+.active-mobile-menu {
+  border-left: 4px solid $red !important;
+}
+
 .navbar-social-networks, .burger-menu {
   img {
     height: 25px;
@@ -94,11 +98,13 @@
   .fa-instagram {
     font-size: 34px;
     transition: all 0.2s ease-out;
+    margin-right: 6px;
     &:hover {
       color: $red;
     }
   }
 }
+
 
 
 // BURGER MENU
@@ -214,18 +220,28 @@
     transition:all 0.4s ease-out;
     a {
       background-color: white;
+      border-bottom: 1px solid $light-gray;
       opacity: 1;
+      cursor: pointer;
+      padding: 20px 10px;
+      font-family: $modern-font;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: black;
+      font-size: 12px;
+      text-align: center;
+      transition: all 0.2s ease-out;
     }
 
     .mobile-menu-darker {
       opacity: 0;
       background-color: black;
       height: 0px;
-      transition:opacity 0.4s ease-out;
+      transition: all 0.4s ease-out;
     }
 
     .mobile-menu-darker.add-opacity {
-      height: 200vh;
+      height: 10000vh;
       opacity: 0.7;
     }
   }
@@ -265,10 +281,6 @@
       font-size: 14px;
       letter-spacing: 0.04em;
     }
-  }
-
-  .navbar-social-networks .fa-instagram {
-    margin-right: 6px;
   }
 
   #signature {

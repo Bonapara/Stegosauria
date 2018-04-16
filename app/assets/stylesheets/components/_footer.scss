@@ -126,10 +126,10 @@ a.footer-menu-item:hover {
 
 .footer-form-input {
   outline: none;
-  width: 200px;
+  width: 170px;
   background-color: white;
   color: $dark-gray;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Roboto";
   padding: 8px;
   border: 1px solid $medium-gray;
@@ -137,7 +137,7 @@ a.footer-menu-item:hover {
 
 .form-button {
   letter-spacing: 0.2em;
-  font-size: 12px;
+  font-size: 11px;
   font-family: "Roboto";
   text-transform: uppercase;
   font-weight: 400;
@@ -149,7 +149,7 @@ a.footer-menu-item:hover {
 }
 
 .form-button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 850px)

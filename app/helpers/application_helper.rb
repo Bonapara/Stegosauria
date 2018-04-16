@@ -8,4 +8,9 @@ module ApplicationHelper
     return 'active2' if request.path == test_path
     ''
   end
+
+  def current_class_mobile?(test_path)
+    return 'active-mobile-menu' if request.path == test_path
+    ''
+  end
 end
