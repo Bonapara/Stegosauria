@@ -3,7 +3,7 @@
   <div class="expos-main-container">
     <% @expos.each do |expo| %>
     <div class="expos-photos">
-      <%= image_tag(expo.photo, :class => "expos-slide") %>
+      <%= image_tag(expo.photo, :class => "expos-slide", alt: "#{expo.name} - #{expo.expo_type}") %>
       <div class="expos-elements">
         <!-- TITLE -->
         <div class="expos-element">

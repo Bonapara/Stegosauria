@@ -12,7 +12,7 @@
           <div class="artist-img">
             <!-- If an artist does not have artworks, display a random image -->
             <% if artist.artworks.first %>
-              <%= cl_image_tag artist.artworks.first.photo, crop: :fill %>
+              <%= cl_image_tag artist.artworks.last.photo, crop: :fill, alt: "#{artist.artworks.last.name} - #{artist.first_name} #{artist.last_name}" %>
             <% else %>
               <%= image_tag "artwork_2.png" %>
             <% end %>

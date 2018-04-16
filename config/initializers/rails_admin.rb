@@ -146,6 +146,12 @@ RailsAdmin.config do |config|
     field :descriptions_expo do
       label "Description de l'expo"
     end
+    field :date_from do
+      label "Du"
+    end
+    field :date_to do
+      label "Au"
+    end
     field :vernissage_date do
       label "Date du vernissage"
     end

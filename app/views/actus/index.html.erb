@@ -18,7 +18,7 @@
           <div class="expos-card">
             <div class="actus-type" style="background-color: <%= actu.event_color %>;"> <%= actu.actu_type %> </div>
             <!-- Expo image -->
-            <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img" %>
+            <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img", alt: "#{actu.title_1} - #{actu.title_2}" %>
             <!-- Expo title and subtitle -->
             <div class="expo-main-infos">
               <div class="artist-elements">

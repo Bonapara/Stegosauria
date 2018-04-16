@@ -15,7 +15,7 @@
         <div class="col-xs-12 col-sm-6">
           <div class="expos-card">
             <!-- Expo image -->
-            <%= cl_image_tag expo.photo, crop: :fill, class: "expo-img" %>
+            <%= cl_image_tag expo.photo, crop: :fill, class: "expo-img", alt: "#{expo.name} - #{expo.expo_type}" %>
             <!-- Expo title and subtitle -->
             <div class="expo-main-infos">
               <div class="artist-elements">

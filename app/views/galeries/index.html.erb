@@ -3,7 +3,7 @@
     <!-- Right column -->
     <div class="gallery-column-1">
       <!-- Photo Gallery -->
-      <%= cl_image_tag @gallery.photo, crop: :fill, :class => "gallery-photo"%>
+      <%= cl_image_tag @gallery.photo, crop: :fill, :class => "gallery-photo", alt: "#{@gallery.name} - #{@gallery.title_2}"%>
       <h2 class="title-2"> <%= @gallery.title_1 %> </h2>
         <p> <%= @gallery.description_1 %> </p>
       <h2 class="title-2"> <%= @gallery.title_2 %> </h2>

@@ -1,8 +1,10 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500|Roboto:300,400,500');
 @font-face {
-  font-family: 'Didot';
-  src: url('fonts/Didot.ttf') format("truetype");
+  font-family: 'gil';
+  src:  url(font-path('Didot-Bold.ttf')) format('truetype'),
+        url(font-path('Didot-Italic.ttf')) format('truetype'),
+        url(font-path('Didot.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,7 +15,7 @@ $headers-font: "Roboto", "Helvetica", "sans-serif";
 
 $modern-font: "Roboto", "Helvetica", "sans-serif";
 $retro-font: "EB Garamond", "Helvetica", "sans-serif";
-$didot: "Didot", "EB Garamond", "sans-serif";
+$didot: "Didot", "gil", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
