@@ -52,7 +52,7 @@ footer {
 .footer-part-3 {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 30px 0px 0px 0px;
   border-top: 1px solid $medium-gray;
 }
@@ -107,6 +107,20 @@ a.footer-menu-item:hover {
   font-weight: 400;
   padding: 12px;
   color: $medium-gray-darker;
+  svg {
+    font-size: 8px;
+  }
+}
+
+.cgv-signature {
+  padding: 0px !important;
+  color: rgb(100, 100, 100);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  font-weight: 400;
+  padding: 12px;
+  color: $medium-gray-darker;
 }
 
 .footer-icon {
@@ -126,10 +140,10 @@ a.footer-menu-item:hover {
 
 .footer-form-input {
   outline: none;
-  width: 200px;
+  width: 170px;
   background-color: white;
   color: $dark-gray;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Roboto";
   padding: 8px;
   border: 1px solid $medium-gray;
@@ -137,7 +151,7 @@ a.footer-menu-item:hover {
 
 .form-button {
   letter-spacing: 0.2em;
-  font-size: 12px;
+  font-size: 11px;
   font-family: "Roboto";
   text-transform: uppercase;
   font-weight: 400;
@@ -146,10 +160,13 @@ a.footer-menu-item:hover {
   text-align: center;
   color: white;
   background-color: black;
+  &:focus {
+    outline:0;
+  }
 }
 
 .form-button:hover {
-  // opacity: 0.9;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 850px)
@@ -171,6 +188,19 @@ a.footer-menu-item:hover {
   .footer-part-2 {
     display: none;
   }
+  .footer-part-3 {
+    flex-direction: column-reverse;
+  }
+
+  .footer-legal {
+    display: flex;
+    border-bottom: 1px solid $medium-gray;
+    align-items: center;
+    .footer-menu-item {
+      flex-basis: 33%;
+      text-align: center;
+    }
+  }
   .footer-menu-item.bold {
     padding-top: 40px;
     text-align: center;
@@ -180,7 +210,7 @@ a.footer-menu-item:hover {
   }
   .cgv {
     letter-spacing: 0.1em;
-    padding: 20px 10px;
+    padding: 10px 10px;
   }
 
 }
