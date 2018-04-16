@@ -21,6 +21,7 @@
   flex-direction: column;
   break-inside: avoid;
   align-items: center;
+  justify-content: center;
 }
 
 // Columns class for Artist Show
@@ -44,6 +45,7 @@
   display: flex;
   flex-direction: column;
   break-inside: avoid;
+  justify-content: center;
   // border-right: 1px solid $medium-gray;
   align-items: center;
 }

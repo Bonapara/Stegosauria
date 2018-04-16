@@ -120,6 +120,7 @@ a.footer-menu-item:hover {
   text-transform: none;
   font-weight: 400;
   padding: 12px;
+  letter-spacing: 0.02em;
   color: $medium-gray-darker;
 }
 
@@ -172,7 +173,20 @@ a.footer-menu-item:hover {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 850px)
+.footer-legal {
+  display: flex;
+  align-items: center;
+}
+
+.normal-spacing {
+  letter-spacing: 0.02em;
+}
+
+.xs-spacing {
+  letter-spacing: 0.0em !important;
+}
+
+@media screen and (max-width: 950px)
 {
   footer {
     padding-top: 0px;
@@ -196,9 +210,7 @@ a.footer-menu-item:hover {
   }
 
   .footer-legal {
-    display: flex;
     border-bottom: 1px solid $medium-gray;
-    align-items: center;
     .footer-menu-item {
       flex-basis: 33%;
       text-align: center;
