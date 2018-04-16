@@ -4,8 +4,8 @@
   max-width: 1100px;
   padding-top: 40px;
   padding-bottom: 120px;
-  // padding-right: 50px;
-  // padding-left:  50px;
+  padding-right: 30px;
+  padding-left:  30px;
 }
 
 .main-container.margin-plus {
@@ -18,11 +18,9 @@ h1 {
 
 @media screen and (max-width: 480px)
 {
-  .main-container {
-    padding-top: 80px;
-    padding-right: 50px;
-    padding-left:  50px;
-  }
+  // .main-container {
+  //   padding-top: 80px;
+  // }
 }
 
 @media screen and (max-width: 1050px)
