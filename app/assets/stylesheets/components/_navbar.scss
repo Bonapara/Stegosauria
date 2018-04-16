@@ -95,13 +95,10 @@
 }
 
 .navbar-social-networks {
-  .fa-instagram {
-    font-size: 34px;
+  .insta-logo {
+    height: 40px;
     transition: all 0.2s ease-out;
     margin-right: 6px;
-    &:hover {
-      color: $red;
-    }
   }
 }
 
