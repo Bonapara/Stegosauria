@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500|Roboto:300,400,500');
 @font-face {
   font-family: 'gil';
-  src:  url(font-path('Didot-HTF-L24-Light.ttf')) format('truetype'),
-        url(font-path('Didot-HTF-M24-Medium.ttf')) format('truetype'),
-        url(font-path('Didot-HTF-B24-Bold.ttf')) format('truetype');
+  src:  url(font-path('Didot-Bold.ttf')) format('truetype'),
+        url(font-path('Didot-Italic.ttf')) format('truetype'),
+        url(font-path('Didot.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
