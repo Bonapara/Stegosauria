@@ -2,7 +2,7 @@
   <%= link_to artwork_path(artwork) do %>
   <div class="artworks-card">
     <div class="artworks-img">
-      <%= cl_image_tag artwork.photo, crop: :fill %>
+      <%= cl_image_tag artwork.photo, crop: :fill, alt: "#{artwork.name} de #{artwork.artist.first_name} #{artwork.artist.last_name}" %>
     </div>
     <!-- Infos under card  -->
     <div class="artworks-infos">

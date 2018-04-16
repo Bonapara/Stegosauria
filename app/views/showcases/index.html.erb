@@ -11,7 +11,7 @@
     <div class="carousel-inner">
       <!-- Artists call to action -->
       <div class="item active slide-no-border" class="slide">
-        <%= image_tag(@showcase.photo_artist, :class => "carousel-slide") %>
+        <%= image_tag(@showcase.photo_artist, :class => "carousel-slide", alt: "#{@artist.first_name} #{@artist.last_name}") %>
         <div class="carousel-elements">
           <!-- TITLE -->
           <div class="carousel-element-title">
@@ -63,7 +63,7 @@
       </div>
       <!-- Artworks call to action -->
       <div class="item slide-no-border" class="slide slide-no-border">
-        <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide") %>
+        <%= image_tag(@showcase.photo_artwork, :class => "carousel-slide", alt: "#{@artwork.name} #{@artwork.artwork_domain}") %>
         <div class="carousel-elements">
           <!-- TITLE -->
             <div class="carousel-element-title">
@@ -114,7 +114,7 @@
         </div>
       <!-- Exposition call to action -->
       <div class="item slide-no-border" class="slide slide-no-border">
-        <%= image_tag(@showcase.photo_expo, :class => "carousel-slide") %>
+        <%= image_tag(@showcase.photo_expo, :class => "carousel-slide", alt: "#{@expo.name} #{@expo.expo_type}") %>
         <div class="carousel-elements">
           <!-- TITLE -->
 
@@ -166,7 +166,7 @@
       </div>
       <!-- Gallery call to action -->
       <div class="item slide-no-border" class="slide slide-no-border">
-        <%= image_tag(@showcase.photo_galerie, :class => "carousel-slide") %>
+        <%= image_tag(@showcase.photo_galerie, :class => "carousel-slide", alt: "#{@galerie.name} #{@galerie.title_2}") %>
         <div class="carousel-elements">
           <!-- TITLE -->
           <div class="carousel-element-title">

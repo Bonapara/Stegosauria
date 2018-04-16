@@ -1,7 +1,7 @@
 <div class="main-container">
   <div class="artwork-container">
     <div class="artwork-img">
-      <%= cl_image_tag @artwork.photo, crop: :fill %>
+      <%= cl_image_tag @artwork.photo, crop: :fill, alt: "#{@artwork.name} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}" %>
     </div>
     <div class="artwork-infos">
       <div class="artwork-infos-1">
