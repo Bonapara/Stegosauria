@@ -61,7 +61,7 @@
  // Navbar menu items
 .navbar-menu > a {
   cursor: pointer;
-  padding: 20px 0px;
+  padding: 20px 10px;
   font-family: $modern-font;
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -76,7 +76,7 @@
 }
 
 .active {
-  border-bottom: 2px solid  $red;
+  border-bottom: 2px solid $red;
 }
 
 .navbar-social-networks, .burger-menu {

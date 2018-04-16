@@ -1,15 +1,13 @@
 <!-- Menu #2 -->
 <%= render 'shared/artworks_navbar' %>
 
-<!-- Artists count -->
-<div class="main-container">
-  <div class="count margin-under-artwork-navbar">
-    <%= @artworks.count %> oeuvres
-  </div>
-</div>
 <!-- Artist cards container -->
 <% if @artworks.count > 0  %>
-<div class="main-container">
+<div class="main-container margin-plus">
+  <!-- Artworks count -->
+<!--     <div class="page-infos">
+      <%= @artworks.count %> oeuvres
+    </div> -->
   <div class="full-page-columns-container">
     <% @artworks.each do |artwork| %>
       <%= render 'shared/artwork_card', artwork: artwork %>
