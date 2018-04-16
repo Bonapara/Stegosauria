@@ -13,7 +13,7 @@
     <div class="grid-expo">
       <div class="row">
         <!-- Loop on expos occurred in the year -->
-        <% @actus.select { |actu| actu.created_at.year == year } .each do |actu| %>
+        <% @actus.select { |actu| actu.publication_date.year == year } .each do |actu| %>
         <div class="col-xs-12 col-sm-6">
           <div class="expos-card">
             <div class="actus-type" style="background-color: <%= actu.event_color %>;"> <%= actu.actu_type %> </div>

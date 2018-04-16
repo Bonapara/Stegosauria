@@ -5,7 +5,7 @@ class ActusController < ApplicationController
     @actus = Actu.all
     # Array containing all the years
     years = []
-    Actu.all.each { |actu| years << actu.created_at.year }
+    Actu.all.each { |actu| years << actu.publication_date.year }
     @years = years.uniq.sort
     if @actus.count > 0
       set_meta_tags title: "Notre actualité",
