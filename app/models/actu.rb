@@ -5,8 +5,7 @@ class Actu < ApplicationRecord
 
   validates :title_1,     presence: true
   validates :title_2,     presence: true
-  validates :date_from,     presence: true  # Dans le cas d'un article de presse mettre la date de publication article en date_from
-  # validates :date_to,     presence: true
+  validates :dates,     presence: true
   # validates :location,     presence: true
   validates :description,     presence: true
   validates :photo,     presence: true
