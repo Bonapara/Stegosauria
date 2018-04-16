@@ -26,6 +26,11 @@ $height-element-action-small: 35px;
   background-image: none!important;
 }
 
+
+.block_edge {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 // To avoid having border red on the slides (active element) conflicts with navbar menu items
 .slide-no-border {
   border: none!important;
