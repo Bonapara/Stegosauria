@@ -4,6 +4,9 @@
   font-size: 14px;
   letter-spacing: 0.18em;
   margin: 40px 0px 20px;
+  &:first-child {
+    margin-top: 0px;
+  }
 }
 
 .expos-card {
