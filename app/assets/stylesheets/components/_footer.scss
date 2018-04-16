@@ -1,7 +1,7 @@
 footer {
   color: $dark-gray;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
 
   form {
     display: flex;
@@ -111,14 +111,10 @@ a.footer-menu-item:hover {
 
 .footer-icon {
   font-size: 28px;
-  svg {
-    margin-right: 10px;
-    transition: all 0.2s ease-out;
-  }
-  svg:last-child {
-    margin-right: 0px;
-  }
-  svg:hover {
+  color: $medium-gray-darker;
+  margin-right: 8px;
+  transition: all 0.2s ease-out;
+  &:hover {
     color: $red;
   }
 }
@@ -145,21 +141,24 @@ a.footer-menu-item:hover {
   font-family: "Roboto";
   text-transform: uppercase;
   font-weight: 400;
-  padding: 9px 20px;
+  padding: 10px 20px;
   border: none;
   text-align: center;
-  color: $dark-gray;
-  background-color: white;
-  border: 1px solid black;
+  color: white;
+  background-color: black;
 }
 
 .form-button:hover {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1050px)
+@media screen and (max-width: 850px)
 {
   footer {
+    padding-top: 0px;
+  }
+
+  .footer-container {
     padding-top: 0px;
   }
   .footer-part-1 {
