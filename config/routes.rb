@@ -13,6 +13,11 @@ mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   post 'newsletter_new_email', to: 'mailer#newsletter_new_email'
   post 'artwork_form_email', to: 'mailer#artwork_form_email'
 
+  # Legal notices
+  get 'legal', to: 'pages#legal'
+  get 'data_privacy', to: 'pages#data_privacy'
+  get 'terms_of_service', to: 'pages#terms_of_service'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
