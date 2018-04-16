@@ -55,7 +55,9 @@
           <!--  Hover infos display  -->
            <div class="expo-infos">
               <p><span class="expo-infos-title">Lieu :</span> <%= actu.location %></p>
+              <% if actu.dates.blank? != false %>
               <p><span class="expo-infos-title">Date :</span> <%= actu.dates %> </p>
+              <% end %>
               <p><span class="expo-infos-title">Description :</span> <%= actu.description %> </p>
             </div>
           </div>
