@@ -52,7 +52,7 @@ footer {
 .footer-part-3 {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 30px 0px 0px 0px;
   border-top: 1px solid $medium-gray;
 }
@@ -64,7 +64,7 @@ footer {
 
 .footer-menu-item {
   color: $medium-gray-darker;
-  padding: 5px 0px;
+  padding: 3px 0px;
   font-size: 12px;
   // text-transform: uppercase;
   font-family: "Roboto";
@@ -107,6 +107,20 @@ a.footer-menu-item:hover {
   font-weight: 400;
   padding: 12px;
   color: $medium-gray-darker;
+  svg {
+    font-size: 8px;
+  }
+}
+
+.cgv-signature {
+  padding: 0px !important;
+  color: rgb(100, 100, 100);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  font-weight: 400;
+  padding: 12px;
+  color: $medium-gray-darker;
 }
 
 .footer-icon {
@@ -129,10 +143,13 @@ a.footer-menu-item:hover {
   width: 170px;
   background-color: white;
   color: $dark-gray;
-  font-size: 13px;
-  font-family: "Roboto";
+  font-size: 14px;
+  font-family: $retro-font;
   padding: 8px;
   border: 1px solid $medium-gray;
+  &::placeholder {
+    color: rgb(200, 200, 200);
+  }
 }
 
 .form-button {
@@ -146,6 +163,9 @@ a.footer-menu-item:hover {
   text-align: center;
   color: white;
   background-color: black;
+  &:focus {
+    outline:0;
+  }
 }
 
 .form-button:hover {
@@ -171,6 +191,19 @@ a.footer-menu-item:hover {
   .footer-part-2 {
     display: none;
   }
+  .footer-part-3 {
+    flex-direction: column-reverse;
+  }
+
+  .footer-legal {
+    display: flex;
+    border-bottom: 1px solid $medium-gray;
+    align-items: center;
+    .footer-menu-item {
+      flex-basis: 33%;
+      text-align: center;
+    }
+  }
   .footer-menu-item.bold {
     padding-top: 40px;
     text-align: center;
@@ -180,7 +213,7 @@ a.footer-menu-item:hover {
   }
   .cgv {
     letter-spacing: 0.1em;
-    padding: 20px 10px;
+    padding: 10px 10px;
   }
 
 }
