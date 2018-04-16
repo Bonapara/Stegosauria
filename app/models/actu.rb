@@ -10,6 +10,8 @@ class Actu < ApplicationRecord
   validates :description,     presence: true
   validates :photo,     presence: true
   validates :actu_type,     presence: true
+  validates :publication_date,     presence: true
+
 
   def actu_type_enum
     ['Article', 'Presse', 'Evènement', 'Sortie culturelle']

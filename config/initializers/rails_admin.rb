@@ -186,6 +186,9 @@ RailsAdmin.config do |config|
     field :photo do
       label "photo"
     end
+    field :publication_date do
+      label "Publié le"
+    end
 
 
     label "Actu"
