@@ -149,6 +149,12 @@ RailsAdmin.config do |config|
     field :vernissage_date do
       label "Date du vernissage"
     end
+    field :date_from do
+      label "Du"
+    end
+    field :date_to do
+      label "Au"
+    end
     field :vernissage_hours_from do
       label "Heure début vernissage"
     end
@@ -174,17 +180,14 @@ RailsAdmin.config do |config|
     field :actu_type do
       label "type d'actu"
     end
+    field :dates do
+      label "Date(s) de l'évènement"
+    end
     field :location do
       label "Adresse"
     end
     field :description do
       label "Description"
-    end
-    field :date_from do
-      label "date_from"
-    end
-    field :date_to do
-      label "date_from"
     end
     field :photo do
       label "photo"
