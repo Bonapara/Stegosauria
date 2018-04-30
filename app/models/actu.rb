@@ -1,4 +1,4 @@
-COLORS = { "Sortie culturelle" => '#2F80ED', "Evènement" => '#EE5F5B', "Presse" => '#F2994A', "Article" => '#00b894'}
+COLORS = { "Nous recommandons" => '#2F80ED', "Evènement" => '#EE5F5B', "Presse" => '#F2994A', "Article" => '#00b894'}
 
 class Actu < ApplicationRecord
   mount_uploader :photo, PhotoUploader
