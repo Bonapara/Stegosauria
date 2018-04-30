@@ -51,10 +51,15 @@
             </div>
           <!--  Hover infos display  -->
            <div class="expo-infos">
+              <p> <%= expo.descriptions_expo %> </p>
               <p><span class="expo-infos-title">Artistes :</span> <%= expo.artistes %></p>
               <p><span class="expo-infos-title">Date :</span> du <%= expo.date_from.strftime('%e') %> <%= l(expo.date_from, format: '%B').capitalize %> au <%= expo.date_to.strftime('%e') %> <%= l(expo.date_to, format: '%B').capitalize %></p>
-              <p><span class="expo-infos-title">Vernissage :</span> <%= expo.vernissage_date.strftime("%e") %> <%= l(expo.vernissage_date, format: '%B').capitalize %>, de <%= expo.vernissage_hours_from.strftime("%H") %>h à <%= expo.vernissage_hours_to.strftime("%H").capitalize %>h </p>
+
+<!--               <p><span class="expo-infos-title">Vernissage :</span> <%= expo.vernissage_date.strftime("%e") %> <%= l(expo.vernissage_date, format: '%B').capitalize %>, de <%= expo.vernissage_hours_from.strftime("%H") %>h à <%= expo.vernissage_hours_to.strftime("%H").capitalize %>h </p> -->
+
               <p><span class="expo-infos-title">Lieu :</span> <%= expo.location %> </p>
+
+
             </div>
           </div>
         </div>
