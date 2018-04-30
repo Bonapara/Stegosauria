@@ -13,7 +13,7 @@ class Actu < ApplicationRecord
 
 
   def actu_type_enum
-    ['Article', 'Presse', 'Evènement', 'Sortie culturelle']
+    ['Article', 'Presse', 'Evènement', 'Nous recommandons']
   end
 
   def event_color
