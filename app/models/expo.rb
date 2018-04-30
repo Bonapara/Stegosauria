@@ -14,5 +14,5 @@ class Expo < ApplicationRecord
   validates :vernissage_hours_from,     presence: true
   validates :vernissage_hours_to,     presence: true
   validates :descriptions_expo,     presence: true
-  validates_length_of :descriptions_expo, :minimum => 140, :maximum => 390
+  validates_length_of :descriptions_expo, :minimum => 100, :maximum => 390
 end

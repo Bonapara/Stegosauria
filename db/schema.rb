@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416122829) do
+ActiveRecord::Schema.define(version: 20180430073155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,13 +48,14 @@ ActiveRecord::Schema.define(version: 20180416122829) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.boolean "sold"
-    t.integer "height"
-    t.integer "width"
-    t.integer "depth"
+    t.string "height"
+    t.string "width"
+    t.string "depth"
     t.boolean "priority"
     t.string "price"
     t.string "number"
     t.string "year"
+    t.string "technique"
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
   end
 
