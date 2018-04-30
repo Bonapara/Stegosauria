@@ -7,7 +7,11 @@
       <div class="artwork-infos-1">
       <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
       <h3 class="artist-name-show"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
+      <% if @artwork.sold %>
+      <p class="artworks-sold"> Vendue </p>
+      <% end %>
       <p class="artwork-info"> <%= @artwork.description %> </p>
+
 
       <ul>
 
