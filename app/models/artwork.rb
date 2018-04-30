@@ -5,11 +5,12 @@ class Artwork < ApplicationRecord
   validates :name,     presence: true
   validates :artwork_domain,     presence: true
   validates :description,     presence: true
-  validates_length_of :description, :minimum => 140, :maximum => 170
+  validates_length_of :description, :minimum => 70, :maximum => 170
   validates :photo,     presence: true
   validates :height,     presence: true
   validates :width,     presence: true
   validates :price,     presence: true
+  validates :technique,     presence: true
 
   def artwork_domain_enum
     ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']
