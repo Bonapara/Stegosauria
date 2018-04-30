@@ -1,4 +1,4 @@
-# Use this setup block to configure all options available in MetaTags.
+.# Use this setup block to configure all options available in MetaTags.
 MetaTags.configure do |config|
   # How many characters should the title meta tag have at most. Default is 70.
   # Set to nil or 0 to remove limits.
