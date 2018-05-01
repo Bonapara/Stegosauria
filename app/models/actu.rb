@@ -1,8 +1,11 @@
 COLORS = { "Nous recommandons" => '#2F80ED', "Evènement" => '#EE5F5B', "Presse" => '#F2994A', "Article" => '#00b894'}
 
 class Actu < ApplicationRecord
+  # Dependance
+  has_many :show_cases
+  # Photo Cloudinary
   mount_uploader :photo, PhotoUploader
-
+  # Validations
   validates :title_1,     presence: true
   validates :title_2,     presence: true
   # validates :location,     presence: true

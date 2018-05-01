@@ -5,6 +5,7 @@ class ShowcasesController < ApplicationController
     @artist = Artist.find(@showcase.artist_id)
     @artwork = Artwork.find(@showcase.artwork_id)
     @expo = Expo.find(@showcase.expo_id)
+    @actu = Actu.find(@showcase.actu_id)
     @galerie = Galerie.find(@showcase.galerie_id)
 
     set_meta_tags reverse: false,
