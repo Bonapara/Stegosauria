@@ -10,7 +10,7 @@
       <% if @artwork.sold %>
       <p class="artworks-sold"> Vendue </p>
       <% end %>
-      <p class="artwork-info"> <%= @artwork.description %> </p>
+      <p class="artwork-info"> <%= raw @artwork.description %> </p>
 
 
       <ul>

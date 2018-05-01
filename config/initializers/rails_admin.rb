@@ -60,6 +60,9 @@ RailsAdmin.config do |config|
     field :artwork_domain do
       label "Type d'oeuvre"
     end
+    field :technique do
+      label "Technique utilisée"
+    end
     field :description do
       label "description"
     end

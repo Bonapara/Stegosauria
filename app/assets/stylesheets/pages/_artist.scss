@@ -26,14 +26,18 @@
 .artist-photo {
   border-radius: 8px;
   filter: grayscale(100%);
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   z-index: -10;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .artist-bio {
-  margin-top: 40px;
+  margin-top: 30px;
+  a {
+    font-style: italic;
+    text-decoration: underline;
+  }
 }
 
 .artist-artwork-photo {
