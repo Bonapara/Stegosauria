@@ -1,3 +1,5 @@
+$expos-card-size: 280px;
+
 .year {
   font-family: $modern-font;
   font-weight: bold;
@@ -13,7 +15,7 @@
   position: relative;
   padding-bottom: 20px;
   img {
-    height: 250px;
+    height: $expos-card-size;
     width: 100%;
   }
 }
@@ -51,7 +53,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 250px;
+  height: $expos-card-size;
   width: 100%;
   p {
     font-size: 16px;
@@ -62,4 +64,13 @@
 
 .expo-infos-title {
   font-weight: bolder;
+}
+
+@media screen and (max-width: 550px)
+{
+  .expo-infos {
+    p {
+      font-size: 13px;
+    }
+  }
 }
