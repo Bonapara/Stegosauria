@@ -7,7 +7,7 @@ class Artist < ApplicationRecord
   validates :first_name,     presence: true
   validates :last_name,      presence: true
   validates :biography,     presence: true
-  validates_length_of :biography, :minimum => 170, :maximum => 280
+  validates_length_of :biography, :minimum => 170, :maximum => 500
   validates :photo,     presence: true
   validates :speciality1,     presence: true
 

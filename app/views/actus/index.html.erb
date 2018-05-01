@@ -60,7 +60,7 @@
               <% if actu.dates.blank? != true %>
                 <p><span class="expo-infos-title">Date :</span> <%= actu.dates %> </p>
               <% end %>
-              <p><span class="expo-infos-title">Description :</span> <%= actu.description %> </p>
+              <p><span class="expo-infos-title">Description :</span> <%= raw actu.description %> </p>
             </div>
           </div>
         </div>
