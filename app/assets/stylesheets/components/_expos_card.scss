@@ -29,6 +29,10 @@ $expos-card-size: 280px;
 .expo-infos:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
+  a {
+    color: black;
+    transition: all 0.3s ease-out;
+  }
 }
 
 
@@ -58,6 +62,12 @@ $expos-card-size: 280px;
   p {
     font-size: 16px;
     margin-bottom: 5px !important;
+    a {
+      color: transparent;
+      font-style: italic;
+      text-decoration: underline;
+      transition: all 0.3s ease-out;
+    }
   }
 }
 

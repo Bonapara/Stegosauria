@@ -12,7 +12,7 @@
     <div class="artist-photo-container">
       <%= cl_image_tag @artist.photo, height: 800, width: 800, crop: :fill, :class => "artist-photo", alt: "#{@artist.first_name} #{@artist.last_name}" %>
     </div>
-    <p class="artist-bio"><%= @artist.biography %></p>
+    <p class="artist-bio"><%= raw @artist.biography %></p>
   </div>
   <!-- Right column with Artist Artworks -->
   <!-- Puts 2 columns if more than 1 artwork for the artist -->
