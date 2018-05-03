@@ -27,11 +27,24 @@ RailsAdmin.config do |config|
       label "Expo"
       :full_name
     end
+    field :position_expo do
+      label "Position 1 ou 2"
+    end
     field :photo_expo do
       label "Photo Expo"
     end
     field :expo_description do
       label "Phrase d'accroche Expo"
+    end
+    field :actu do
+      label "Actu"
+      :full_name
+    end
+    field :photo_actu do
+      label "Photo Actu"
+    end
+    field :actu_description do
+      label "Phrase d'accroche Actu"
     end
     field :galerie do
       label "Galerie"
@@ -123,6 +136,10 @@ RailsAdmin.config do |config|
 
     field :photo do
       label "Photo de l'artiste"
+    end
+
+    field :photo_artwork do
+      label "Photo de l'oeuvre caractérisant l'artiste"
     end
 
     label "Artiste"

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430181455) do
+ActiveRecord::Schema.define(version: 20180501084711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "actus", force: :cascade do |t|
-    t.string "title_1"
+    t.string "name"
     t.string "title_2"
     t.string "location"
     t.text "description"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180430181455) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "speciality2"
+    t.string "photo_artwork"
   end
 
   create_table "artworks", force: :cascade do |t|
@@ -117,6 +118,11 @@ ActiveRecord::Schema.define(version: 20180430181455) do
     t.bigint "galerie_id"
     t.string "photo_galerie"
     t.string "galerie_description"
+    t.bigint "actu_id"
+    t.string "photo_actu"
+    t.string "actu_description"
+    t.integer "position_expo"
+    t.index ["actu_id"], name: "index_show_cases_on_actu_id"
     t.index ["artist_id"], name: "index_show_cases_on_artist_id"
     t.index ["artwork_id"], name: "index_show_cases_on_artwork_id"
     t.index ["expo_id"], name: "index_show_cases_on_expo_id"
@@ -142,6 +148,7 @@ ActiveRecord::Schema.define(version: 20180430181455) do
   end
 
   add_foreign_key "artworks", "artists"
+  add_foreign_key "show_cases", "actus"
   add_foreign_key "show_cases", "artists"
   add_foreign_key "show_cases", "artworks"
   add_foreign_key "show_cases", "expos"
