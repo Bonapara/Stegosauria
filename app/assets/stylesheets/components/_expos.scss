@@ -107,6 +107,10 @@ $expos-height-element-small: 49px;
   flex-direction: column;
   margin-left: 25px;
   flex-basis: 50%;
+  a {
+    font-style: italic;
+    text-decoration: underline;
+  }
 }
 
 

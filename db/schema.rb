@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180501084711) do
+=======
+ActiveRecord::Schema.define(version: 20180430181455) do
+>>>>>>> 0416db34cb389abb4206e163051f4fa4bf83cfef
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +62,18 @@ ActiveRecord::Schema.define(version: 20180501084711) do
     t.string "year"
     t.string "technique"
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
+  end
+
+  create_table "ckeditor_assets", id: :serial, force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.integer "width"
+    t.integer "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "expos", force: :cascade do |t|
