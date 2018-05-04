@@ -13,19 +13,19 @@
     <div class="grid-expo">
       <div class="row">
         <!-- Loop on expos occurred in the year -->
-        <% @actus.select { |actu| actu.created_at.year == year } .each do |actu| %>
+        <% @actus.select { |actu| actu.publication_date.year == year } .each do |actu| %>
         <div class="col-xs-12 col-sm-6">
           <div class="expos-card">
-            <div class="actus-type" style="background-color: <%= actu.event_color %>;"> <%= actu.actu_type %> </div>
+            <div class="actus-type" style="color: <%= actu.event_color %>;"> <%= actu.actu_type %> </div>
             <!-- Expo image -->
-            <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img", alt: "#{actu.title_1} - #{actu.title_2}" %>
+            <%= cl_image_tag actu.photo, crop: :fill, class: "expo-img", alt: "#{actu.name} - #{actu.title_2}" %>
             <!-- Expo title and subtitle -->
             <div class="expo-main-infos">
               <div class="artist-elements">
                 <div class="artist-element-display">
                   <div class="artist-element-content">
                     <h2 class="artist-name">
-                      <%= actu.title_1 %>
+                      <%= actu.name %>
                     </h2>
                   </div>
                   <div class="artist-hide-block">
@@ -54,9 +54,13 @@
             </div>
           <!--  Hover infos display  -->
            <div class="expo-infos">
+              <% if actu.location.blank? != true %>
               <p><span class="expo-infos-title">Lieu :</span> <%= actu.location %></p>
-              <p><span class="expo-infos-title">Date :</span> <%= actu.dates %> </p>
-              <p><span class="expo-infos-title">Description :</span> <%= actu.description %> </p>
+              <% end %>
+              <% if actu.dates.blank? != true %>
+                <p><span class="expo-infos-title">Date :</span> <%= actu.dates %> </p>
+              <% end %>
+              <p><span class="expo-infos-title">Description :</span> <%= raw actu.description %> </p>
             </div>
           </div>
         </div>

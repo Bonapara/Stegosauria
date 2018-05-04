@@ -23,7 +23,7 @@
     </div>
     <div class="navbar-social-networks">
       <%= link_to "https://www.instagram.com/galerie_isabelle_laverny/?hl=fr", target: :_blank do %>
-        <i class="fab fa-instagram"></i>
+        <%= image_tag "insta1.png", :class => "insta-logo" %>
       <% end %>
     </div>
   </div>
@@ -31,11 +31,16 @@
 
 <!-- Mobile menu invisible on desktop, visible on tablet and mobile -->
 <div class="mobile-menu-container">
-  <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
+<!--   <%= link_to "ARTISTES", artists_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "OEUVRES", artworks_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "EXPOS", currents_path, class: "navbar-menu-item navbar-menu-link" %>
   <%= link_to "ACTUS", actus_path, class: "navbar-menu-item navbar-menu-link" %>
-  <%= link_to "LA GALERIE", galeries_path, class: "navbar-menu-item navbar-menu-link" %>
+  <%= link_to "LA GALERIE", galeries_path, class: "navbar-menu-item navbar-menu-link" %> -->
+  <%= link_to "ARTISTES", artists_path, :class => current_class_mobile?(artists_path)%>
+  <%= link_to "OEUVRES", artworks_path, :class => current_class_mobile?(artworks_path) %>
+  <%= link_to "EXPOS", currents_path, :class => current_class_mobile?(currents_path) %>
+  <%= link_to "ACTUS", actus_path, :class => current_class_mobile?(actus_path) %>
+  <%= link_to "LA GALERIE", galeries_path, :class => current_class_mobile?(galeries_path) %>
   <!-- Dark div on existing content, visble when the mobile menu is displaying -->
   <div class="mobile-menu-darker">
     <div id="dark-wrapper"></div>

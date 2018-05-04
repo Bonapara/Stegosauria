@@ -1,3 +1,5 @@
+$expos-card-size: 280px;
+
 .year {
   font-family: $modern-font;
   font-weight: bold;
@@ -13,7 +15,7 @@
   position: relative;
   padding-bottom: 20px;
   img {
-    height: 250px;
+    height: $expos-card-size;
     width: 100%;
   }
 }
@@ -21,11 +23,16 @@
 .expo-img {
   object-fit: cover;
   object-position: 50% 50%;
+  border-radius: 2px;
 }
 
 .expo-infos:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
+  a {
+    color: black;
+    transition: all 0.3s ease-out;
+  }
 }
 
 
@@ -37,7 +44,7 @@
   bottom: 40px;
   left: 20px;
   transition: all 0.3s ease-out;
-  opacity: 0.9;
+  // opacity: 0.9;
 }
 
 .expo-infos {
@@ -50,15 +57,30 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 250px;
+  height: $expos-card-size;
   width: 100%;
   p {
     font-size: 16px;
     margin-bottom: 5px !important;
+    a {
+      color: transparent;
+      font-style: italic;
+      text-decoration: underline;
+      transition: all 0.3s ease-out;
+    }
   }
 }
 
 
 .expo-infos-title {
   font-weight: bolder;
+}
+
+@media screen and (max-width: 550px)
+{
+  .expo-infos {
+    p {
+      font-size: 13px;
+    }
+  }
 }

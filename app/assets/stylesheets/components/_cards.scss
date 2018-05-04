@@ -67,7 +67,7 @@
   }
   // for artist index
   .artist-infos {
-  transform: scale(1.02);
+  transform: scale(1.00);
 }
 }
 
@@ -239,7 +239,7 @@ $artist-height: 35px;
 
 .artist-element-content {
   background-color: $white;
-  opacity: 0.9;
+  // opacity: 0.9;
   height: $artist-height;
   display: flex;
   align-items: center;
@@ -256,7 +256,7 @@ h1.artist-text {
 
 .artist-svg {
   position: absolute;
-  opacity: 0.9;
+  // opacity: 0.9;
   right: 0;
   top: 0;
   width: $artist-angle-width;
@@ -280,7 +280,7 @@ $speciality-height: 35px;
 
 .speciality-element-content {
   background-color: $white;
-  opacity: 0.9;
+  // opacity: 0.9;
   height: $speciality-height;
   display: flex;
   align-items: center;
@@ -297,7 +297,7 @@ h1.speciality-text {
 
 .speciality-svg {
   position: absolute;
-  opacity: 0.9;
+  // opacity: 0.9;
   right: 0;
   top: 0;
   width: $speciality-angle-width;

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416083655) do
+ActiveRecord::Schema.define(version: 20180501084711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "actus", force: :cascade do |t|
-    t.string "title_1"
+    t.string "name"
     t.string "title_2"
     t.string "location"
     t.text "description"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180416083655) do
     t.string "photo"
     t.string "actu_type"
     t.string "dates"
+    t.date "publication_date"
   end
 
   create_table "artists", force: :cascade do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180416083655) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "speciality2"
+    t.string "photo_artwork"
   end
 
   create_table "artworks", force: :cascade do |t|
@@ -47,14 +49,27 @@ ActiveRecord::Schema.define(version: 20180416083655) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.boolean "sold"
-    t.integer "height"
-    t.integer "width"
-    t.integer "depth"
+    t.string "height"
+    t.string "width"
+    t.string "depth"
     t.boolean "priority"
     t.string "price"
     t.string "number"
     t.string "year"
+    t.string "technique"
     t.index ["artist_id"], name: "index_artworks_on_artist_id"
+  end
+
+  create_table "ckeditor_assets", id: :serial, force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.integer "width"
+    t.integer "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "expos", force: :cascade do |t|
@@ -103,6 +118,11 @@ ActiveRecord::Schema.define(version: 20180416083655) do
     t.bigint "galerie_id"
     t.string "photo_galerie"
     t.string "galerie_description"
+    t.bigint "actu_id"
+    t.string "photo_actu"
+    t.string "actu_description"
+    t.integer "position_expo"
+    t.index ["actu_id"], name: "index_show_cases_on_actu_id"
     t.index ["artist_id"], name: "index_show_cases_on_artist_id"
     t.index ["artwork_id"], name: "index_show_cases_on_artwork_id"
     t.index ["expo_id"], name: "index_show_cases_on_expo_id"
@@ -128,6 +148,7 @@ ActiveRecord::Schema.define(version: 20180416083655) do
   end
 
   add_foreign_key "artworks", "artists"
+  add_foreign_key "show_cases", "actus"
   add_foreign_key "show_cases", "artists"
   add_foreign_key "show_cases", "artworks"
   add_foreign_key "show_cases", "expos"

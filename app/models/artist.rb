@@ -1,5 +1,6 @@
 class Artist < ApplicationRecord
   mount_uploader :photo, PhotoUploader
+  mount_uploader :photo_artwork, PhotoUploader
   has_many :artworks
   has_many :show_cases
   paginates_per 30
@@ -7,8 +8,9 @@ class Artist < ApplicationRecord
   validates :first_name,     presence: true
   validates :last_name,      presence: true
   validates :biography,     presence: true
-  validates_length_of :biography, :minimum => 170, :maximum => 280
+  validates_length_of :biography, :minimum => 170, :maximum => 500
   validates :photo,     presence: true
+  validates :photo_artwork, presence: true
   validates :speciality1,     presence: true
 
   def speciality1_enum

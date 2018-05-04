@@ -63,6 +63,9 @@ h1.button-text {
   color: white;
   font-size: 10px;
   text-transform: uppercase;
+  &:focus {
+    outline:0;
+  }
   // &:hover {
   //   opacity: 0.8;
   // }

@@ -10,6 +10,7 @@ class Artwork < ApplicationRecord
   validates :height,     presence: true
   validates :width,     presence: true
   validates :price,     presence: true
+  validates :technique,     presence: true
 
   def artwork_domain_enum
     ['Sculpture', 'Peinture', 'Photographie', 'Dessin', 'Céramique', 'Installation', 'Edition']

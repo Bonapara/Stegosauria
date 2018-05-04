@@ -7,11 +7,11 @@
       <div class="artwork-infos-1">
       <h2 class="title-1 title-1-small-size"> <%= @artwork.name %> </h2>
       <h3 class="artist-name-show"> <%= @artwork.artist.first_name %> <%= @artwork.artist.last_name %></h3>
-      <h3 class="artwork-infos-text" id="artwork-number"> <%= @artwork.year %>
-        <% if @artwork.number %>
-        - <%= @artwork.number %> </h3>
-        <% end %>
-      <p class="artwork-info"> <%= @artwork.description %> </p>
+      <% if @artwork.sold %>
+      <p class="artworks-sold"> Vendue </p>
+      <% end %>
+      <p class="artwork-info"> <%= raw @artwork.description %> </p>
+
 
       <ul>
 
@@ -27,9 +27,17 @@
           <% end %>
         </li>
 
-        <li class="dimensions-content black"> <%= image_tag "designer.png", class: "icon" %><%= @artwork.artwork_domain %></li>
+        <li class="dimensions-content black"> <%= image_tag "designer.png", class: "icon" %><%= @artwork.technique %></li>
 
-        <li class="dimensions-content black"> <%= image_tag "euro.png", class: "icon" %>Entre 2000 € et 3000 € </li>
+        <% if @artwork.number %>
+        <li class="dimensions-content black"> <%= image_tag "hash.png", class: "icon" %><%= @artwork.number %></li>
+        <% end %>
+
+        <% if @artwork.year %>
+        <li class="dimensions-content black"> <%= image_tag "timeline.png", class: "icon" %><%= @artwork.year %></li>
+        <% end %>
+
+        <li class="dimensions-content black"> <%= image_tag "euro.png", class: "icon" %><%= @artwork.price %></li>
       </ul>
       </div>
 
