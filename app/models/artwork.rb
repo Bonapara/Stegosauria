@@ -5,7 +5,7 @@ class Artwork < ApplicationRecord
   validates :name,     presence: true
   validates :artwork_domain,     presence: true
   validates :description,     presence: true
-  validates_length_of :description, :minimum => 140, :maximum => 170
+  validates_length_of :description, :minimum => 140, :maximum => 300
   validates :photo,     presence: true
   validates :height,     presence: true
   validates :width,     presence: true
@@ -16,7 +16,7 @@ class Artwork < ApplicationRecord
   end
 
    def price_enum
-    ['< 500 €', '500 - 1000 €', '1000 - 1500 €', '1500 - 2000 €', '> 2000 €']
+    ['Moins de 100 €', 'Entre 100 et 500 €', 'Entre 500 et 1000 €', 'Entre 1000 et 2500 €', 'Entre 2500 et 5000 €', 'Plus de 5000 €', 'Plus de 10 000 €', 'Nous consulter']
   end
 
   paginates_per 30
