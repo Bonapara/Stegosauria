@@ -8,7 +8,6 @@ class Actu < ApplicationRecord
   # Validations
   validates :name,     presence: true
   validates :title_2,     presence: true
-  # validates :location,     presence: true
   validates :description,     presence: true
   validates :photo,     presence: true
   validates :actu_type,     presence: true
