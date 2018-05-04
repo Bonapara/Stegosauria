@@ -1,9 +1,9 @@
 development:
-  cloud_name: <%= ENV["galerieisabellelaverny"] %>
-  api_key: <%= ENV["747166856714326"] %>
-  api_secret: <%= ENV["T6AHklJcAzfkhlTRZgbzLthQ41c"] %>
+  cloud_name: <%= ENV["dxjn2cmij"] %>
+  api_key: <%= ENV["714729629781191"] %>
+  api_secret: <%= ENV["VpIa794KsDHMC5Dj9S7LyQq2EH8"] %>
 
 test:
-  cloud_name: <%= ENV["galerieisabellelaverny"] %>
-  api_key: <%= ENV["747166856714326"] %>
-  api_secret: <%= ENV["T6AHklJcAzfkhlTRZgbzLthQ41c"] %>
+  cloud_name: <%= ENV["dxjn2cmij"] %>
+  api_key: <%= ENV["714729629781191"] %>
+  api_secret: <%= ENV["VpIa794KsDHMC5Dj9S7LyQq2EH8"] %>
