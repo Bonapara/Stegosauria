@@ -6,7 +6,7 @@ class Actu < ApplicationRecord
   # Photo Cloudinary
   mount_uploader :photo, PhotoUploader
   # Validations
-  validates :title_1,     presence: true
+  validates :name,     presence: true
   validates :title_2,     presence: true
   # validates :location,     presence: true
   validates :description,     presence: true

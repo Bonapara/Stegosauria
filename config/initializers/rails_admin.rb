@@ -191,7 +191,7 @@ RailsAdmin.config do |config|
   end
 
     config.model 'Actu' do
-    field :title_1 do
+    field :name do
       label "Titre"
     end
     field :title_2 do
