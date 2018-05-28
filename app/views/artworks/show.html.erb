@@ -1,7 +1,19 @@
 <div class="main-container">
   <div class="artwork-container">
     <div class="artwork-img">
-      <%= cl_image_tag @artwork.photo, crop: :fill, alt: "#{@artwork.name} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}" %>
+      <%= cl_image_tag @artwork.photo, crop: :fill, alt: "#{@artwork.name} - #{@artwork.artist.first_name} #{@artwork.artist.last_name}", class: "artwork-photo-1" %>
+      <% if @artwork.photo_2.blank? != true %>
+        <div class="artwork-img-thumbs">
+          <%= cl_image_tag @artwork.photo, crop: :fill, class: "artwork-img-thumb active-img" %>
+          <%= cl_image_tag @artwork.photo_2, crop: :fill, class: "artwork-img-thumb" %>
+          <% if @artwork.photo_3.blank? != true %>
+          <%= cl_image_tag @artwork.photo_3, crop: :fill, class: "artwork-img-thumb" %>
+          <% end %>
+          <% if @artwork.photo_4.blank? != true %>
+          <%= cl_image_tag @artwork.photo_4, crop: :fill, class: "artwork-img-thumb" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <div class="artwork-infos">
       <div class="artwork-infos-1">

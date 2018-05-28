@@ -1,5 +1,9 @@
 class Artwork < ApplicationRecord
   mount_uploader :photo, PhotoUploader
+  mount_uploader :photo_2, PhotoUploader
+  mount_uploader :photo_3, PhotoUploader
+  mount_uploader :photo_4, PhotoUploader
+
   belongs_to :artist
   has_many :show_cases
   validates :name,     presence: true
