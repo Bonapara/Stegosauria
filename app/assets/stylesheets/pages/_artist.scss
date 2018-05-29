@@ -18,11 +18,6 @@
   padding-left: 40px;
 }
 
-.show-artist-art-type {
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
 .artist-photo {
   border-radius: 8px;
   filter: grayscale(100%);
@@ -34,6 +29,7 @@
 
 .artist-bio {
   margin-top: 30px;
+  font-size: 16px;
   a {
     font-style: italic;
     text-decoration: underline;
