@@ -13,7 +13,7 @@ const displayArtworkImage = (image) => {
   image.classList.add("active-img");
 };
 
-// For each thumbs, we display ArtworkImage on click
+// For each thumbs, we display ArtworkImage on click !
 artworkThumbs.forEach(function(image, index) {
   image.addEventListener('click', function() {
     displayArtworkImage(image);
