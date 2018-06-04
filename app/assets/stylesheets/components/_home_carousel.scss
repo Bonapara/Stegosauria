@@ -27,10 +27,10 @@ $height-element-action-small: 35px;
 }
 
 
-.block_edge {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+// .block_edge {
+//   -webkit-transform: scale(1);
+//   transform: scale(1);
+// }
 // To avoid having border red on the slides (active element) conflicts with navbar menu items
 .slide-no-border {
   border: none!important;
@@ -73,7 +73,7 @@ $height-element-action-small: 35px;
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 
 // CATCH PHRASE & CALL TO ACTION CONTAINER
@@ -93,7 +93,7 @@ $height-element-action-small: 35px;
 .carousel-element-title {
   position: relative;
   background-color: transparent;
-  display: inline-block;
+  display: flex;
   height: $height-element;
 }
 
