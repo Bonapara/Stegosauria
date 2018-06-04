@@ -10,8 +10,8 @@ class ShowcasesController < ApplicationController
 
     set_meta_tags reverse: false,
                   title: "De l'art à l'art de vivre",
-                  description: "Galerie d'art Paris 17",
-                  keywords: "art, peinture, galerie, Paris 17",
+                  description: "La galerie Isabelle Laverny est une galerie d'art et d'art de vivre située dans le 17 arrondissement proposant les œuvres d'artistes contemporain français et internationaux.",
+                  keywords: "art, peinture, Galerie d'art, Paris 17, Galerie Isabelle Laverny, Maison sur pilotis, Paris 17 art, Paris art de vivre, Galerie d'art 17e, Exposition 17e, idée cadeaux oeuvre d'art, Galerie Ternes, Galerie porte maillot, Galerie Pereire, idées cadeaux art, Art contemporain paris 17e, Objets déco Paris",
                   og: {
                         title: :title,
                         site_name: :site,

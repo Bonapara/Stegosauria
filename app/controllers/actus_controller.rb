@@ -9,8 +9,8 @@ class ActusController < ApplicationController
     @years = years.uniq.sort
     if @actus.count > 0
       set_meta_tags title: "Notre actualité",
-                    description: "Découvrez les dernières nouvelles de la Galerie Isabelle Laverny, évenements - presse - articles - expos",
-                    keywords: "évenements, presse, articles, expos, news, blog, actualités, actualités galerie isabelle laverny",
+                    description: "Nous vous proposons une sélection d'actualités concernant nos artistes et la galerie, mais également des recommandations culturelles, des sorties de livre etc .",
+                    keywords: "Actu galerie isabelle laverny, Livre galerie isabelle laverny, presse galerie isabelle laverny, Edition galerie isabelle laverny, sortie galerie isabelle laverny ",
                     og: {
                           title: :title,
                           site_name: :site,
@@ -19,7 +19,7 @@ class ActusController < ApplicationController
                         }
     else
       set_meta_tags title: "Notre actualité",
-                    description: "Découvrez les dernières nouvelles de la Galerie Isabelle Laverny, évenements - presse - articles - expos",
+                    description: "Nous vous proposons une sélection d'actualités concernant nos artistes et la galerie, mais également des recommandations culturelles, des sorties de livre etc .",
                     keywords: "évenements, presse, articles, expos, news, blog, actualités, actualités galerie isabelle laverny",
                     og: {
                           title: :title,
