@@ -1,8 +1,8 @@
 class Artwork < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   mount_uploader :photo_2, PhotoUploader
-  mount_uploader :photo_3, PhotoUploader
-  mount_uploader :photo_4, PhotoUploader
+  # mount_uploader :photo_3, PhotoUploader
+  # mount_uploader :photo_4, PhotoUploader
 
   belongs_to :artist
   has_many :show_cases
@@ -11,6 +11,7 @@ class Artwork < ApplicationRecord
   validates :description,     presence: true
   validates_length_of :description, :minimum => 140, :maximum => 300
   validates :photo,     presence: true
+  validates :photo_2,     presence: true
   validates :height,     presence: true
   validates :width,     presence: true
   validates :price,     presence: true

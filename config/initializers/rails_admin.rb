@@ -94,12 +94,12 @@ RailsAdmin.config do |config|
     field :photo_2 do
       label "Photo 2"
     end
-    field :photo_3 do
-      label "Photo 3"
-    end
-    field :photo_4 do
-      label "Photo 4"
-    end
+    # field :photo_3 do
+    #   label "Photo 3"
+    # end
+    # field :photo_4 do
+    #   label "Photo 4"
+    # end
     field :price do
       label "Fourchette de prix"
     end
