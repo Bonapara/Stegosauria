@@ -5,8 +5,8 @@ class ArtworksController < ApplicationController
     I18n.locale = :fr
      # GET /artworks
     if params[:commit]
-      domain = params[:commit]
-      @artworks = Artwork.where(artwork_domain: domain).order('priority ASC').all.page params[:page]
+      @domain = params[:commit]
+      @artworks = Artwork.where(artwork_domain: @domain).order('priority ASC').all.page params[:page]
     else
       @artworks = Artwork.order('priority ASC').all.order('priority ASC').page params[:page]
     end
